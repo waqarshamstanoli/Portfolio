@@ -1,8 +1,9 @@
 <template>
-  <v-app class="red" >
+  <v-app>
    
 
     <v-main>
+      <h1>jljjkljkljl</h1>
       <img src="./assets/swinger.png" alt="" class="setimage" :class="{ transformImage: left }"/>
       <router-view/>
     </v-main>
