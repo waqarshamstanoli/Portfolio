@@ -153,11 +153,7 @@ export default {
       scrollPosition: "",
       visible: false,
       name: "DE",
-      image: require("../assets/ger-flag.png"),
-      list: [
-        { name: "DE", img: require("../assets/ger-flag.png") },
-        { name: "GER", img: require("../assets/eng-flag.png") },
-      ],
+      
     };
   },
   methods: {
