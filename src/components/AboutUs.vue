@@ -30,6 +30,7 @@
         </v-col>
         <v-col cols="12" lg="6" md="12" sm="12">
           <img src="../assets/worldmap.png" alt="" class="marginTop" />
+          <img src="../assets/numbers.svg" alt="">
         </v-col>
       </v-row>
     </v-card>

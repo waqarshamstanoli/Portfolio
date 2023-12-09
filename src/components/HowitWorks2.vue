@@ -2,7 +2,7 @@
   <v-container class="">
     <v-row class="justify-space-around height">
       <v-col cols="12" lg="6" md="12" sm="12">
-        <v-card width="410" class="ml-auto mr-8">
+        <v-card width="410" color="transparent" class="elevation-0 ml-auto mr-8">
           <v-img src="../assets/machine.png" alt="" width="410" >
             <img src="../assets/BS_Shake-Erstellung_Langsam_Einmal.gif" alt="" class="gifAnimation">
           </v-img>

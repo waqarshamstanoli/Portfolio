@@ -1,5 +1,5 @@
 <template>
-  <v-container class="height">
+  <v-container fluid class="height">
     <v-row class="justify-space-around">
       <v-col cols="12" lg="12" md="12" sm="12">
         <v-card
@@ -22,17 +22,20 @@
         </v-card>
       </v-col>
       <v-col cols="12" lg="9">
-        <div class="d-flex mt-4 centerCards">
+        <div class="d-flex mt-4 centerCards" ref="mySection">
           <v-card
             rounded="lg"
             color="rgba(0,0,0,.1)"
             width="300"
-            class="mx-auto elevation-0 pb-4 "
+            class="mx-auto elevation-0 "
           >
             <v-card-text>
               <h4 class="text--h4 text-center">CHOOSE YOUR PROTEIN.</h4>
               <div class="d-flex mt-8">
-                <div>
+                <v-img src="../assets/proteins.png" width="95%">
+                  <img src="../assets/step1.png" alt="" width="100" height="85" class="Hide mt-10 ml-10" :class="{ scaled: whiteProtien }" />
+                </v-img>
+                <!-- <div>
                   <img src="../assets/step1.png" alt="" width="160" />
                 </div>
                 <img
@@ -41,7 +44,8 @@
                   width="160"
                   class="mt-16"
                   style="position: relative; right: 50px"
-                />
+                /> -->
+                
               </div>
             </v-card-text>
           </v-card>
@@ -49,11 +53,14 @@
             rounded="lg"
             color="rgba(0,0,0,.1)"
             width="300"
-            class="mx-auto elevation-0 pb-4"
+            class="mx-auto elevation-0 "
           >
             <v-card-text>
               <h4 class="text--h4 text-center">CHOOSE YOUR PROTEIN AMOUNT.</h4>
-              <img src="../assets/step2.png" alt="" class="mt-8" />
+              <v-img src="../assets/step2.png" alt="" class="mt-8" >
+                  <img src="../assets/step2_highligh.png" class="Hide mt-4 ml-4" :class="{ scaled: step2Highlight }" width="90" style="position: relative; left: 70px; top:80px">
+            
+                </v-img>
 
             </v-card-text>
           </v-card>
@@ -62,11 +69,14 @@
             rounded="lg"
             color="rgba(0,0,0,.1)"
             width="300"
-            class="mx-auto elevation-0 pb-4"
+            class="mx-auto elevation-0 "
           >
             <v-card-text>
               <h4 class="text--h4 text-center">CHOOSE YOUR FLAVOR.</h4>
-              <img src="../assets/step3.png" alt="" class="mt-8" />
+              <v-img src="../assets/step3.png" alt="" class="mt-8" >
+                <img src="../assets/strawberyactive.png" alt="" width="60" height="50" style="position: relative; top: 50px; left:95px;" class="Hide" :class="{ scaled: step3Highlight }" >
+                <img src="../assets/step3highlight.png" alt="" width="60" height="50" style="position: relative; top: 90px; left:95px;" class="Hide" :class="{ scaled: step3Highlight }">
+              </v-img>
             </v-card-text>
           </v-card>
 
@@ -74,11 +84,23 @@
             rounded="lg"
             color="rgba(0,0,0,.1)"
             width="300"
-            class="mx-auto elevation-0 pb-4"
+            class="mx-auto elevation-0 "
           >
             <v-card-text>
               <h4 class="text--h4 text-center">CHOOSE YOUR INTENSITY.</h4>
-              <img src="../assets/step4.png" alt="" class="mt-12 ml-8" />
+              <v-row>
+                <v-col cols="12" lg="10" md="10" sm="12" offset="1">
+                  <v-img src="../assets/step4.png" alt="" class="mt-8 ml-2"  >
+                    <div style="width:125px;height:197px">
+                      <img src="../assets/step4_highlight.png"    alt="" class=" Hide ml-n2" 
+                 :class="{ scaled2: step4Highlight }"  /></div>
+                
+      
+              </v-img>
+                </v-col>
+              </v-row>
+             
+             
             </v-card-text>
           </v-card>
         </div>
@@ -96,31 +118,91 @@ export default {
     return {
       text: "Hello, World!",
       isTextVisible: false,
+      whiteProtien:false,
+      // step4HIghlight:false,
+      step2Highlight:false,
+      step3Highlight:false,
+      step4Highlight:false,
     };
   },
   methods: {
-    // reveal() {
-    //   var reveals = document.querySelectorAll(".headingCenter");
-    //   for (var i = 0; i < reveals.length; i++) {
-    //     var windowHeight = window.innerHeight;
-    //     var elementTop = reveals[i].getBoundingClientRect().top;
-    //     var elementVisible = 150;
+    step1Visible() {
+      setTimeout(() => {
+        this.whiteProtien=true
+      }, 1000); 
+    },
+    step1Hide() {
+      setTimeout(() => {
+        this.whiteProtien=false
+      }, 10000); 
+    },
+    step2Visible() {
+      setTimeout(() => {
+        this.step2Highlight=true
+      }, 5000); 
+    },
+    step3Visible() {
+      setTimeout(() => {
+        this.step3Highlight=true
+      }, 7000); 
+    },
+    step4Visible() {
+      setTimeout(() => {
+        this.step4Highlight=true
+      }, 8000); 
+    },
 
-    //     if (elementTop < windowHeight - elementVisible) {
-    //       reveals[i].classList.add("active");
-    //     } else {
-    //       reveals[i].classList.remove("active");
-    //     }
-    //   }
-    // },
+    makeAllInactive() {
+      setTimeout(() => {
+        this.step4Highlight=false
+        this.step3Highlight=false
+        this.step2Highlight=false
+      }, 12000); 
+    },
+
+
+    handleIntersection(entries) {
+    
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          this.step1Visible(); 
+          this.step2Visible(); 
+          this.step3Visible(); 
+          this.step4Visible(); 
+          this.makeAllInactive();
+          this.step1Hide()
+        }
+      });
+    },
+   
   },
   created() {
     window.addEventListener("scroll", this.reveal);
   },
+  mounted(){
+    const observer = new IntersectionObserver(this.handleIntersection, {
+      root: null,
+      rootMargin: '0px',
+      threshold: 0.5 
+    });
+    observer.observe(this.$refs.mySection);
+    // this.step1Visible()
+  }
 };
 </script>
   
   <style>
-
+  .Hide{
+    transition: transform 1s ease; 
+    transform: scale(0);
+  }
+.scaled {
+  transform: scale(0.2); 
+  transition: transform 1s ease; /* Add a smooth transition effect */
+}
+.scaled2 {
+  transform: scale(1); 
+  transition: transform 1s ease; /* Add a smooth transition effect */
+}
 </style>
   

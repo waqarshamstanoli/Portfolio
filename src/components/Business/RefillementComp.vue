@@ -1,6 +1,6 @@
 <template>
   <v-container>
-    <v-row class="justify-space-around containerHeight">
+    <v-row class="justify-space-around ">
       <v-col cols="12" lg="6" md="12" sm="12">
         <v-card width="425" color="transparent" class="elevation-0 mx-auto">
           <v-card-text>

@@ -1,5 +1,5 @@
 <template>
-  <v-container>
+  <v-container fluid >
     <v-row class="justify-space-around" style="height: 1000px">
       <v-col cols="12" lg="4" md="12" sm="12">
         <v-card
@@ -28,12 +28,17 @@
         /></v-img>
       </v-col>
     </v-row>
-    <flavors-component></flavors-component>
-    <howit-works></howit-works>
-    <howit-works-2></howit-works-2>
-    <app-comp></app-comp>
+    
+      <flavors-component></flavors-component>
+    
+      <howit-works  ></howit-works>
+    
+    <howit-works-2 class="ball"></howit-works-2>
+
+    <app-comp ref="section" class="section" ></app-comp>
     <sustain-ability></sustain-ability>
-    <about-us></about-us>
+    <about-us ref="myEl"></about-us>
+    
     <v-footer fixed color="transparent">
       <v-btn large icon class="mx-auto" @click="scrollToContent"
         ><v-icon>mdi-chevron-down</v-icon></v-btn
@@ -64,32 +69,98 @@ export default {
     return {
       scrollPosition: 0,
       comsumer: false,
+      translateX: 0,
+      translateY: 0,
+      increment: 0,
+      scrolling:true,
+      test:false
     };
   },
   methods: {
+    // handleScroll(event){
+    //   let intervalId = window.setInterval(() => {
+    //     if ((window.scrollY >=980 && (window.scrollY <=1000)  ||(window.scrollY >=1790 && window.scrollY<=1800) || (window.scrollY ==2599))) {
+    //       clearInterval(intervalId);
+    //       event.preventDefault();
+    //       window.scrollY=1001
+         
+    //     } else {
+    //       if (window.innerHeight + window.scrollY >= document.body.offsetHeight)
+    //         window.scrollTo(0, 0);
+    //       else window.scrollBy(0, 3);
+    //     }
+    //   }, 5);
+    // },
+    pageScroll() {
+      console.log(window.innerHeight + window.scrollY >= document.body.offsetHeight)
+      let intervalId = window.setInterval(() => {
+        if (window.scrollY >= this.scrollTo) {
+          clearInterval(intervalId);
+          this.scrollPosition = this.scrollTo;
+         
+        } else {
+          if (window.innerHeight + window.scrollY >= document.body.offsetHeight)
+            window.scrollTo(0, 0);
+          else window.scrollBy(0, 3);
+        }
+      }, 5);
+    },
+
     scrollToContent() {
+      
       if (this.scrollPosition == 0) {
-        this.scrollPosition = this.scrollPosition + 1150;
+        this.increment = 1150;
+        this.scrollTo = this.scrollPosition + this.increment;
       } else if (this.scrollPosition == 1150) {
-        this.scrollPosition = this.scrollPosition + 800;
+        this.increment = 800;
+        this.scrollTo = this.scrollPosition + this.increment;
       } else if (this.scrollPosition == 1950) {
-        this.scrollPosition = this.scrollPosition + 800;
+        this.increment = 800;
+        this.scrollTo = this.scrollPosition + this.increment;
       } else if (this.scrollPosition == 2750) {
-        this.scrollPosition = this.scrollPosition + 800;
+        this.increment = 800;
+        this.scrollTo = this.scrollPosition + this.increment;
       } else if (this.scrollPosition == 3550) {
-        this.scrollPosition = this.scrollPosition + 800;
+        this.increment = 800;
+        this.scrollTo = this.scrollPosition + this.increment;
       } else if (this.scrollPosition == 4350) {
-        this.scrollPosition = this.scrollPosition + 800;
+        this.increment = 950;
+        this.scrollTo = this.scrollPosition + this.increment;
       } else if (this.scrollPosition == 5150) {
-        this.scrollPosition = this.scrollPosition + 800;
+        alert('5150')
+        // this.increment = 800;
+        // this.scrollTo = this.scrollPosition + this.increment;
       }
-      window.scroll({
-        top: this.scrollPosition,
-        left: 0,
-        behavior: "smooth",
-      });
+      // else if (this.scrollPosition >= 5150) {
+       
+      //    this.scrollPosition =0;
+      // }
+      this.pageScroll(this.scrollTo);
+      // let x = this.scrollPosition;
+      // window.setInterval(()=>{
+      //   if(x<=this.scrollTo) {
+      //     window.scrollBy(0,2);
+      //     x++;
+      //   } else {
+
+      //     this.scrollPosition=this.scrollTo
+      //   }
+
+      // },0)
+
+      // window.scroll({
+      //   top: this.scrollPosition,
+      //   left: 0,
+      //   behavior: "smooth",
+      //   scrollEase: 1,
+      // });
+      //   this.$smoothScroll({
+      //   scrollTo: this.scrollPosition,
+      //   hash: '#sampleHash'  // required if updateHistory is true
+      // });
     },
     movetoScrollPosition(value) {
+      this.scrollPosition=value
       window.scroll({
         top: value,
         left: 0,
@@ -111,10 +182,36 @@ export default {
         }
       }
     },
+    handleIntersection(entries) {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          // Call your function when the section becomes visible
+          this.onSectionVisible();
+        }
+      });
+    },
+    onSectionVisible() {
+      alert('fdsfdsfdsf')
+      this.test=true
+      console.log(this.test)
+      // Your logic wthishen the section becomes visible
+    }
   },
 
   mounted() {
     this.animate();
+
+    const options = {
+      root: null,
+      rootMargin: "0px",
+      threshold: 0.5 // Adjust this value based on your needs
+    };
+
+    const observer = new IntersectionObserver(this.handleIntersection, options);
+    observer.observe(this.$refs.sectionElement);
+  },
+  created() {
+    // window.addEventListener("scroll",  this.handleScroll)
   },
   watch: {
     getScrollValue: {
@@ -133,4 +230,32 @@ export default {
 .marginTop {
   margin-top: 150px;
 }
+.scroll-ease {
+  transition: transform 0.03s ease-out;
+}
+.translate-element {
+  transition: transform 3s ease-out;
+  position: fixed;
+  top: 100px;
+}
+.scroll-effect {
+  transition: opacity 5s ease-in-out;
+  opacity: 1;
+}
+
+.slide-up-enter-active,
+.slide-up-leave-active {
+  transition: all 4s ease-out;
+}
+.slide-up-enter-from {
+  transform: translateY(0px);
+}
+.slide-up-leave-to {
+  transform: translateY(-300px);
+}
+
+
+
+
+
 </style>

@@ -83,7 +83,7 @@ const router = new VueRouter({
 router.beforeEach((to, from, next) => {
   let isAuthenticated = false;
   const admin = localStorage.getItem("roleAdmin");
-  console.log("router", to);
+  console.log("router", to, isAuthenticated);
   if (to.meta.needsAuth) {
     if (admin) {
       next();

@@ -1,6 +1,7 @@
 <template>
-  <v-container>
-    <v-row class="justify-space-around containerHeight">
+  <v-container fluid >
+   
+    <v-row class="justify-space-around containerHeight" :class="{ square: test }" ref="sectionElement">
       <v-col cols="12" lg="6" md="12" sm="12">
         <v-card width="425" color="transparent" class="elevation-0 mx-auto">
           <v-card-text>
@@ -27,7 +28,12 @@
         </v-card>
       </v-col>
       <v-col cols="12" lg="6" md="12" sm="12">
-        <img src="../assets/mobile-app-screens.png" alt="" />
+        <v-card color="transparent" width="100%" class="elevation-0">
+        <img src="../assets/mobile-app-screens.png" alt="" class="element"
+      :class="{ 'element-hovered': isHovered }"
+      @mouseover="setHovered(true)"
+      @mouseout="setHovered(false)" />
+    </v-card>
       </v-col>
     </v-row>
   </v-container>
@@ -39,13 +45,66 @@ export default {
     return {
       text: "Hello, World!",
       isTextVisible: false,
+      isHovered: false,
+      test:false
+
     };
   },
+  methods: {
+    setHovered(value) {
+      this.isHovered = value;
+    },
+     handleIntersection(entries) {
+      
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          // Call your function when the section becomes visible
+          this.onSectionVisible();
+        }
+      });
+    },
+    onSectionVisible() {
+      
+      this.test=true
+      // Your logic when the section becomes visible
+    }
+  },
+  mounted(){
+
+    const options = {
+      root: null,
+      rootMargin: "0px",
+      threshold: 0.5 // Adjust this value based on your needs
+    };
+
+    const observer = new IntersectionObserver(this.handleIntersection, options);
+    observer.observe(this.$refs.sectionElement);
+  }
  
 };
 </script>
   
-  <style>
+  <style scoped>
+  .element {
+  /* Styles for the element */
+  transition: transform 1s ease-out;
+}
+
+.element-hovered {
+  transform: scale(1.1);
+  
+}
+.square {
+  /* background-color: red; */
+  animation-name: rotateAnimation;
+  animation-duration: 5s;
+  /* animation-timeline: squareTimeline; */
+   animation-fill-mode: forwards; 
+}
+@keyframes rotateAnimation {
+   0%   { left:0px; top:700px;}
+  100% { left:0px; top:0px;}
+}
 /* @import url('https://fonts.googleapis.com/css2?family=Asap&display=swap'); */
 /* *{
     margin: 0;

@@ -8,7 +8,6 @@ const getters = {
 };
 const mutations = {
     SET_SCROLL_POSITION: (state, payload) => {
-        console.log('mutation',payload)
         state.scroll = payload;
     },
 };

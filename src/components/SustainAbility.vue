@@ -1,10 +1,11 @@
 <template>
-  <div class="height">
-    <v-row class="justify-space-around">
-      <v-col cols="12" lg="6" md="12" sm="12">
+  <div class="height ">
+    <v-row class="justify-space-around " >
+      <v-col cols="12" lg="6" md="12" sm="12" >
+        <v-card color="transparent" width="100%" class="elevation-0">
         <div class="d-flex ml-16">
           <img src="../assets/cup-dark2.png"  width="200"
-            height="400" class="cupImage" alt="" :class="{ scaled: dark }" />
+            height="400" class="cupImage dark" alt="" :class="{ scaled: dark }" />
           <img
             src="../assets/cup-light-purple2.png"
             alt=""
@@ -22,6 +23,7 @@
             :class="{ scaled: darkPurple }"
           />
         </div>
+      </v-card>
       </v-col>
       <v-col cols="12" lg="6" md="12" sm="12">
         <v-card width="100%" color="transparent" class="elevation-0 mx-auto">
@@ -106,7 +108,7 @@ export default {
     return {
       text: "Hello, World!",
       isTextVisible: false,
-      dark:false,
+      dark:true,
       darkPurple:false,
       lightPurple:false,
       scaleDark:false
@@ -143,11 +145,15 @@ export default {
   <style>
 .cupImage {
   margin-top: 170px;
+  transition: transform 1.9s ease; 
 }
 .scaled {
   transform: scale(1.5); /* Increase the scale value as desired */
-  transition: transform 0.9s ease; /* Add a smooth transition effect */
+  transition: transform 1.9s ease; /* Add a smooth transition effect */
 }
+/* .dark{
+  transform: scale(5.5);
+} */
 
 </style>
   

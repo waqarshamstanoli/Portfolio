@@ -1,6 +1,6 @@
 <template>
   <div>
-    <v-app-bar class="pb-8 pt-4  primary" extended fixed app>
+    <v-app-bar class="pb-8 pt-4 topBarOpacity primary" extended fixed app>
       <v-row class="justify-space-around">
         <v-col cols="12" lg="4" md="12" sm="12">
           <v-app-bar-nav-icon
@@ -19,26 +19,51 @@
         </v-col>
 
         <v-col cols="12" lg="4" md="12" sm="12" class="d-none d-md-block">
+          <!-- <v-switch v-model="consumer" @change="toggleTheme"></v-switch> -->
+
           <div class="d-flex justify-end">
             <span class="gray--text text-uppercase topBarSpan">consumer</span>
-            <input-switch class="mt-n4 mx-4" v-model="consumer"  @switch-changed="toggleTheme"></input-switch>
-            <!-- <div>
-  <input type="checkbox" id="switch"   @click="toggleTheme" /><label for="switch">Toggle</label>
-</div> -->
-            <!-- <v-switch inset dense  color="green" class="mt-0 mx-4" v-model="consumer"></v-switch> -->
+            <v-switch
+              inset
+              color="grey"
+              v-model="consumer"
+              class="mx-4"
+              @change="handleSwitchToggle"
+            ></v-switch>
+
+            <!-- <input-switch
+             
+              v-model="consumer"
+              @switch-changed="toggleTheme"
+            ></input-switch> -->
+
             <span class="gray--text text-uppercase topBarSpan">business</span>
             <div class="aselect">
-             
-
-              <div class="selector" @click="toggle()">
-                <div class="label">
-                  <span>{{ value }}</span>
+              <div class="selector" @mouseover="toggle(true)">
+                <div class="label d-flex">
+                  <img
+                    :src="image"
+                    alt=""
+                    width="15"
+                    height="15"
+                    class="mt-1"
+                  />
+                  <span class="white--text mx-2">{{ name }}</span>
+                  <!-- <img src="../assets/dropdown icon.png" alt="" width="20"/> -->
                 </div>
-                <div class="arrow"  ></div>
+                <!-- <div class="arrow"></div> -->
+                
                 <div>
                   <ul v-if="visible">
-                    <li class="d-flex" v-for="item in list" :key="item" @click="select(item)">
-                      <span><img src="../assets/ger-flag.png" alt="" class="mr-2"/></span>
+                    <li
+                      class="d-flex mt-2 cursor-pointer"
+                      v-for="item in list"
+                      :key="item"
+                      @click="select(item)"
+                    >
+                      <span
+                        ><img :src="item.img" alt="" width="20" class="mr-2"
+                      /></span>
                       {{ item.name }}
                     </li>
                   </ul>
@@ -46,24 +71,61 @@
               </div>
             </div>
           </div>
-          <div class="d-flex justify-end" v-if="!consumer">
-            <v-btn text large @click="scrollTo(1150)"> flavors </v-btn>
-            <v-btn text large @click="scrollTo(1950)"> how it works </v-btn>
-            <v-btn text large @click="scrollTo(3550)"> app </v-btn>
-            <v-btn text large @click="scrollTo(4350)"> sustainability </v-btn>
-            <v-btn text large @click="scrollTo(5150)"> about us </v-btn>
+          <div class="d-flex justify-end" v-if="!comsumer">
+            <v-btn
+              text
+              large
+              @click="scrollTo(1150)"
+              :class="{ activeButton: scrollPosition == 1150 }"
+            >
+              flavors
+            </v-btn>
+            <v-btn
+              text
+              large
+              @click="scrollTo(1950)"
+              :class="{ activeButton: scrollPosition == 1950 }"
+            >
+              how it works
+            </v-btn>
+            <v-btn
+              text
+              large
+              @click="scrollTo(3550)"
+              :class="{ activeButton: scrollPosition == 3550 }"
+            >
+              app
+            </v-btn>
+            <v-btn
+              text
+              large
+              @click="scrollTo(4350)"
+              :class="{ activeButton: scrollPosition == 4350 }"
+            >
+              sustainability
+            </v-btn>
+            <v-btn
+              text
+              large
+              @click="scrollTo(5150)"
+              :class="{ activeButton: scrollPosition == 5150 }"
+            >
+              about us
+            </v-btn>
           </div>
           <div class="d-flex justify-end" v-else>
-            <v-btn text large to="/business/machines" > machine </v-btn>
+            <v-btn text large to="/business/machines"> machine </v-btn>
             <v-btn text large to="/business/app"> app </v-btn>
             <v-btn text large to="/business/refillment"> refillment </v-btn>
-            <v-btn text large to="/business/digitalization"> digitilization </v-btn>
-            <v-btn text large to="/business/about"> about  </v-btn>
-            <v-btn text large to="/business/contact"> contact  </v-btn>
+            <v-btn text large to="/business/digitalization">
+              digitilization
+            </v-btn>
+            <v-btn text large to="/business/about"> about </v-btn>
+            <v-btn text large to="/business/contact"> contact </v-btn>
           </div>
         </v-col>
       </v-row>
-  </v-app-bar>
+    </v-app-bar>
     <v-navigation-drawer
       class="back1"
       width="100%"
@@ -76,82 +138,76 @@
           <v-icon class="ml-auto">mdi-close</v-icon>
         </v-btn>
       </div>
-
-     
-      
     </v-navigation-drawer>
   </div>
 </template>
 <script>
-import InputSwitch from '@/components/InputSwitch.vue';
-import { mapActions,  } from 'vuex';
+// import InputSwitch from "@/components/InputSwitch.vue";
+import { mapActions } from "vuex";
 export default {
-  components: { InputSwitch },
+  // components: { InputSwitch },
   data() {
     return {
-      drawer: false,
-      dashboardButton: false,
-consumer:false,
+      isHovered: true,
+      consumer: false,
+      scrollPosition: "",
       visible: false,
-      value: "DE",
+      name: "DE",
+      image: require("../assets/ger-flag.png"),
       list: [
-        { name: "DE", img: "require('../assets/logo.png')" },
-        { name: "GER", img: "require('../assets/logo.png')" },
+        { name: "DE", img: require("../assets/ger-flag.png") },
+        { name: "GER", img: require("../assets/eng-flag.png") },
       ],
     };
   },
   methods: {
-    ...mapActions([
-      'moveToNext'
-    ]),
+    ...mapActions(["moveToNext"]),
     openModal() {
       this.$emit("openDialog", true);
     },
-    toggle() {
-      this.visible = true;
-      console.log(this.visible);
+    toggle(event) {
+      this.visible = event;
     },
     select(option) {
-      console.log(option);
-      this.value = option.name;
+      alert("");
+      this.name = option.name;
+      this.image = option.img;
+      this.visible = false;
     },
-    // scrollTo(scrollValue){
-    //   this.moveToNext(scrollValue)
-    // },
-    toggleTheme() {
-      this.consumer=!this.consumer
-      if(this.$vuetify.theme.dark ==false){
-        this.$vuetify.theme.dark=true
-        // this.$router.push({path:'/business/machines'})
+
+    handleSwitchToggle() {
+      // this.consumer = !this.consumer;
+      // const theme = localStorage.getItem('theme');
+      // localStorage.getItem("theme");
+
+      if (this.$vuetify.theme.dark == false) {
+        this.$vuetify.theme.dark = true;
+        this.$router.push({ path: "/business/machines" });
+      } else {
+        this.$vuetify.theme.dark = false;
+        this.$router.push({ path: "/" });
       }
-      else{
-        this.$vuetify.theme.dark=false
-        // this.$router.push({path:'/'})
-      }
-      
-    // this.$vuetify.theme.dark = !this.$vuetify.theme.dark;
-  },
-  scrollTo(color) {
-     
-     this.$store.commit("SET_SCROLL_POSITION", 
-       color
-     );
-   }
+
+      // this.$vuetify.theme.dark = !this.$vuetify.theme.dark;
+    },
+    scrollTo(position) {
+      this.scrollPosition = position;
+      this.$store.commit("SET_SCROLL_POSITION", position);
+    },
   },
   computed: {},
 };
 </script>
 
 <style scoped>
-
 .aselect {
-  width: 65px;
+  width: 75px;
 }
 
 .arrow {
   position: absolute;
   right: 10px;
-  top: 40%;
+  top: 20%;
   width: 0;
   height: 0;
   border-left: 7px solid transparent;
@@ -166,7 +222,7 @@ consumer:false,
 }
 .label {
   display: block;
-  padding: 12px;
+  padding: 2px 12px;
   font-size: 16px;
   color: white;
   font-family: Tungsten !important;
@@ -187,16 +243,23 @@ consumer:false,
   z-index: 1;
 }
 ul {
-  width: 100%;
+  /* width: 100%; */
   list-style-type: none;
-  padding: 0;
+
   margin: 0;
   font-size: 16px;
+  font-family: tungsten;
   border: 1px solid gainsboro;
   position: absolute;
   z-index: 1;
   background: #fff;
   border-radius: 5px;
-  padding: 10px;
+  padding: 10px 25px 10px 10px;
+}
+.topBarOpacity {
+  opacity: 0.8;
+}
+.activeButton {
+  background-color: #ffec00;
 }
 </style>

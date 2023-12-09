@@ -4,7 +4,7 @@
       <Top-bar></Top-bar>
       <dashboard-content ref="content" class="body"></dashboard-content>
       
-      <Footer class="mt-8"></Footer>
+      <Footer></Footer>
     </div>
   </div>
 </template>
