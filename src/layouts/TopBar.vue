@@ -41,20 +41,20 @@
             <div class="aselect">
               <div class="selector" @mouseover="toggle(true)">
                 <div class="label d-flex">
-                  <img
+                  <!-- <img
                     :src="image"
                     alt=""
                     width="15"
                     height="15"
                     class="mt-1"
-                  />
+                  /> -->
                   <span class="white--text mx-2">{{ name }}</span>
                   <!-- <img src="../assets/dropdown icon.png" alt="" width="20"/> -->
                 </div>
                 <!-- <div class="arrow"></div> -->
                 
                 <div>
-                  <ul v-if="visible">
+                  <!-- <ul v-if="visible">
                     <li
                       class="d-flex mt-2 cursor-pointer"
                       v-for="item in list"
@@ -66,7 +66,7 @@
                       /></span>
                       {{ item.name }}
                     </li>
-                  </ul>
+                  </ul> -->
                 </div>
               </div>
             </div>
