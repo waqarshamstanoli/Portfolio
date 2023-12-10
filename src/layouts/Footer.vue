@@ -1,6 +1,6 @@
 <template>
   <v-footer class="pa-0" >
-    <v-card tile width="100%" color="#EFEFF0">
+    <!-- <v-card tile width="100%" color="#EFEFF0">
       <v-card-text>
         <v-row class="">
           <v-col cols="12" lg="6" md="12" sm="12">
@@ -53,7 +53,7 @@
       </v-row>
 
 
-    </v-card>
+    </v-card> -->
   </v-footer>
 </template>
 <script>
