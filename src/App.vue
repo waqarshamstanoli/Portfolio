@@ -3,6 +3,7 @@
    
 
     <v-main>
+     
       <img src="./assets/swinger.png" alt="" class="setimage" :class="{ transformImage: left }"/>
       <router-view/>
     </v-main>
