@@ -8,11 +8,9 @@
           color="transparent"
         >
           <h1 class="text--h2 text-center">
-            <span class="text--h2 secondary--text">
-              YOUR NEEDS. YOUR INGREDIENTS.
-            </span>
+            
             <br />
-            YOUR RULES.
+            PROJECTS
           </h1>
           <p class="text--body-1 mt-4 ffHalyard text-center">
             Stay in control - und create the shake that meets your needs. Just

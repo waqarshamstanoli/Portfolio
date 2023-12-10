@@ -23,13 +23,13 @@
 
           <div class="d-flex justify-end">
             <span class="gray--text text-uppercase topBarSpan">consumer</span>
-            <v-switch
+            <!-- <v-switch
               inset
               color="grey"
               v-model="consumer"
               class="mx-4"
               @change="handleSwitchToggle"
-            ></v-switch>
+            ></v-switch> -->
 
             <!-- <input-switch
              
@@ -75,42 +75,53 @@
             <v-btn
               text
               large
-              @click="scrollTo(1150)"
+              @click="scrollTo(100)"
               :class="{ activeButton: scrollPosition == 1150 }"
             >
-              flavors
+            About Me
             </v-btn>
             <v-btn
               text
               large
-              @click="scrollTo(1950)"
+              @click="scrollTo(1050)"
               :class="{ activeButton: scrollPosition == 1950 }"
             >
-              how it works
+            
+            Projects
+
             </v-btn>
             <v-btn
               text
               large
-              @click="scrollTo(3550)"
+              @click="scrollTo(1850)"
               :class="{ activeButton: scrollPosition == 3550 }"
             >
-              app
+            Skills
+
             </v-btn>
             <v-btn
               text
               large
-              @click="scrollTo(4350)"
+              @click="scrollTo(2650)"
               :class="{ activeButton: scrollPosition == 4350 }"
             >
-              sustainability
+            Work Experience
             </v-btn>
             <v-btn
               text
               large
-              @click="scrollTo(5150)"
+              @click="scrollTo(3450)"
               :class="{ activeButton: scrollPosition == 5150 }"
             >
-              about us
+            Education
+            </v-btn>
+            <v-btn
+              text
+              large
+              @click="scrollTo(4250)"
+              :class="{ activeButton: scrollPosition == 5150 }"
+            >
+            Contact
             </v-btn>
           </div>
           <div class="d-flex justify-end" v-else>
@@ -149,7 +160,7 @@ export default {
   data() {
     return {
       isHovered: true,
-      consumer: false,
+      // consumer: false,
       scrollPosition: "",
       visible: false,
       name: "DE",
@@ -187,6 +198,7 @@ export default {
       // this.$vuetify.theme.dark = !this.$vuetify.theme.dark;
     },
     scrollTo(position) {
+      console.log('test',position)
       this.scrollPosition = position;
       this.$store.commit("SET_SCROLL_POSITION", position);
     },

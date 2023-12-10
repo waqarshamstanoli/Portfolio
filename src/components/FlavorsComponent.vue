@@ -2,52 +2,26 @@
   <v-container
     fluid
   >
-    <v-row class="containerHeight">
+    <v-row >
       <v-col cols="12" lg="6" md="12" sm="12">
-        <carousel-3d>
-    <slide :index="0">
-      <img src="https://thienha3d.vn/wp-content/uploads/2019/01/hinh-dan-tuong-phong-canh-04.jpg">
-    </slide>
-    <slide :index="1">
-      <img src="https://thienha3d.vn/wp-content/uploads/2019/01/hinh-dan-tuong-phong-canh-04.jpg">
-    </slide>
-    <slide :index="2">
-      <img src="../assets/10_maintrigger-easyfitness.png">
-    </slide>
-    <slide :index="3">
-      <img src="../assets/1_machines-light.png">
-    </slide>
-  </carousel-3d>
+       
       </v-col>
       <v-col cols="12" lg="6" md="12" sm="12">
-        <v-card width="530" class="elevation-0 mx-auto" color="transparent">
-          <h1 class="text--h2 headingRight">
-            <span class="text--h2 secondary--text"> 28 FLAVORS </span> <br />
-            ENDLESS VARIATIONS
-          </h1>
-          <p class="text--body-1 mt-4 ffHalyard paragraphRight">
-            Discover the delicious BODYSHAKE® flavors. Unique flavor creations
-            give you that extra taste-plus and truly never get boring. Choose
-            your favorite - or try countless variations. Enjoy
-            strawberry-chocolate or treat yourself with almond-vanilla. We got
-            them all.
-          </p>
-        </v-card>
+       
       </v-col>
     </v-row>
   </v-container>
 </template>
 
 <script>
-import { Carousel3d, Slide } from 'vue-carousel-3d';
+// import { Carousel3d, Slide } from 'vue-carousel-3d';
 
 export default {
   data() {
     return {};
   },
   components: {
-    Carousel3d,
-    Slide
+   
   },
   methods: {
     pageScroll() {

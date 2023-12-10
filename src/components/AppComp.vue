@@ -6,15 +6,16 @@
         <v-card width="425" color="transparent" class="elevation-0 mx-auto">
           <v-card-text>
             <h1 class="text--h2 headingLeft">
-              <span class="secondary--text"> ONE APP. </span> <br />
+              <span class="secondary--text">  </span> <br />
 
-              MANY BENEFITS.
+              SKILLS
             </h1>
-            <p class="text--body-1 ffHalyard mt-4 paragraphLeft">
-              All within the app: Manage your membership, enjoy exclusive
-              benefits and save real money. Watch out for our loyalty program.
-              Coming soon! Download now and enjoy.
-            </p>
+            <p class="text--body-1 ffHalyard mt-4 paragraphLeft">Vue.js: I specialize in building modern and responsive web applications using Vue.js, harnessing the power of its components and reactivity.</p>
+        <p class="text--body-1 ffHalyard mt-4 paragraphLeft">HTML5 & CSS3: Proficient in crafting well-structured and visually appealing user interfaces, ensuring a seamless user experience.</p>
+        <p class="text--body-1 ffHalyard mt-4 paragraphLeft">JavaScript: Leveraging the full potential of JavaScript to create dynamic and interactive features that enhance user engagement.</p>
+        <p class="text--body-1 ffHalyard mt-4 paragraphLeft">Git: Experienced in version control to collaborate efficiently and maintain code integrity throughout the development process.</p>
+        
+           
           </v-card-text>
           <v-card-actions>
             <img src="../assets/google-icon.png" alt="" width="140" />

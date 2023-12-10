@@ -29,23 +29,24 @@
         <v-card width="100%" color="transparent" class="elevation-0 mx-auto">
           <v-card-text>
             <h1 class="text--h2 headingRight">
-              <span class="secondary--text"> SUSTAINABLE - </span> <br />
+              
 
-              BECAUSE EXCELLENCE CAN'T KEEP UP.
+              WORK EXPERIENCE
+
             </h1>
+           
+
+
             <p class="text--body-1 ffHalyard mt-4 paragraphRight">
-              Because disposable cups sooner or later will go into the trash,
-              here comes <br />
-              the alternative: Our to-go cups made from bamboo. Simply great.
-              Simply <br />
-              reusable. The classic design fits every BODYSHAKE® machine. Thanks
-              to <br />
-              the screw cap, nothing gets spilled in the hustle and bustle of
-              daily life. <br />
-              Natural, robust materials comply with food safety standards and
-              make <br />
-              cups dishwasher-proof up to 70°C.
+              [Company Name 1] - [Position] ([Month/Year] - [Month/Year])
+Description: Outline your responsibilities, achievements, and notable projects during your time at the company. Mention any collaborations, advancements, or innovations you contributed to. <br />
+             
             </p>
+            <P class="text--body-1 ffHalyard mt-4 paragraphRight">
+              [Company Name 2] - [Position] ([Month/Year] - [Month/Year])
+Description: Highlight your role, accomplishments, and the skills you gained while working at this company. Discuss how you added value and contributed to the team's success.
+            </P>
+           
           </v-card-text>
           <v-card-actions>
             <img

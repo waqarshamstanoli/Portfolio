@@ -5,26 +5,18 @@
           <v-card width="500" color="transparent" class="elevation-0 ml-16 marginTop">
             <v-card-text>
               <h1 class="text--h2 headingLeft">
-                <span class="secondary--text"> MADE IN GERMANY. </span> <br />
+                
 
-                POPULAR ALL AROUND THE GLOBE.
+EDUCATION
               </h1>
               <p class="text--body-1 ffHalyard paragraphLeft">
-                At BODYSHAKE® we aim for a positive impact on our way to a
-                healthy society. For us, high-quality protein shakes are part of
-                a balanced and fit lifestyle.
+                Degree: [Your Degree] - [University Name] ([Month/Year] - [Month/Year])
+
               </p>
               <p class="text--body-1 ffHalyard paragraphLeft">
-                We see a bright future - healthy, sustainable and digital:
-                That's why our shakes are freshly prepared, made just for you -
-                always on a basis of high-class ingredients and sustainable
-                production.
+                Relevant Courses: List any courses or certifications that enhance your skills as a Vue.js developer.
               </p>
-              <p class="text--body-1 ffHalyard paragraphLeft">
-                Our vision is to provide access to BODYSHAKE® in every situation
-                - for athletes, workaholics and shopping queens. With you we can
-                make the dream come true! Are you with us?
-              </p>
+             
             </v-card-text>
           </v-card>
         </v-col>

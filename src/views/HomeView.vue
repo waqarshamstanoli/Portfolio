@@ -9,9 +9,8 @@
         >
           <v-card-text>
             <h1 class="text--h1 headingLeft">YOUR PROTEIN SHAKE.</h1>
-            <h2 class="text--h3 mt-4">
-              CUSTOMIZED PROTEIN SHAKES. HIGH-CLASS INGREDIENTS. POWER FOR YOUR
-              DAILY LIFE.
+            <h2 class="text--h3 mt-4 text-uppercase">
+              Hello, I'm [Your Name], a passionate and dedicated Vue.js developer with a love for creating interactive and dynamic web applications. I thrive on turning ideas into reality through clean and efficient code. My journey in the world of web development has been exciting, and I'm always eager to take on new challenges.
             </h2>
           </v-card-text>
           <v-card-actions>
@@ -20,12 +19,21 @@
         </v-card>
       </v-col>
       <v-col cols="12" lg="5" md="12" sm="12">
-        <v-img src="../assets/machine.png" width="410" alt=""
+        <h1>Skills</h1>
+        
+
+
+
+
+
+
+
+        <!-- <v-img src="../assets/machine.png" width="410" alt=""
           ><img
             src="../assets/BS_Screensaver-Banana_Final.gif"
             class="gifAnimation"
             alt=""
-        /></v-img>
+        /></v-img> -->
       </v-col>
     </v-row>
     
@@ -33,7 +41,7 @@
     
       <howit-works  ></howit-works>
     
-    <howit-works-2 class="ball"></howit-works-2>
+    <!-- <howit-works-2 class="ball"></howit-works-2> -->
 
     <app-comp ref="section" class="section" ></app-comp>
     <sustain-ability></sustain-ability>
@@ -52,7 +60,7 @@ import { mapGetters } from "vuex";
 
 import FlavorsComponent from "@/components/FlavorsComponent.vue";
 import HowitWorks from "@/components/HowitWorks.vue";
-import HowitWorks2 from "@/components/HowitWorks2.vue";
+// import HowitWorks2 from "@/components/HowitWorks2.vue";
 import AppComp from "@/components/AppComp.vue";
 import SustainAbility from "@/components/SustainAbility.vue";
 import AboutUs from "@/components/AboutUs.vue";
@@ -60,7 +68,7 @@ export default {
   components: {
     FlavorsComponent,
     HowitWorks,
-    HowitWorks2,
+    // HowitWorks2,
     AppComp,
     SustainAbility,
     AboutUs,
@@ -107,7 +115,7 @@ export default {
     },
 
     scrollToContent() {
-      
+      console.log('fdfasf')
       if (this.scrollPosition == 0) {
         this.increment = 1150;
         this.scrollTo = this.scrollPosition + this.increment;
