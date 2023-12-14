@@ -1,52 +1,37 @@
 <template>
-  <v-container fluid >
-    <v-row class="justify-space-around" style="height: 1000px">
-      <v-col cols="12" lg="4" md="12" sm="12">
+  <v-container fluid>
+    <v-row class="justify-space-around" style="height: 100vh">
+      <v-col cols="12" lg="12" md="12" sm="12">
         <v-card
-          width="425"
+          width="50%"
           color="transparent"
           class="elevation-0 mx-auto marginTop"
         >
           <v-card-text>
-            <h1 class="text--h1 headingLeft">YOUR PROTEIN SHAKE.</h1>
-            <h2 class="text--h3 mt-4 text-uppercase">
-              Hello, I'm [Your Name], a passionate and dedicated Vue.js developer with a love for creating interactive and dynamic web applications. I thrive on turning ideas into reality through clean and efficient code. My journey in the world of web development has been exciting, and I'm always eager to take on new challenges.
+            <h1 class="text--h1 headingLeft text-center">
+              Hi, My Name Is Waqar Shams
+            </h1>
+            <h4 class="text--h4 mt-4 headingLeft text-center">I AM A FRONT END DEVELOPER</h4>
+            <h2 class="text--h3 mt-8 text-uppercase text-center">
+              Hello, I'm Waqar Shams, a passionate and dedicated Vue.js
+              developer with a love for creating interactive and dynamic web
+              applications. I thrive on turning ideas into reality through clean
+              and efficient code. My journey in the world of web development has
+              been exciting, and I'm always eager to take on new challenges.
             </h2>
           </v-card-text>
           <v-card-actions>
-            <v-btn outlined rounded x-large class="px-16 py-8">Try Now</v-btn>
+            <!-- <v-btn outlined rounded x-large class="px-16 py-8">Try Now</v-btn> -->
           </v-card-actions>
         </v-card>
       </v-col>
-      <v-col cols="12" lg="5" md="12" sm="12">
-        <h1>Skills</h1>
-        
-
-
-
-
-
-
-
-        <!-- <v-img src="../assets/machine.png" width="410" alt=""
-          ><img
-            src="../assets/BS_Screensaver-Banana_Final.gif"
-            class="gifAnimation"
-            alt=""
-        /></v-img> -->
-      </v-col>
     </v-row>
-    
-      <flavors-component></flavors-component>
-    
-      <howit-works  ></howit-works>
-    
-    <!-- <howit-works-2 class="ball"></howit-works-2> -->
 
-    <app-comp ref="section" class="section" ></app-comp>
-    <sustain-ability></sustain-ability>
-    <about-us ref="myEl"></about-us>
-    
+    <flavors-component></flavors-component>
+    <projects-comp></projects-comp>
+    <SkillsComp ref="section" class="section"></SkillsComp>
+    <WorkExperience></WorkExperience>
+    <education-comp ref="myEl"></education-comp>
     <v-footer fixed color="transparent">
       <v-btn large icon class="mx-auto" @click="scrollToContent"
         ><v-icon>mdi-chevron-down</v-icon></v-btn
@@ -59,53 +44,39 @@
 import { mapGetters } from "vuex";
 
 import FlavorsComponent from "@/components/FlavorsComponent.vue";
-import HowitWorks from "@/components/HowitWorks.vue";
-// import HowitWorks2 from "@/components/HowitWorks2.vue";
-import AppComp from "@/components/AppComp.vue";
-import SustainAbility from "@/components/SustainAbility.vue";
-import AboutUs from "@/components/AboutUs.vue";
+import ProjectsComp from "@/components/ProjectsComp.vue";
+import SkillsComp from "@/components/SkillsComp.vue";
+import WorkExperience from "@/components/WorkExperience.vue";
+import EducationComp from "@/components/EducationComp.vue";
 export default {
   components: {
     FlavorsComponent,
-    HowitWorks,
-    // HowitWorks2,
-    AppComp,
-    SustainAbility,
-    AboutUs,
+    ProjectsComp,
+    SkillsComp,
+    WorkExperience,
+    EducationComp,
   },
   data() {
     return {
       scrollPosition: 0,
-      comsumer: false,
-      translateX: 0,
-      translateY: 0,
+      // comsumer: false,
+      // translateX: 0,
+      // translateY: 0,
       increment: 0,
-      scrolling:true,
-      test:false
+      // scrolling: true,
+      test: false,
     };
   },
   methods: {
-    // handleScroll(event){
-    //   let intervalId = window.setInterval(() => {
-    //     if ((window.scrollY >=980 && (window.scrollY <=1000)  ||(window.scrollY >=1790 && window.scrollY<=1800) || (window.scrollY ==2599))) {
-    //       clearInterval(intervalId);
-    //       event.preventDefault();
-    //       window.scrollY=1001
-         
-    //     } else {
-    //       if (window.innerHeight + window.scrollY >= document.body.offsetHeight)
-    //         window.scrollTo(0, 0);
-    //       else window.scrollBy(0, 3);
-    //     }
-    //   }, 5);
-    // },
+    
     pageScroll() {
-      console.log(window.innerHeight + window.scrollY >= document.body.offsetHeight)
+      console.log(
+        window.innerHeight + window.scrollY >= document.body.offsetHeight
+      );
       let intervalId = window.setInterval(() => {
         if (window.scrollY >= this.scrollTo) {
           clearInterval(intervalId);
           this.scrollPosition = this.scrollTo;
-         
         } else {
           if (window.innerHeight + window.scrollY >= document.body.offsetHeight)
             window.scrollTo(0, 0);
@@ -115,7 +86,7 @@ export default {
     },
 
     scrollToContent() {
-      console.log('fdfasf')
+      console.log("fdfasf");
       if (this.scrollPosition == 0) {
         this.increment = 1150;
         this.scrollTo = this.scrollPosition + this.increment;
@@ -135,40 +106,15 @@ export default {
         this.increment = 950;
         this.scrollTo = this.scrollPosition + this.increment;
       } else if (this.scrollPosition == 5150) {
-        alert('5150')
-        // this.increment = 800;
-        // this.scrollTo = this.scrollPosition + this.increment;
+        alert("5150");
+        
       }
-      // else if (this.scrollPosition >= 5150) {
-       
-      //    this.scrollPosition =0;
-      // }
+      
       this.pageScroll(this.scrollTo);
-      // let x = this.scrollPosition;
-      // window.setInterval(()=>{
-      //   if(x<=this.scrollTo) {
-      //     window.scrollBy(0,2);
-      //     x++;
-      //   } else {
-
-      //     this.scrollPosition=this.scrollTo
-      //   }
-
-      // },0)
-
-      // window.scroll({
-      //   top: this.scrollPosition,
-      //   left: 0,
-      //   behavior: "smooth",
-      //   scrollEase: 1,
-      // });
-      //   this.$smoothScroll({
-      //   scrollTo: this.scrollPosition,
-      //   hash: '#sampleHash'  // required if updateHistory is true
-      // });
+      
     },
     movetoScrollPosition(value) {
-      this.scrollPosition=value
+      this.scrollPosition = value;
       window.scroll({
         top: value,
         left: 0,
@@ -191,7 +137,7 @@ export default {
       }
     },
     handleIntersection(entries) {
-      entries.forEach(entry => {
+      entries.forEach((entry) => {
         if (entry.isIntersecting) {
           // Call your function when the section becomes visible
           this.onSectionVisible();
@@ -199,11 +145,11 @@ export default {
       });
     },
     onSectionVisible() {
-      alert('fdsfdsfdsf')
-      this.test=true
-      console.log(this.test)
+      alert("fdsfdsfdsf");
+      this.test = true;
+      console.log(this.test);
       // Your logic wthishen the section becomes visible
-    }
+    },
   },
 
   mounted() {
@@ -212,7 +158,7 @@ export default {
     const options = {
       root: null,
       rootMargin: "0px",
-      threshold: 0.5 // Adjust this value based on your needs
+      threshold: 0.5, // Adjust this value based on your needs
     };
 
     const observer = new IntersectionObserver(this.handleIntersection, options);
@@ -261,9 +207,4 @@ export default {
 .slide-up-leave-to {
   transform: translateY(-300px);
 }
-
-
-
-
-
 </style>

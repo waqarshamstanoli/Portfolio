@@ -1,52 +1,48 @@
 <template>
-  <div class="height ">
-    <v-row class="justify-space-around " >
-      <v-col cols="12" lg="6" md="12" sm="12" >
+  <div class="height">
+    <v-row class="justify-space-around">
+      <v-col cols="12" lg="6" md="12" sm="12">
         <v-card color="transparent" width="100%" class="elevation-0">
-        <div class="d-flex ml-16">
-          <img src="../assets/cup-dark2.png"  width="200"
-            height="400" class="cupImage dark" alt="" :class="{ scaled: dark }" />
-          <img
-            src="../assets/cup-light-purple2.png"
-            alt=""
-            width="200"
-            height="400"
-            class="cupImage ml-12"
-            :class="{ scaled: lightPurple }"
-          />
-          <img
-            src="../assets/cup-dark-purple2.png"
-            alt=""
-            width="200"
-            height="400"
-            class="cupImage ml-12"
-            :class="{ scaled: darkPurple }"
-          />
-        </div>
-      </v-card>
+          <div class="d-flex flex-wrap ml-16">
+            <img
+              src="../assets/cup-dark2.png"
+              class="cupImage glass dark"
+              alt=""
+              :class="{ scaled: dark }"
+            />
+            <img
+              src="../assets/cup-light-purple2.png"
+              alt=""
+              class="cupImage glass ml-12"
+              :class="{ scaled: lightPurple }"
+            />
+            <img
+              src="../assets/cup-dark-purple2.png"
+              alt=""
+              class="cupImage glass ml-12"
+              :class="{ scaled: darkPurple }"
+            />
+          </div>
+        </v-card>
       </v-col>
       <v-col cols="12" lg="6" md="12" sm="12">
         <v-card width="100%" color="transparent" class="elevation-0 mx-auto">
           <v-card-text>
-            <h1 class="text--h2 headingRight">
-              
-
-              WORK EXPERIENCE
-
-            </h1>
-           
-
+            <h1 class="text--h2 headingRight">WORK EXPERIENCE</h1>
 
             <p class="text--body-1 ffHalyard mt-4 paragraphRight">
               [Company Name 1] - [Position] ([Month/Year] - [Month/Year])
-Description: Outline your responsibilities, achievements, and notable projects during your time at the company. Mention any collaborations, advancements, or innovations you contributed to. <br />
-             
+              Description: Outline your responsibilities, achievements, and
+              notable projects during your time at the company. Mention any
+              collaborations, advancements, or innovations you contributed to.
+              <br />
             </p>
             <P class="text--body-1 ffHalyard mt-4 paragraphRight">
               [Company Name 2] - [Position] ([Month/Year] - [Month/Year])
-Description: Highlight your role, accomplishments, and the skills you gained while working at this company. Discuss how you added value and contributed to the team's success.
+              Description: Highlight your role, accomplishments, and the skills
+              you gained while working at this company. Discuss how you added
+              value and contributed to the team's success.
             </P>
-           
           </v-card-text>
           <v-card-actions>
             <img
@@ -61,7 +57,6 @@ Description: Highlight your role, accomplishments, and the skills you gained whi
               src="../assets/1_maintrigger-dark-active.png"
               alt=""
               width="100"
-              
               v-if="dark"
             />
             <img
@@ -77,25 +72,23 @@ Description: Highlight your role, accomplishments, and the skills you gained whi
               alt=""
               class="mx-8"
               width="100"
-
               v-if="lightPurple"
             />
             <img
               src="../assets/6_maintrigger-darkpurple-inactive.png"
               alt=""
               width="100"
-             class="cursor-pointer"
+              class="cursor-pointer"
               v-if="!darkPurple"
               @click="activeDarkPurple"
             />
-           
+
             <img
               src="../assets/5_maintrigger-darkpurple-active.png"
               alt=""
               width="100"
               v-if="darkPurple"
             />
-           
           </v-card-actions>
         </v-card>
       </v-col>
@@ -109,44 +102,40 @@ export default {
     return {
       text: "Hello, World!",
       isTextVisible: false,
-      dark:true,
-      darkPurple:false,
-      lightPurple:false,
-      scaleDark:false
+      dark: true,
+      darkPurple: false,
+      lightPurple: false,
+      scaleDark: false,
     };
   },
-  methods:{
-    activeDark(){
-      this.lightPurple=false
-      this.darkPurple=false
-      this.dark=true
+  methods: {
+    activeDark() {
+      this.lightPurple = false;
+      this.darkPurple = false;
+      this.dark = true;
       // this.scaleDark = true;
-     
     },
-    activeLightPurple(){
-      this.lightPurple=true
-      this.darkPurple=false
-      this.dark=false
+    activeLightPurple() {
+      this.lightPurple = true;
+      this.darkPurple = false;
+      this.dark = false;
       // this.scaleLightPurple = true;
     },
-    activeDarkPurple(){
-      this.darkPurple=true
-      this.dark=false
-      this.lightPurple=false
+    activeDarkPurple() {
+      this.darkPurple = true;
+      this.dark = false;
+      this.lightPurple = false;
       // this.scaleDarkPurple = true;
     },
-    toggleScale() {
-    
-  }
-  }
- 
+    toggleScale() {},
+  },
 };
 </script>
   
   <style>
 .cupImage {
   margin-top: 170px;
-  transition: transform 1.9s ease; 
+  transition: transform 1.9s ease;
 }
 .scaled {
   transform: scale(1.5); /* Increase the scale value as desired */
@@ -155,6 +144,15 @@ export default {
 /* .dark{
   transform: scale(5.5);
 } */
-
+.glass {
+  width: 200px;
+  height: 400px;
+}
+@media only screen and(max-width: 400) {
+  .glass {
+    width: 100px;
+    height: 200px;
+  }
+}
 </style>
   

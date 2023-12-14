@@ -1,14 +1,8 @@
 <template>
-  <v-container
-    fluid
-  >
-    <v-row >
-      <v-col cols="12" lg="6" md="12" sm="12">
-       
-      </v-col>
-      <v-col cols="12" lg="6" md="12" sm="12">
-       
-      </v-col>
+  <v-container fluid>
+    <v-row>
+      <v-col cols="12" lg="6" md="12" sm="12"> </v-col>
+      <v-col cols="12" lg="6" md="12" sm="12"> </v-col>
     </v-row>
   </v-container>
 </template>
@@ -20,17 +14,15 @@ export default {
   data() {
     return {};
   },
-  components: {
-   
-  },
+  components: {},
   methods: {
     pageScroll() {
-        // If at page bottom, scroll by to top
-        // if((window.innerHeight + window.scrollY) >= document.body.offsetHeight)
-        //   window.scrollTo(0, 0)
-        // else
-        //   // Scroll 1px down
-        //   window.scrollBy(0, 1)
+      // If at page bottom, scroll by to top
+      // if((window.innerHeight + window.scrollY) >= document.body.offsetHeight)
+      //   window.scrollTo(0, 0)
+      // else
+      //   // Scroll 1px down
+      //   window.scrollBy(0, 1)
     },
     reveal() {
       var reveals = document.querySelectorAll(".headingRight");
@@ -136,14 +128,11 @@ export default {
     window.addEventListener("scroll", this.reveal);
     window.addEventListener("scroll", this.animateParagraphRight);
     window.addEventListener("scroll", this.animateParagraphLeft);
-
     window.addEventListener("scroll", this.animateHeadingLeft);
     window.addEventListener("scroll", this.animateHeadingLeftBottom);
-
     window.addEventListener("scroll", this.animateHeadingCenter);
     window.addEventListener("scroll", this.animateCenterCards);
   },
- 
 };
 </script>
 
@@ -250,6 +239,4 @@ export default {
   visibility: inherit;
   transform: scale(1);
 }
-
-
 </style>

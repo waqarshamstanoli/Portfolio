@@ -3,54 +3,58 @@
     <div>
       <Top-bar></Top-bar>
       <dashboard-content ref="content" class="body"></dashboard-content>
-      
-    <v-footer color="transparent" class="pa-0">
-      <v-card tile color="#2D2F2E" width="100%" >
-        <v-row class="justify-space-around">
-          <v-col cols="12" lg="4" md="12" sm="12" class="">
-        <div class="mt-6">
-<img src="../assets/instagram.png" alt="" width="50">
-<img src="../assets/snapchat.png" alt="" width="50" class="mx-4">
-<img src="../assets/youtube.png" alt="" width="50">
-</div>
-</v-col>
-<v-col cols="12" lg="2" md="12" sm="12">
-  <v-btn rounded x-large class="gradientButton mt-6">download the app</v-btn>
-</v-col>
-<v-col cols="12" lg="3" md="12" sm="12" class="">
-  <div class="d-flex">
-    <div>
-              <img src="../assets/glassWhite.png" alt="" />
-            </div>
-              <v-card color="#ffffff" height="50" width="30" v-for="item in digits" :key="item" class="mt-8 ml-2 pl-1">
-                <h1 class="black--text" >
-              {{ item }}</h1>
-              </v-card>
-              
-              <div class="ml-4">
-                <h5 class=" ShakeCounter white--text ">SOLD</h5>
-                <h5 class="ShakeCounter yellow--text">SHAKES</h5>
+
+      <v-footer color="transparent" class="pa-0">
+        <v-card tile color="#2D2F2E" width="100%">
+          <v-row class="justify-space-around">
+            <v-col cols="12" lg="4" md="12" sm="12" class="">
+              <div class="mt-6">
+                <img src="../assets/instagram.png" alt="" width="50" />
+               
+                
               </div>
-            </div>
-</v-col>
-</v-row>
+            </v-col>
+            <v-col cols="12" lg="2" md="12" sm="12">
+              
+            </v-col>
+            <v-col cols="12" lg="3" md="12" sm="12" class="">
+              <div class="d-flex">
+                <div>
+                  <img src="../assets/glassWhite.png" alt="" />
+                </div>
+                <v-card
+                  color="#ffffff"
+                  height="50"
+                  width="30"
+                  v-for="item in digits"
+                  :key="item"
+                  class="mt-8 ml-2 pl-1"
+                >
+                  <h1 class="black--text">
+                    {{ item }}
+                  </h1>
+                </v-card>
 
-      </v-card>
-      <v-card tile color="black" width="100%" class="py-2">
-      <v-row>
-        <v-col cols="12" lg="3" md="3" sm="3" offset-lg="5">
-          <img src="../assets/footerImage.png" alt="">
-        </v-col>
-        <v-col cols="12" lg="3" md="3" sm="3">
-          <v-btn text small class="mt-2">COOKIE-PREFERENCES</v-btn>
-<v-btn text small class="mt-2">LEGAL NOTICE</v-btn>
-<v-btn text small class="mt-2">PRIVACY POLICY</v-btn>
-        </v-col>
-      </v-row>
-
-
-    </v-card>
-    </v-footer>
+                <div class="ml-4">
+                 
+                </div>
+              </div>
+            </v-col>
+          </v-row>
+        </v-card>
+        <v-card tile color="black" width="100%" class="py-2">
+          <v-row>
+            <v-col cols="12" lg="3" md="3" sm="3" offset-lg="5">
+             
+            </v-col>
+            <v-col cols="12" lg="3" md="3" sm="3">
+              <v-btn text small class="mt-2">COOKIE-PREFERENCES</v-btn>
+              <v-btn text small class="mt-2">LEGAL NOTICE</v-btn>
+              <v-btn text small class="mt-2">PRIVACY POLICY</v-btn>
+            </v-col>
+          </v-row>
+        </v-card>
+      </v-footer>
     </div>
   </div>
 </template>
@@ -58,36 +62,34 @@
 <script>
 import DashboardContent from "../components/ContentView.vue";
 import TopBar from "./TopBar.vue";
-// import Footer from "./Footer.vue";
 
 export default {
   components: {
     DashboardContent,
     TopBar,
-    // Footer,
   },
 
   data() {
     return {
-      count:1000000,
-      digits:[],
+      // count: 1000000,
+      // digits: [],
     };
   },
-  methods:{
-    move(){
-      this.$refs.content.move
-    },
-    increment() {
-      this.count++;
-      this.digits= "" + this.count
-    }
+  methods: {
+    // move() {
+    //   this.$refs.content.move;
+    // },
+    // increment() {
+    //   this.count++;
+    //   this.digits = "" + this.count;
+    // },
   },
-  created() {
-    this.digits= "" + this.count
-    setInterval(() => {
-      this.increment();
-    }, 100000); // Increment every 1 second (1000 milliseconds)
-  },
+  // created() {
+  //   this.digits = "" + this.count;
+  //   setInterval(() => {
+  //     this.increment();
+  //   }, 100000); 
+  // },
 };
 </script>
 
@@ -106,8 +108,8 @@ export default {
   font-size: 16px !important;
 }
 
-.v-btn--active{
-  background: #FFEC00 !important;
+.v-btn--active {
+  background: #ffec00 !important;
   color: black !important;
 }
 .topBarSpan {
@@ -189,19 +191,19 @@ export default {
 .v-application .body-1 {
   font-size: 28px !important;
   font-weight: 200;
-  
+
   font-family: Halyard !important;
 }
 .v-application .body-2 {
   font-size: 58px !important;
   font-weight: 200;
-  
+
   font-family: Halyard !important;
 }
 .v-application .caption {
   font-size: 22px !important;
   font-weight: 200;
-  
+
   font-family: Halyard !important;
 }
 .v-card__title {
@@ -211,25 +213,20 @@ export default {
 }
 
 .height {
-  height: 88vh;
+  height: fit-content;
 }
 
-.gradientButton{
-  color:white !important;
-  background-image: linear-gradient(to right, #5F2A89 , #0EA8E3);
-  border: none !important;
-}
-.gradientButton2{
-  color:white !important;
-  background-image: linear-gradient(to right, #5F2A89 , #0EA8E3);
+
+.gradientButton2 {
+  color: white !important;
+  background-image: linear-gradient(to right, #5f2a89, #0ea8e3);
   font-size: 25px !important;
   border: none !important;
-  
 }
 .cursor-pointer {
   cursor: pointer;
 }
-.gifAnimation{
+.gifAnimation {
   margin-top: 62px;
   margin-left: 117px;
 }
@@ -239,25 +236,6 @@ export default {
   color: #fbbf23;
 }
 ///business layout ki classes
-.machinesCard{
-  margin-top: 420px;
-}
-.paymentCards{
-  margin-top: 500px;
-}
-.footerSpan{
-  font-size: 16px;
-  font-family: Halyard !important;
-
-}
-.ShakeCounter{
-  font-family: TungstenBold;
-  font-size: 33px;
-  color:#585B5B
-}
-
-
-
 
 
 </style>

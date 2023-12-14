@@ -52,7 +52,7 @@
                   <!-- <img src="../assets/dropdown icon.png" alt="" width="20"/> -->
                 </div>
                 <!-- <div class="arrow"></div> -->
-                
+
                 <div>
                   <!-- <ul v-if="visible">
                     <li
@@ -78,7 +78,7 @@
               @click="scrollTo(100)"
               :class="{ activeButton: scrollPosition == 1150 }"
             >
-            About Me
+              About Me
             </v-btn>
             <v-btn
               text
@@ -86,9 +86,7 @@
               @click="scrollTo(1050)"
               :class="{ activeButton: scrollPosition == 1950 }"
             >
-            
-            Projects
-
+              Projects
             </v-btn>
             <v-btn
               text
@@ -96,8 +94,7 @@
               @click="scrollTo(1850)"
               :class="{ activeButton: scrollPosition == 3550 }"
             >
-            Skills
-
+              Skills
             </v-btn>
             <v-btn
               text
@@ -105,7 +102,7 @@
               @click="scrollTo(2650)"
               :class="{ activeButton: scrollPosition == 4350 }"
             >
-            Work Experience
+              Work Experience
             </v-btn>
             <v-btn
               text
@@ -113,7 +110,7 @@
               @click="scrollTo(3450)"
               :class="{ activeButton: scrollPosition == 5150 }"
             >
-            Education
+              Education
             </v-btn>
             <v-btn
               text
@@ -121,7 +118,7 @@
               @click="scrollTo(4250)"
               :class="{ activeButton: scrollPosition == 5150 }"
             >
-            Contact
+              Contact
             </v-btn>
           </div>
           <div class="d-flex justify-end" v-else>
@@ -164,7 +161,6 @@ export default {
       scrollPosition: "",
       visible: false,
       name: "DE",
-      
     };
   },
   methods: {
@@ -198,7 +194,7 @@ export default {
       // this.$vuetify.theme.dark = !this.$vuetify.theme.dark;
     },
     scrollTo(position) {
-      console.log('test',position)
+      console.log("test", position);
       this.scrollPosition = position;
       this.$store.commit("SET_SCROLL_POSITION", position);
     },
