@@ -19,59 +19,9 @@
         </v-col>
 
         <v-col cols="12" lg="4" md="12" sm="12" class="d-none d-md-block">
-          <!-- <v-switch v-model="consumer" @change="toggleTheme"></v-switch> -->
 
-          <div class="d-flex justify-end">
-            <span class="gray--text text-uppercase topBarSpan">consumer</span>
-            <!-- <v-switch
-              inset
-              color="grey"
-              v-model="consumer"
-              class="mx-4"
-              @change="handleSwitchToggle"
-            ></v-switch> -->
-
-            <!-- <input-switch
-             
-              v-model="consumer"
-              @switch-changed="toggleTheme"
-            ></input-switch> -->
-
-            <span class="gray--text text-uppercase topBarSpan">business</span>
-            <div class="aselect">
-              <div class="selector" @mouseover="toggle(true)">
-                <div class="label d-flex">
-                  <!-- <img
-                    :src="image"
-                    alt=""
-                    width="15"
-                    height="15"
-                    class="mt-1"
-                  /> -->
-                  <span class="white--text mx-2">{{ name }}</span>
-                  <!-- <img src="../assets/dropdown icon.png" alt="" width="20"/> -->
-                </div>
-                <!-- <div class="arrow"></div> -->
-
-                <div>
-                  <!-- <ul v-if="visible">
-                    <li
-                      class="d-flex mt-2 cursor-pointer"
-                      v-for="item in list"
-                      :key="item"
-                      @click="select(item)"
-                    >
-                      <span
-                        ><img :src="item.img" alt="" width="20" class="mr-2"
-                      /></span>
-                      {{ item.name }}
-                    </li>
-                  </ul> -->
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="d-flex justify-end" v-if="!comsumer">
+         
+          <div class="d-flex justify-end mt-8">
             <v-btn
               text
               large
@@ -121,16 +71,7 @@
               Contact
             </v-btn>
           </div>
-          <div class="d-flex justify-end" v-else>
-            <v-btn text large to="/business/machines"> machine </v-btn>
-            <v-btn text large to="/business/app"> app </v-btn>
-            <v-btn text large to="/business/refillment"> refillment </v-btn>
-            <v-btn text large to="/business/digitalization">
-              digitilization
-            </v-btn>
-            <v-btn text large to="/business/about"> about </v-btn>
-            <v-btn text large to="/business/contact"> contact </v-btn>
-          </div>
+         
         </v-col>
       </v-row>
     </v-app-bar>
@@ -262,6 +203,7 @@ ul {
 }
 .topBarOpacity {
   opacity: 0.8;
+  
 }
 .activeButton {
   background-color: #ffec00;

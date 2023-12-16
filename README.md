@@ -1,4 +1,4 @@
-# body-shake
+# Waqar-Shams
 
 ## Project setup
 ```

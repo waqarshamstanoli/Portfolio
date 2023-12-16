@@ -6,28 +6,40 @@
       ref="sectionElement"
     >
       <v-col cols="12" lg="6" md="12" sm="12">
-        <v-card width="425" color="transparent" class="elevation-0 mx-auto">
+        <v-card width="70%" color="transparent" class="elevation-0 mx-auto">
           <v-card-text>
             <h1 class="text--h2 headingLeft">
               <span class="secondary--text"> </span> <br />
 
               SKILLS
             </h1>
+            <h2 class="black--text mt-4">
+              Vue.js:
+            </h2>
             <p class="text--body-1 ffHalyard mt-4 paragraphLeft">
-              Vue.js: I specialize in building modern and responsive web
+              I specialize in building modern and responsive web
               applications using Vue.js, harnessing the power of its components
               and reactivity.
             </p>
+            <h2 class="black--text mt-4">
+              HTML5 & CSS3:
+            </h2>
             <p class="text--body-1 ffHalyard mt-4 paragraphLeft">
-              HTML5 & CSS3: Proficient in crafting well-structured and visually
+               Proficient in crafting well-structured and visually
               appealing user interfaces, ensuring a seamless user experience.
             </p>
+            <h2 class="black--text mt-4">
+              JavaScript:
+            </h2>
             <p class="text--body-1 ffHalyard mt-4 paragraphLeft">
-              JavaScript: Leveraging the full potential of JavaScript to create
+               Leveraging the full potential of JavaScript to create
               dynamic and interactive features that enhance user engagement.
             </p>
+            <h2 class="black--text mt-4">
+              Git:
+            </h2>
             <p class="text--body-1 ffHalyard mt-4 paragraphLeft">
-              Git: Experienced in version control to collaborate efficiently and
+              Experienced in version control to collaborate efficiently and
               maintain code integrity throughout the development process.
             </p>
           </v-card-text>

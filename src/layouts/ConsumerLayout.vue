@@ -118,8 +118,9 @@ export default {
 }
 .body {
   background-image: url("../assets/hexabackground.png");
-  // background-size: cover;
+   background-size: 100 100;
   background-repeat: repeat-y;
+  background-position: center;
 }
 .v-application .text--h1 {
   line-height: 92px !important;
@@ -136,8 +137,8 @@ export default {
   color: black;
 }
 .v-application .text--h3 {
-  font-size: 35px !important;
-  font-family: "tungsten-light";
+  font-size: 16px !important;
+  font-family: "Halyard";
   font-weight: 100 !important;
   line-height: 35px !important;
   color: black;
@@ -194,12 +195,12 @@ export default {
 
   font-family: Halyard !important;
 }
-.v-application .body-2 {
-  font-size: 58px !important;
-  font-weight: 200;
+// .v-application .body-2 {
+//   font-size: 58px !important;
+//   font-weight: 200;
 
-  font-family: Halyard !important;
-}
+//   font-family: Halyard !important;
+// }
 .v-application .caption {
   font-size: 22px !important;
   font-weight: 200;

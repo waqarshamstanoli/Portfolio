@@ -1,17 +1,20 @@
 <template>
   <v-container fluid>
-    <v-row class="justify-space-around" style="height: 100vh">
-      <v-col cols="12" lg="12" md="12" sm="12">
+    <v-row class="justify-center" style="height: 100vh">
+      <v-col cols="12" lg="6" md="12" sm="12">
         <v-card
-          width="50%"
+          width="100%"
           color="transparent"
           class="elevation-0 mx-auto marginTop"
         >
           <v-card-text>
+            <h4 class="text--h4 headingLeft text-center">
+              Hi,
+            </h4>
             <h1 class="text--h1 headingLeft text-center">
-              Hi, My Name Is Waqar Shams
+               I am Waqar Shams
             </h1>
-            <h4 class="text--h4 mt-4 headingLeft text-center">I AM A FRONT END DEVELOPER</h4>
+            <h4 class="text--h4 mt-4 headingLeft text-center"> FRONT END DEVELOPER</h4>
             <h2 class="text--h3 mt-8 text-uppercase text-center">
               Hello, I'm Waqar Shams, a passionate and dedicated Vue.js
               developer with a love for creating interactive and dynamic web

@@ -26,23 +26,30 @@
         </v-card>
       </v-col>
       <v-col cols="12" lg="6" md="12" sm="12">
-        <v-card width="100%" color="transparent" class="elevation-0 mx-auto">
+        <v-card
+          width="100%"
+          color="transparent"
+          class="elevation-0 mx-auto pr-md-16"
+        >
           <v-card-text>
             <h1 class="text--h2 headingRight">WORK EXPERIENCE</h1>
-
-            <p class="text--body-1 ffHalyard mt-4 paragraphRight">
-              [Company Name 1] - [Position] ([Month/Year] - [Month/Year])
+            <h2 class="black--text mt-4">
+              Infini8AI - Senior Front End Developer (Oct 2021 - Present)
+            </h2>
+            <h2 class="text--h3  mt-4 paragraphRight">
               Description: Outline your responsibilities, achievements, and
               notable projects during your time at the company. Mention any
               collaborations, advancements, or innovations you contributed to.
               <br />
-            </p>
-            <P class="text--body-1 ffHalyard mt-4 paragraphRight">
-              [Company Name 2] - [Position] ([Month/Year] - [Month/Year])
+            </h2>
+            <h2 class="black--text mt-4">
+              Financials Unlimited - Vue JS Developer (Nov 2019 - Sep 2021)
+            </h2>
+            <h2 class="text--h3 ffHalyard mt-4 paragraphRight">
               Description: Highlight your role, accomplishments, and the skills
               you gained while working at this company. Discuss how you added
               value and contributed to the team's success.
-            </P>
+            </h2>
           </v-card-text>
           <v-card-actions>
             <img

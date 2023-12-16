@@ -1,8 +1,11 @@
 <template>
   <v-app>
     <v-main>
-      <img src="./assets/swinger.png" alt="" class="setimage" :class="{ transformImage: left }"/>
+      <!-- <img src="./assets/swinger.png" alt="" class="setimage" :class="{ transformImage: left }"/> -->
       <div class="dot" :style="{ top: `${dotPosition.y}px`, left: `${dotPosition.x}px` }"></div>
+      <div class="ripples-container">
+        <div v-for="(ripple, index) in ripples" :key="index" class="ripple" :style="{ top: `${dotPosition.y-25}px`, left: `${dotPosition.x-25}px` }"></div>
+      </div>
       <router-view />
     </v-main>
   </v-app>
@@ -16,9 +19,33 @@ export default {
     //
     left: false,
     right: true,
-    dotPosition: { x: 0, y: 0 }
+    dotPosition: { x: 0, y: 0 },
+   
+    ripples: [],
+    tempX: 0,
+    tempY: 0,
   }),
   methods: {
+    handleMouseMove() {
+    if (!this.firstMove) {
+      this.firstMove = true;
+      this.changeCursorToPointer();
+    }
+  },
+  changeCursorToPointer() {
+    document.body.style.cursor = 'pointer';
+  },
+    
+    createRipples() {
+      console.log('ripples')
+      this.ripples.push({});
+      
+      setTimeout(() => {
+        console.log('inner ripples')
+        // this.ripples.pop();
+      }, 2000); 
+    },
+
     rotate() {
       if (window.pageYOffset > 10 && window.pageYOffset < 1150) {
         this.left = true;
@@ -45,25 +72,43 @@ export default {
       // this.left=true
     },
     updateDotPosition(event) {
-      const offsetX = 100; // You can adjust this value to your preference
-      const offsetY = 150;
-      this.dotPosition = {
-        x: event.clientX - offsetX,
-        y: event.clientY - offsetY
-      };
-      console.log('dsd',this.dotPosition.x)
-    }
+      const offsetX = 10;
+      const offsetY = 120;
+
+      if (event.clientX !== undefined) {
+        this.dotPosition = {
+          x: event.clientX + window.scrollX - offsetX,
+          y: event.clientY + window.scrollY - offsetY,
+        };
+
+        (this.tempX = event.clientX), (this.tempY = event.clientY);
+      } else {
+        this.dotPosition = {
+          x: this.tempX + window.scrollX - offsetX,
+          y: this.tempY + window.scrollY - offsetY,
+        };
+      }
+    },
   },
   created() {
     window.addEventListener("scroll", this.rotate);
   },
- 
+
   mounted() {
-    window.addEventListener('mousemove', this.updateDotPosition);
+    this.handleMouseMove()
+    this.updateDotPosition({
+      clientX: window.innerWidth / 2,
+      clientY: window.innerHeight / 2,
+    });
+
+    setInterval(this.createRipples, 2000); 
+    window.addEventListener("mousemove", this.updateDotPosition);
+    window.addEventListener("scroll", this.updateDotPosition);
   },
   beforeDestroy() {
-    window.removeEventListener('mousemove', this.updateDotPosition);
-  }
+    window.removeEventListener("mousemove", this.updateDotPosition);
+    window.removeEventListener("scroll", this.updateDotPosition);
+  },
 };
 </script>
 <style>
@@ -74,15 +119,18 @@ export default {
   /* left:900px; top:0px; transform:rotate(0deg); */
   animation-name: moveRight;
   animation-duration: 3s;
-  animation-fill-mode: forwards; /* Add this line */
+  animation-fill-mode: forwards;
+  /* Add this line */
   opacity: 0.7;
 }
+
 @keyframes moveRight {
   0% {
     left: 50px;
     top: 0px;
     transform: rotate(-160deg);
   }
+
   100% {
     left: 900px;
     top: 0px;
@@ -93,7 +141,8 @@ export default {
 .transformImage {
   animation-name: moveLeft;
   animation-duration: 3s;
-  animation-fill-mode: forwards; /* Add this line */
+  animation-fill-mode: forwards;
+  /* Add this line */
   opacity: 0.7;
 }
 
@@ -102,19 +151,42 @@ export default {
     left: 800px;
     top: 0px;
   }
+
   100% {
     left: -450px;
     top: 0px;
     transform: rotate(-140deg);
   }
 }
+
 .dot {
   position: absolute;
+  z-index: 1000;
   width: 20px;
   height: 20px;
   border-radius: 50%;
-  background-color: #3498db;
+  background-color: #ff9b4f;
   transform: translate(-50%, -50%);
-  pointer-events: none; /* Prevent the dot from blocking interactions */
+  pointer-events: none;
+  /* Prevent the dot from blocking interactions */
+}
+
+.ripple {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #333333;
+  /* transform: translate(-50%, -50%); */
+  pointer-events: none;
+  animation: rippleAnimation 4s linear;
+  animation-fill-mode: forwards;
+}
+
+@keyframes rippleAnimation {
+  to {
+    transform: scale(2);
+    opacity: 0;
+  }
 }
 </style>

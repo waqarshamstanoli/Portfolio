@@ -9,9 +9,11 @@
         >
           <v-card-text>
             <h1 class="text--h2 headingLeft">EDUCATION</h1>
+            <h2 class="black--text mt-4">
+              Degree: BS (Computer Science) - IQRA University 
+            </h2>
             <p class="text--body-1 ffHalyard paragraphLeft">
-              Degree: [Your Degree] - [University Name] ([Month/Year] -
-              [Month/Year])
+             
             </p>
             <p class="text--body-1 ffHalyard paragraphLeft">
               Relevant Courses: List any courses or certifications that enhance
