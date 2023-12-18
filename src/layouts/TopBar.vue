@@ -1,6 +1,6 @@
 <template>
   <div>
-    <v-app-bar class="pb-8 pt-4 topBarOpacity primary" extended fixed app>
+    <v-app-bar class="pb-8 pt-4  gray" extended fixed app>
       <v-row class="justify-space-around">
         <v-col cols="12" lg="4" md="12" sm="12">
           <v-app-bar-nav-icon

@@ -2,9 +2,13 @@
   <v-app>
     <v-main>
       <!-- <img src="./assets/swinger.png" alt="" class="setimage" :class="{ transformImage: left }"/> -->
-      <div class="dot" :style="{ top: `${dotPosition.y}px`, left: `${dotPosition.x}px` }"></div>
+      <div class="dot" :style="{ top: `${dotPosition.y}px`, left: `${dotPosition.x}px` }">
+        </div>
+        <div class="dottext" v-if="showtext" :style="{ top: `${dotPosition.y +60}px`, left: `${dotPosition.x + 20}px` }"><p class="primary--text">Click to stop ripples</p></div>
       <div class="ripples-container">
-        <div v-for="(ripple, index) in ripples" :key="index" class="ripple" :style="{ top: `${dotPosition.y-25}px`, left: `${dotPosition.x-25}px` }"></div>
+        <div v-for="(ripple, index) in ripples" :key="index" class="ripple" :style="{ top: `${dotPosition.y-25}px`, left: `${dotPosition.x-25}px` }">
+         </div>
+        
       </div>
       <router-view />
     </v-main>
@@ -20,12 +24,17 @@ export default {
     left: false,
     right: true,
     dotPosition: { x: 0, y: 0 },
-   
+    showtext:true,
     ripples: [],
     tempX: 0,
     tempY: 0,
   }),
   methods: {
+    stopFunction() {
+      this.showtext=false
+      clearInterval(this.intervalId);
+      this.ripples=[]
+    },
     handleMouseMove() {
     if (!this.firstMove) {
       this.firstMove = true;
@@ -37,11 +46,11 @@ export default {
   },
     
     createRipples() {
-      console.log('ripples')
+      
       this.ripples.push({});
       
       setTimeout(() => {
-        console.log('inner ripples')
+       
         // this.ripples.pop();
       }, 2000); 
     },
@@ -101,7 +110,8 @@ export default {
       clientY: window.innerHeight / 2,
     });
 
-    setInterval(this.createRipples, 2000); 
+    this.intervalId = setInterval(this.createRipples, 2000); 
+    document.addEventListener('click', this.stopFunction);
     window.addEventListener("mousemove", this.updateDotPosition);
     window.addEventListener("scroll", this.updateDotPosition);
   },
@@ -165,18 +175,26 @@ export default {
   width: 20px;
   height: 20px;
   border-radius: 50%;
-  background-color: #ff9b4f;
+  background-color: #e744b6;
   transform: translate(-50%, -50%);
   pointer-events: none;
   /* Prevent the dot from blocking interactions */
 }
+.dottext {
+  position: absolute;
+  z-index: 1000;
+  width: 150px;
+  transform: translate(-50%, -50%);
+  font-size: 12px;
+}
 
 .ripple {
   position: absolute;
+  z-index: 100;
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  background-color: #333333;
+  background-color: #b911e4;
   /* transform: translate(-50%, -50%); */
   pointer-events: none;
   animation: rippleAnimation 4s linear;

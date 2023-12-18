@@ -8,14 +8,14 @@
           class="elevation-0 mx-auto marginTop"
         >
           <v-card-text>
-            <h4 class="text--h4 headingLeft text-center">
+            <h4 class="text--h4 white--text headingLeft text-center">
               Hi,
             </h4>
-            <h1 class="text--h1 headingLeft text-center">
+            <h1 class="text--h1 white--text headingLeft text-center">
                I am Waqar Shams
             </h1>
-            <h4 class="text--h4 mt-4 headingLeft text-center"> FRONT END DEVELOPER</h4>
-            <h2 class="text--h3 mt-8 text-uppercase text-center">
+            <h4 class="text--h4 white--text mt-4 headingLeft text-center"> FRONT END DEVELOPER</h4>
+            <h2 class="text--h3 white--text mt-8 text-uppercase text-center">
               Hello, I'm Waqar Shams, a passionate and dedicated Vue.js
               developer with a love for creating interactive and dynamic web
               applications. I thrive on turning ideas into reality through clean

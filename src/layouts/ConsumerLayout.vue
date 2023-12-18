@@ -30,7 +30,7 @@
                   :key="item"
                   class="mt-8 ml-2 pl-1"
                 >
-                  <h1 class="black--text">
+                  <h1 class="white--text">
                     {{ item }}
                   </h1>
                 </v-card>
@@ -117,8 +117,8 @@ export default {
   font-size: 16px !important;
 }
 .body {
-  background-image: url("../assets/hexabackground.png");
-   background-size: 100 100;
+  background-image: url("../assets/heroheaders.png");
+   background-size: 100% 100%;
   background-repeat: repeat-y;
   background-position: center;
 }

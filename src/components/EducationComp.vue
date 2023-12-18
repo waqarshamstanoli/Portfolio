@@ -8,14 +8,14 @@
           class="elevation-0 ml-16 marginTop"
         >
           <v-card-text>
-            <h1 class="text--h2 headingLeft">EDUCATION</h1>
-            <h2 class="black--text mt-4">
+            <h1 class="primary--text text--h2 headingLeft">EDUCATION</h1>
+            <h2 class="primary--text mt-4">
               Degree: BS (Computer Science) - IQRA University 
             </h2>
-            <p class="text--body-1 ffHalyard paragraphLeft">
+            <p class="primary--text text--body-1 ffHalyard paragraphLeft">
              
             </p>
-            <p class="text--body-1 ffHalyard paragraphLeft">
+            <p class="primary--text text--body-1 ffHalyard paragraphLeft">
               Relevant Courses: List any courses or certifications that enhance
               your skills as a Vue.js developer.
             </p>

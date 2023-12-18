@@ -32,20 +32,20 @@
           class="elevation-0 mx-auto pr-md-16"
         >
           <v-card-text>
-            <h1 class="text--h2 headingRight">WORK EXPERIENCE</h1>
-            <h2 class="black--text mt-4">
+            <h1 class="primary--text text--h2 headingRight">WORK EXPERIENCE</h1>
+            <h2 class="primary--text mt-4">
               Infini8AI - Senior Front End Developer (Oct 2021 - Present)
             </h2>
-            <h2 class="text--h3  mt-4 paragraphRight">
+            <h2 class="text--h3 primary--text mt-2 paragraphRight">
               Description: Outline your responsibilities, achievements, and
               notable projects during your time at the company. Mention any
               collaborations, advancements, or innovations you contributed to.
               <br />
             </h2>
-            <h2 class="black--text mt-4">
+            <h2 class="primary--text mt-12">
               Financials Unlimited - Vue JS Developer (Nov 2019 - Sep 2021)
             </h2>
-            <h2 class="text--h3 ffHalyard mt-4 paragraphRight">
+            <h2 class="primary--text text--h3 ffHalyard mt-2 paragraphRight">
               Description: Highlight your role, accomplishments, and the skills
               you gained while working at this company. Discuss how you added
               value and contributed to the team's success.
