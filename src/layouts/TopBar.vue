@@ -1,6 +1,6 @@
 <template>
   <div>
-    <v-app-bar class="pb-8 pt-4  gray" extended fixed app>
+    <v-app-bar class="gray"  fixed app>
       <v-row class="justify-space-around">
         <v-col cols="12" lg="4" md="12" sm="12">
           <v-app-bar-nav-icon
@@ -12,7 +12,7 @@
               src="../assets/logo.svg"
               alt=""
               width="70%"
-              class="mt-12 ml-8 ml-md-4 cursor-pointer"
+              class="mt-6 ml-8 ml-md-4 cursor-pointer"
               to="/"
             />
           </v-toolbar-title>
@@ -21,7 +21,7 @@
         <v-col cols="12" lg="4" md="12" sm="12" class="d-none d-md-block">
 
          
-          <div class="d-flex justify-end mt-8">
+          <div class="d-flex justify-end mt-4">
             <v-btn
               text
               large

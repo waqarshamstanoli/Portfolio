@@ -1,5 +1,5 @@
 <template>
-  <v-container fluid style="height: 80vh; padding-top: 200px">
+  <v-container class="md-px-16"  style=" padding-top: 200px">
     <v-row class="justify-center" :class="{ square: test }" ref="sectionElement">
       <!-- <v-col cols="12" lg="4" md="12" sm="12">
         <v-card width="80%" color="transparent" class="elevation-0 mx-auto">
@@ -44,7 +44,154 @@
           </v-card-actions>
         </v-card>
       </v-col> -->
-      <v-col cols="12" lg="4" md="12" sm="12" class="px-16 paragraphLeft">
+      
+      <v-col cols="12" lg="2" md="4" sm="6" class=" paragraphLeft">
+      <v-card outlined width="230" class="mx-auto borderRadius py-16">
+  <div class="text-center ">
+  <img src="../assets/skills/vue.png" width="50" class="" alt="">
+  <h2 class="text--h3 mt-4">Vue JS</h2>
+  <h2 class="text--h3 mt-4">90%</h2>
+</div>
+</v-card>
+</v-col>
+<v-col cols="12" lg="2" md="4" sm="6" class=" paragraphLeft">
+<v-card outlined width="230" class="mx-auto borderRadius py-16">
+  <div class="text-center ">
+  <img src="../assets/skills/vuetify.png" width="50" class="" alt="">
+  <h2 class="text--h3 mt-4">Vuetify</h2>
+  <h2 class="text--h3 mt-4">90%</h2>
+</div>
+</v-card>
+</v-col>
+<v-col cols="12" lg="2" md="12" sm="12" class=" paragraphLeft">
+<v-card outlined width="230" class="mx-auto borderRadius py-16">
+  <div class="text-center ">
+  <img src="../assets/skills/nuxt.png" width="50" class="" alt="">
+  <h2 class="text--h3 mt-4">Nuxt</h2>
+  <h2 class="text--h3 mt-4">90%</h2>
+</div>
+</v-card>
+</v-col>
+<v-col cols="12" lg="2" md="12" sm="12" class=" paragraphLeft">
+<v-card outlined width="230" class="mx-auto borderRadius py-16">
+  <div class="text-center ">
+  <img src="../assets/skills/react.png" width="50" class="" alt="">
+  <h2 class="text--h3 mt-4">React</h2>
+  <h2 class="text--h3 mt-4">90%</h2>
+</div>
+</v-card>
+</v-col>
+<v-col cols="12" lg="2" md="12" sm="12" class=" paragraphLeft">
+<v-card outlined width="230" class="mx-auto borderRadius py-16">
+  <div class="text-center ">
+  <img src="../assets/skills/angular.png" width="50" class="" alt="">
+  <h2 class="text--h3 mt-4">Angular</h2>
+  <h2 class="text--h3 mt-4">90%</h2>
+</div>
+</v-card>
+</v-col>
+<v-col cols="12" lg="2" md="12" sm="12" class=" paragraphLeft">
+<v-card outlined width="230" class=" mx-auto borderRadius py-16">
+  <div class="text-center ">
+  <img src="../assets/skills/photoshope.png" width="50" class="" alt="">
+  <h2 class="text--h3 mt-4">Adobe Photoshope</h2>
+  <h2 class="text--h3 mt-4">90%</h2>
+</div>
+</v-card>
+</v-col>
+<v-col cols="12" lg="2" md="12" sm="12" class=" paragraphLeft">
+<v-card outlined width="230" class="mx-auto borderRadius py-16">
+  <div class="text-center ">
+  <img src="../assets/skills/xd.png" width="50" class="" alt="">
+  <h2 class="text--h3 mt-4">Adobe Xd</h2>
+  <h2 class="text--h3 mt-4">90%</h2>
+</div>
+</v-card>
+</v-col>
+<v-col cols="12" lg="2" md="12" sm="12" class=" paragraphLeft">
+<v-card outlined width="230" class="mx-auto borderRadius py-16">
+  <div class="text-center ">
+  <img src="../assets/skills/material.png" width="50" class="" alt="">
+  <h2 class="text--h3 mt-4">Material UI</h2>
+  <h2 class="text--h3 mt-4">90%</h2>
+</div>
+</v-card>
+</v-col>
+<v-col cols="12" lg="2" md="12" sm="12" class=" paragraphLeft">
+<v-card outlined width="230" class="mx-auto borderRadius py-16">
+  <div class="text-center ">
+  <img src="../assets/skills/tailwind.png" width="50" class="" alt="">
+  <h2 class="text--h3 mt-4">Tailwind</h2>
+  <h2 class="text--h3 mt-4">90%</h2>
+</div>
+</v-card>
+</v-col>
+<v-col cols="12" lg="2" md="12" sm="12" class=" paragraphLeft">
+<v-card outlined width="230" class="mx-auto borderRadius py-16">
+  <div class="text-center ">
+  <img src="../assets/skills/figma.png" width="50" class="" alt="">
+  <h2 class="text--h3 mt-4">Figma</h2>
+  <h2 class="text--h3 mt-4">90%</h2>
+</div>
+</v-card>
+</v-col>
+
+<v-col cols="12" lg="2" md="12" sm="12" class=" paragraphLeft">
+<v-card outlined width="230" class="mx-auto borderRadius py-16">
+  <div class="text-center ">
+  <img src="../assets/skills/antdesign.png" width="50" class="" alt="">
+  <h2 class="text--h3 mt-4">Ant Design</h2>
+  <h2 class="text--h3 mt-4">90%</h2>
+</div>
+</v-card>
+</v-col>
+<v-col cols="12" lg="2" md="12" sm="12" class=" paragraphLeft">
+<v-card outlined width="230" class="mx-auto borderRadius py-16">
+  <div class="text-center ">
+  <img src="../assets/skills/github.png" width="50" class="" alt="">
+  <h2 class="text--h3 mt-4">Github</h2>
+  <h2 class="text--h3 mt-4">90%</h2>
+</div>
+</v-card>
+</v-col>
+<v-col cols="12" lg="2" md="12" sm="12" class=" paragraphLeft">
+<v-card outlined width="230" class="mx-auto borderRadius py-16">
+  <div class="text-center ">
+  <img src="../assets/skills/bootstrap.png" width="50" class="" alt="">
+  <h2 class="text--h3 mt-4">Bootstrap</h2>
+  <h2 class="text--h3 mt-4">90%</h2>
+</div>
+</v-card>
+</v-col>
+<v-col cols="12" lg="2" md="12" sm="12" class=" paragraphLeft">
+<v-card outlined width="230" class="mx-auto borderRadius py-16">
+  <div class="text-center ">
+  <img src="../assets/skills/quasar.png" width="50" class="" alt="">
+  <h2 class="text--h3 mt-4">Quasar</h2>
+  <h2 class="text--h3 mt-4">90%</h2>
+</div>
+</v-card>
+</v-col>
+<v-col cols="12" lg="2" md="12" sm="12" class=" paragraphLeft">
+<v-card outlined width="230" class="mx-auto borderRadius py-16">
+  <div class="text-center ">
+  <img src="../assets/skills/css.png" width="50" class="" alt="">
+  <h2 class="text--h3 mt-4">CSS</h2>
+  <h2 class="text--h3 mt-4">90%</h2>
+</div>
+</v-card>
+</v-col>
+<v-col cols="12" lg="2" md="12" sm="12" class=" paragraphLeft">
+<v-card outlined width="230" class="mx-auto borderRadius py-16">
+  <div class="text-center ">
+  <img src="../assets/skills/html.png" width="50" class="" alt="">
+  <h2 class="text--h3 mt-4">HTML</h2>
+  <h2 class="text--h3 mt-4">90%</h2>
+</div>
+</v-card>
+</v-col>
+
+      <!-- <v-col cols="12" lg="4" md="12" sm="12" class="px-16 paragraphLeft">
         <div class="d-flex">
           <v-hover v-slot="{ hover }">
             <div class="text-center">
@@ -99,10 +246,7 @@
           </v-hover>
         </div>
 
-        <!-- <img src="../assets/skills/photoshope.png" width="70%" alt="" class="ml-1"/>
-            <img src="../assets/skills/xd.png" width="70%" alt="" class="ml-12"/>
-            <img src="../assets/skills/tailwind.png" width="70%" alt="" class="ml-12"/>
-            <img src="../assets/skills/figma.png" width="70%" alt="" class="ml-12"/> -->
+       
 
         <v-row> </v-row>
       </v-col>
@@ -150,7 +294,7 @@
         </div>
 
         <v-row> </v-row>
-      </v-col>
+      </v-col> -->
     </v-row>
   </v-container>
 </template>
@@ -225,5 +369,8 @@ export default {
 }
 .scaled {
   transform: scale(3);
+}
+.borderRadius{
+  border-radius: 40px;
 }
 </style>

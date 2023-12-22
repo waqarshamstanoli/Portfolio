@@ -2,11 +2,11 @@
   <v-app>
     <v-main>
       <!-- <img src="./assets/swinger.png" alt="" class="setimage" :class="{ transformImage: left }"/> -->
-      <div class="dot" :style="{ top: `${dotPosition.y}px`, left: `${dotPosition.x}px` }">
+      <div class="dot" :style="{ top: `${dotPosition.y+45}px`, left: `${dotPosition.x+10}px` }">
         </div>
-        <div class="dottext" v-if="showtext" :style="{ top: `${dotPosition.y +60}px`, left: `${dotPosition.x + 20}px` }"><p class="primary--text">Click to stop ripples</p></div>
+        <div class="dottext" v-if="showtext" :style="{ top: `${dotPosition.y +110}px`, left: `${dotPosition.x + 20}px` }"><p class="primary--text ml-2">Click to stop ripples</p></div>
       <div class="ripples-container">
-        <div v-for="(ripple, index) in ripples" :key="index" class="ripple" :style="{ top: `${dotPosition.y-25}px`, left: `${dotPosition.x-25}px` }">
+        <div v-for="(ripple, index) in ripples" :key="index" class="ripple" :style="{ top: `${dotPosition.y+20}px`, left: `${dotPosition.x-15}px` }">
          </div>
         
       </div>

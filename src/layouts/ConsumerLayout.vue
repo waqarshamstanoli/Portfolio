@@ -2,7 +2,7 @@
   <div class="dashboard-layout">
     <div>
       <Top-bar></Top-bar>
-      <dashboard-content ref="content" class="body"></dashboard-content>
+      <dashboard-content ref="content" class="bodyy" ></dashboard-content>
 
       <v-footer color="transparent" class="pa-0">
         <v-card tile color="#2D2F2E" width="100%">
@@ -96,7 +96,7 @@ export default {
 <style lang="scss">
 .v-btn.v-size--large {
   transition: all 0.15s ease-in-out;
-  color: #bfbfbf !important;
+  color: #FFFFFF !important;
   font-family: Tungsten !important;
   font-size: 25px !important;
   cursor: pointer;
@@ -116,25 +116,26 @@ export default {
   font-family: Tungsten !important;
   font-size: 16px !important;
 }
-.body {
-  background-image: url("../assets/heroheaders.png");
-   background-size: 100% 100%;
-  background-repeat: repeat-y;
-  background-position: center;
+.bodyy {
+  // background-image: url("../assets/5073414.jpg");
+  background-color:"#0F172A";
+  //  background-size: 100 100;
+  // background-repeat: repeat-y;
+  // background-position: center;
 }
 .v-application .text--h1 {
   line-height: 92px !important;
   font-size: 110px !important;
   font-weight: 700 !important;
+  // font-family: "Halyard";
   font-family: "tungsten";
-  color: black;
 }
 .v-application .text--h2 {
   line-height: 0.9em !important;
   font-size: 76px !important;
   font-weight: 600 !important;
   font-family: "tungsten";
-  color: black;
+  // font-family: "Halyard";
 }
 .v-application .text--h3 {
   font-size: 16px !important;
