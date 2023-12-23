@@ -1,7 +1,7 @@
 <template>
-  <div class="height">
+  <div class=" py-16">
     <v-row class="justify-space-around">
-      <v-col cols="12" lg="6" md="12" sm="12">
+      <!-- <v-col cols="12" lg="6" md="12" sm="12">
         <v-card color="transparent" width="100%" class="elevation-0">
           <div class="d-flex flex-wrap ml-16">
             <img
@@ -24,16 +24,16 @@
             />
           </div>
         </v-card>
-      </v-col>
-      <v-col cols="12" lg="6" md="12" sm="12">
+      </v-col> -->
+      <v-col cols="12" lg="12" md="12" sm="12">
         <v-card
           width="100%"
           color="transparent"
-          class="elevation-0 mx-auto pr-md-16"
+          class="elevation-0 mx-auto mt-16"
         >
           <v-card-text>
-            <h1 class="primary--text text--h2 headingRight">WORK EXPERIENCE</h1>
-            <h2 class="primary--text mt-4">
+            <h1 class="primary--text text-center text--h2 headingRight">WORK EXPERIENCE</h1>
+            <!-- <h2 class="primary--text mt-4">
               Infini8AI - Senior Front End Developer (Oct 2021 - Present)
             </h2>
             <h2 class="text--h3 primary--text mt-2 paragraphRight">
@@ -49,9 +49,9 @@
               Description: Highlight your role, accomplishments, and the skills
               you gained while working at this company. Discuss how you added
               value and contributed to the team's success.
-            </h2>
+            </h2> -->
           </v-card-text>
-          <v-card-actions>
+          <!-- <v-card-actions>
             <img
               src="../assets/2_maintrigger-dark-inactive.png"
               alt=""
@@ -96,8 +96,30 @@
               width="100"
               v-if="darkPurple"
             />
-          </v-card-actions>
+          </v-card-actions> -->
         </v-card>
+      </v-col>
+      <v-col cols="12" lg="6" md="12" sm="12">
+        <v-card outlined width="80%" class="mx-auto mt-8 px-4 py-4 pb-8 px-md-16 borderRadius py-md-16 paragraphLeft">
+  <div class="text-center ">
+  <!-- <img src="../assets/skills/vue.png" width="50" class="" alt=""> -->
+  <h2 class="black--text text--h3 mt-4">Infini8AI - Senior Front End Developer (Oct 2021 - Present)</h2>
+  <h2 class="text--h3 mt-4"> Description: Outline your responsibilities, achievements, and
+              notable projects during your time at the company. Mention any
+              collaborations, advancements, or innovations you contributed to.</h2>
+</div>
+</v-card>
+      </v-col>
+      <v-col cols="12" lg="6" md="12" sm="12">
+        <v-card outlined width="80%" class="mx-auto mt-8  px-4 py-4 pb-8 px-md-16 borderRadius py-md-16 paragraphRight">
+  <div class="text-center ">
+  <!-- <img src="../assets/skills/vue.png" width="50" class="" alt=""> -->
+  <h2 class="black--text text--h3 mt-4">Infini8AI - Senior Front End Developer (Oct 2021 - Present)</h2>
+  <h2 class="text--h3 mt-4"> Description: Outline your responsibilities, achievements, and
+              notable projects during your time at the company. Mention any
+              collaborations, advancements, or innovations you contributed to.</h2>
+</div>
+</v-card>
       </v-col>
     </v-row>
   </div>
@@ -139,7 +161,7 @@ export default {
 };
 </script>
   
-  <style>
+  <style scoped>
 .cupImage {
   margin-top: 170px;
   transition: transform 1.9s ease;
@@ -160,6 +182,9 @@ export default {
     width: 100px;
     height: 200px;
   }
+}
+.borderRadius{
+  border-radius: 40px;
 }
 </style>
   

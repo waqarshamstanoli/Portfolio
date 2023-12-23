@@ -1,39 +1,57 @@
 <template>
-  <v-container fluid>
-    <v-row class="justify-space-around" style="height: 100vh">
-      <v-col cols="12" lg="4" md="12" sm="12">
+  <v-container  class="px-lg-16">
+    <v-row class="justify-center" style="height: 100vh">
+      <v-col cols="12" lg="5" md="12" sm="12" class="">
         <v-card
-          width="100%"
+          width="80%"
           color="transparent"
           class="elevation-0 mx-auto marginTop"
         >
           <v-card-text>
             
-            <h4 class="text--h4 primary--text headingLeft text-center">
+            <h4 class="text-subtitle-2 font-weight-bold gray--text headingLeft">
               Hello Everyone!
             </h4>
-            <h1 class="text--h1 IM  headingLeft ">
+            <h2 class="text--h2 secondary--text  headingLeft mt-4">
               I'm <span class="header-text"> {{ typedText }} </span>
-            </h1>
+            </h2>
             <!-- <h4 class="text--h4 primary--text mt-4 headingLeft text-center"> FRONT END DEVELOPER</h4> -->
-            <h2 class="text--h3 primary--text mt-8 text-uppercase text-center">
+            <p class="text-body-1 gray--text font-weight-regular mt-8">
               Hello, I'm Waqar Shams, a passionate and dedicated Vue.js
               developer with a love for creating interactive and dynamic web
               applications. I thrive on turning ideas into reality through clean
               and efficient code. My journey in the world of web development has
               been exciting, and I'm always eager to take on new challenges.
-            </h2>
+            </p>
           </v-card-text>
-          <v-card-actions>
-            <!-- <v-btn outlined rounded x-large class="px-16 py-8">Try Now</v-btn> -->
-          </v-card-actions>
+          <!-- <v-card-actions class="red"> -->
+            <!--  -->
+            <div class="d-flex" style="border: 2px solid #56D3DB; border-radius: 10px; background-color: #C8D5E8; padding: 12px 12px 4px 12px; width:420px">
+            <v-text-field outlined dense label="Type Your Email Address" >   </v-text-field>
+            <v-btn color="primary"  class="py-4 ml-12 text-capitalize">Subscribe</v-btn>
+          </div>
+          <!-- </v-card-actions> -->
         </v-card>
       </v-col>
-      <v-col cols="12" lg="4" md="12" sm="12">
-        <!-- <div class="cross" :style="{ top: dotTop + 'px', left: dotLeft + 'px' }"></div> -->
-        <div :key="animationKey" class="animated-div">
-        <img src="../assets/pattern-1.svg" alt="" width="20"></div>
+      <v-col cols="12" lg="5" md="12" sm="12">
+        <div class="d-flex">
+          <div :key="animationKey" class="animated-div">
+        <img src="../assets/pattern-1.svg" alt="" width="20">
+      </div>
+        <div class="bouncing-element">
+      </div>
+        <div class="text-center">
+        <img src="../assets/banner.png" alt="" class="mt-16">
+      </div>
+        
+        <div :key="animationKey" class="cross-2">
+        <img src="../assets/pattern-2.svg" alt="" width="20"></div>
+        
+      <div class="bouncing-element2">
+      </div> 
+      </div>
       </v-col>
+     
     </v-row>
 
     <flavors-component></flavors-component>
@@ -70,7 +88,7 @@ export default {
       scrollPosition: 0,
       increment: 0,
       test: false,
-      texts: [" Waqar Shams", "WEB DEVELOPER", "Web Designer"],
+      texts: [" Waqar Shams", " DEVELOPER", " Designer"],
     currentTextIndex: 0,
     typedText: '',
     index: 0,
@@ -243,31 +261,31 @@ export default {
 </script>
 <style>
 .marginTop {
-  margin-top: 150px;
+  margin-top: 200px;
 }
-.scroll-ease {
+/* .scroll-ease {
   transition: transform 0.03s ease-out;
-}
-.translate-element {
+} */
+/* .translate-element {
   transition: transform 3s ease-out;
   position: fixed;
   top: 100px;
-}
-.scroll-effect {
+} */
+/* .scroll-effect {
   transition: opacity 5s ease-in-out;
   opacity: 1;
-}
+} */
 
-.slide-up-enter-active,
+/* .slide-up-enter-active,
 .slide-up-leave-active {
   transition: all 4s ease-out;
-}
-.slide-up-enter-from {
+} */
+/* .slide-up-enter-from {
   transform: translateY(0px);
-}
-.slide-up-leave-to {
+} */
+/* .slide-up-leave-to {
   transform: translateY(-300px);
-}
+} */
 /* .cross {
     width: 20px;
     height: 20px;
@@ -278,29 +296,71 @@ export default {
 } */
 
 .animated-div {
-  /* width: 10px;
-  height: 10px;
-  background-color: red; */
+
   position: relative;
-  animation-name: example;
+  animation-name: cross1;
   animation-duration: 25s;
 }
+.cross-2 {
+position: relative;
+animation-name: cross2;
+animation-duration: 25s;
+}
 
-@keyframes example {
+@keyframes cross1 {
   0%   {  left: 10px; top: 200px; }
   25%  {  left: 150px; top: 190px; }
   50%  {  left: 250px; top: 250px; }
   75%  {  left: 0px; top: 200px; }
   100% {  left: 0px; top: 0px; }
 }
-.header-text{
-   background: linear-gradient(90deg, #0ea5ea,  #0ea5ea, #0bd1d1);
-     -webkit-background-clip: text !important;
-    -webkit-text-fill-color: transparent !important;
-    background-clip: text !important;
-    text-fill-color: transparent;
+@keyframes cross2 {
+  0%   {  left: 200px; top: 200px; }
+  25%  {  left: 150px; top: 300px; }
+  50%  {  left: 250px; top: 250px; }
+  75%  {  left: 0px; top: 200px; }
+  100% {  left: 0px; top: 0px; }
 }
-.IM{
-  color: #d9d9d9;
+.bouncing-element {
+  animation: bounce 5s infinite;
+  margin-top: 200px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #0CB9DF;
 }
+@keyframes bounce {
+  0%{
+    transform: translateY(0px);
+  } 
+  50% {
+    transform: translateY(100px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+.bouncing-element2 {
+  animation: scale 3s infinite;
+  margin-top: 200px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #B2E8F4;
+}
+@keyframes scale {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.8);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+
+
+
 </style>

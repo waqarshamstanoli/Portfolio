@@ -1,14 +1,21 @@
 <template>
   <v-container class="md-px-16"  style=" padding-top: 200px">
     <v-row class="justify-center" :class="{ square: test }" ref="sectionElement">
+      <v-col cols="12" lg="12" md="12" sm="12">
+        <v-card width="80%" color="transparent" class="elevation-0 mx-auto">
+          <v-card-text>
+           <h1 class="gray-text text--h2 text-center">
+            SKILLS
+          </h1>
+          </v-card-text>
+          </v-card>
+          </v-col>
       <!-- <v-col cols="12" lg="4" md="12" sm="12">
         <v-card width="80%" color="transparent" class="elevation-0 mx-auto">
           <v-card-text>
-            <h1 class="text--h2 white--text headingLeft">
-              <span class="secondary--text"> </span> <br />
-
-              SKILLS
-            </h1>
+           <h1 class="gray-text text--h2 text-center">
+            PROJECTS
+          </h1>
             <h2 class="white--text mt-4">
               Vue.js:
             </h2>
@@ -49,7 +56,7 @@
       <v-card outlined width="230" class="mx-auto borderRadius py-16">
   <div class="text-center ">
   <img src="../assets/skills/vue.png" width="50" class="" alt="">
-  <h2 class="text--h3 mt-4">Vue JS</h2>
+  <h2 class="black--text text--h3 mt-4">Vue JS</h2>
   <h2 class="text--h3 mt-4">90%</h2>
 </div>
 </v-card>
@@ -58,7 +65,7 @@
 <v-card outlined width="230" class="mx-auto borderRadius py-16">
   <div class="text-center ">
   <img src="../assets/skills/vuetify.png" width="50" class="" alt="">
-  <h2 class="text--h3 mt-4">Vuetify</h2>
+  <h2 class="black--text text--h3 mt-4">Vuetify</h2>
   <h2 class="text--h3 mt-4">90%</h2>
 </div>
 </v-card>

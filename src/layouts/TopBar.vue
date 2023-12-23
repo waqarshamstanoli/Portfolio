@@ -1,8 +1,8 @@
 <template>
   <div>
-    <v-app-bar class="gray"  fixed app>
-      <v-row class="justify-space-around">
-        <v-col cols="12" lg="4" md="12" sm="12">
+    <v-app-bar class="elevation-0" color=""  fixed app>
+      <v-row class="justify-center">
+        <v-col cols="12" lg="2" md="12" sm="12" class="">
           <v-app-bar-nav-icon
             @click="drawer = true"
             class="hidden-md-and-up"
@@ -12,21 +12,22 @@
               src="../assets/logo.svg"
               alt=""
               width="70%"
-              class="mt-6 ml-8 ml-md-4 cursor-pointer"
+              class="mt-6 ml-8 ml-md-4  cursor-pointer"
               to="/"
             />
           </v-toolbar-title>
         </v-col>
 
-        <v-col cols="12" lg="4" md="12" sm="12" class="d-none d-md-block">
+        <v-col cols="12" lg="6" md="12" sm="12" class="d-none d-md-block">
 
          
-          <div class="d-flex justify-end mt-4">
+          <div class="d-flex mt-4">
             <v-btn
               text
               large
               @click="scrollTo(100)"
               :class="{ activeButton: scrollPosition == 1150 }"
+              class="text-capitalize"
             >
               About Me
             </v-btn>
@@ -35,6 +36,7 @@
               large
               @click="scrollTo(1050)"
               :class="{ activeButton: scrollPosition == 1950 }"
+              class="text-capitalize"
             >
               Projects
             </v-btn>
@@ -43,6 +45,7 @@
               large
               @click="scrollTo(1850)"
               :class="{ activeButton: scrollPosition == 3550 }"
+              class="text-capitalize"
             >
               Skills
             </v-btn>
@@ -51,6 +54,7 @@
               large
               @click="scrollTo(2650)"
               :class="{ activeButton: scrollPosition == 4350 }"
+              class="text-capitalize"
             >
               Work Experience
             </v-btn>
@@ -59,6 +63,7 @@
               large
               @click="scrollTo(3450)"
               :class="{ activeButton: scrollPosition == 5150 }"
+              class="text-capitalize"
             >
               Education
             </v-btn>
@@ -67,6 +72,7 @@
               large
               @click="scrollTo(4250)"
               :class="{ activeButton: scrollPosition == 5150 }"
+              class="text-capitalize"
             >
               Contact
             </v-btn>

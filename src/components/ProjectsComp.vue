@@ -3,15 +3,14 @@
     <v-row class="justify-space-around">
       <v-col cols="12" lg="12" md="12" sm="12">
         <v-card
-          width="700"
+          width="50%"
           class="headingCenter elevation-0 mx-auto mt-16"
           color="transparent"
         >
-          <h1 class="primary--text text--h2 text-center">
-            <br />
+          <h1 class="gray-text text--h2 text-center">
             PROJECTS
           </h1>
-          <p class="primary--text text--body-1 mt-4 ffHalyard text-center">
+          <p class="text-body-1 gray--text font-weight-regular mt-8  text-center">
             Stay in control - und create the shake that meets your needs. Just
             as you like it. Just as you need it. Keep an eye out for our
             machines. The rest's a cinch:
@@ -24,12 +23,12 @@
           <v-card
             rounded="lg"
             color="rgba(0,0,0,.1)"
-            width="300"
+            width="290"
             class="mx-auto mt-8 elevation-0"
             v-for="project in projects" :key="project"
           >
             <v-card-text>
-              <h4 class="primary--text text--h4 text-center">{{project.projectName}}.</h4>
+              <h4 class="secondary--text text--h4 text-center mt-2">{{project.projectName}}.</h4>
               
                   <v-img :src="project.projectImg" alt="" class="mt-8">
                    

@@ -94,17 +94,65 @@ export default {
 </script>
 
 <style lang="scss">
+.v-application .text--h2 {
+  line-height: 0.9em !important;
+  font-size: 64px !important;
+  font-weight: 800 !important;
+  font-family: "Noto_Sans-Black" !important;
+  // font-family: "Halyard";
+}
+.v-application .body-1 {
+  font-family: 'NotoSans-Medium' !important;
+}
+.v-application .text--h4 {
+  font-size: 18px !important;
+  font-family: "NotoSans-Medium";
+  font-weight: 100 !important;
+  line-height: 35px !important;
+}
+.v-text-field.v-text-field--enclosed .v-text-field__details {
+    padding-top: 0px;
+    margin-bottom: 8px;
+    display: none !important;
+}
+.header-text{
+   background: linear-gradient(90deg, #0ea5ea,  #0ea5ea, #0bd1d1);
+     -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    background-clip: text !important;
+    text-fill-color: transparent;
+}
 .v-btn.v-size--large {
   transition: all 0.15s ease-in-out;
-  color: #FFFFFF !important;
-  font-family: Tungsten !important;
-  font-size: 25px !important;
+  color: #2E548C !important;
+  font-family: 'NotoSans-Medium' !important;
+  font-size: 16px !important;
   cursor: pointer;
   border-radius: 30px !important;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .v-btn.v-size--small {
   color: #bfbfbf !important;
-  font-family: Tungsten !important;
+  font-family: Noto_Sans !important;
   font-size: 16px !important;
 }
 
@@ -113,54 +161,42 @@ export default {
   color: black !important;
 }
 .topBarSpan {
-  font-family: Tungsten !important;
+  font-family: Noto_Sans !important;
   font-size: 16px !important;
 }
 .bodyy {
   // background-image: url("../assets/5073414.jpg");
-  background-color:"#0F172A";
+  background: linear-gradient(45deg, #DDF4FB, #F9FBFF);
   //  background-size: 100 100;
   // background-repeat: repeat-y;
   // background-position: center;
 }
 .v-application .text--h1 {
-  line-height: 92px !important;
-  font-size: 110px !important;
-  font-weight: 700 !important;
+  line-height: 52px !important;
+  font-size: 60px !important;
+  font-weight: 900 !important;
   // font-family: "Halyard";
-  font-family: "tungsten";
+  font-family: "Noto_Sans-Black";
 }
-.v-application .text--h2 {
-  line-height: 0.9em !important;
-  font-size: 76px !important;
-  font-weight: 600 !important;
-  font-family: "tungsten";
-  // font-family: "Halyard";
-}
+
 .v-application .text--h3 {
   font-size: 16px !important;
-  font-family: "Halyard";
-  font-weight: 100 !important;
-  line-height: 35px !important;
-  color: black;
+  font-family: "Noto_Sans";
+  font-weight: 400 !important;
+  line-height: 24px !important;
+  color: #7E9CC7;
 }
-.v-application .text--h4 {
-  font-size: 28px !important;
-  font-family: "tungsten";
-  font-weight: 100 !important;
-  line-height: 35px !important;
-  color: black;
-}
+
 .v-application .text--h5 {
   font-size: 26px !important;
-  font-family: "tungsten";
+  font-family: "Noto_Sans";
   font-weight: 100 !important;
   line-height: 35px !important;
   color: black;
 }
 
 .v-btn--rounded {
-  font-family: "tungsten" !important;
+  font-family: "Noto_Sans" !important;
 }
 .v-btn.v-size--x-large {
   border-radius: 40px !important;
@@ -168,14 +204,14 @@ export default {
   font-size: 30px !important;
 }
 @font-face {
-  font-family: "Tungsten";
-  src: local("Tungsten"),
-    url(../assets/tungsten/Tungsten-Medium.ttf) format("truetype");
+  font-family: "Noto_Sans-Black";
+  src: local("Noto_Sans"),
+    url(../assets/Noto_Sans/static/NotoSans-Black.ttf) format("truetype");
 }
 @font-face {
-  font-family: "TungstenBold";
-  src: local("TungstenBold"),
-    url(../assets/tungsten/Tungsten-Bold.ttf) format("truetype");
+  font-family: "NotoSans-Medium";
+  src: local("Noto_Sans"),
+    url(../assets/Noto_Sans/static/NotoSans-Medium.ttf) format("truetype");
 }
 @font-face {
   font-family: "Tungsten-light";
@@ -190,12 +226,12 @@ export default {
 .ffHalyard {
   font-family: Halyard !important;
 }
-.v-application .body-1 {
-  font-size: 28px !important;
-  font-weight: 200;
+// .v-application .body-1 {
+//   font-size: 28px !important;
+//   font-weight: 200;
 
-  font-family: Halyard !important;
-}
+//   font-family: Halyard !important;
+// }
 // .v-application .body-2 {
 //   font-size: 58px !important;
 //   font-weight: 200;

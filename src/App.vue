@@ -175,7 +175,7 @@ export default {
   width: 20px;
   height: 20px;
   border-radius: 50%;
-  background-color: #e744b6;
+  background-color: #0ea5ea;
   transform: translate(-50%, -50%);
   pointer-events: none;
   /* Prevent the dot from blocking interactions */
@@ -194,7 +194,7 @@ export default {
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  background-color: #b911e4;
+  background-color: #0bd1d1;
   /* transform: translate(-50%, -50%); */
   pointer-events: none;
   animation: rippleAnimation 4s linear;
