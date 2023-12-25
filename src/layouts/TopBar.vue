@@ -1,93 +1,46 @@
 <template>
   <div>
-    <v-app-bar class="elevation-0" color=""  fixed app>
+    <v-app-bar class="elevation-0" color="blue" fixed app>
       <v-row class="justify-center">
         <v-col cols="12" lg="2" md="12" sm="12" class="">
-          <v-app-bar-nav-icon
-            @click="drawer = true"
-            class="hidden-md-and-up"
-          ></v-app-bar-nav-icon>
-          <v-toolbar-title link @click="changeRoute()">
-            <img
-              src="../assets/logo.svg"
-              alt=""
-              width="70%"
-              class="mt-6 ml-8 ml-md-4  cursor-pointer"
-              to="/"
-            />
+          <v-app-bar-nav-icon @click="drawer = true" class="hidden-md-and-up"></v-app-bar-nav-icon>
+          <v-toolbar-title link @click="openModal()">
+            <img src="../assets/logo.svg" alt="" width="70%" class="mt-6 ml-8 ml-md-4 cursor-pointer" to="/" />
           </v-toolbar-title>
         </v-col>
 
         <v-col cols="12" lg="6" md="12" sm="12" class="d-none d-md-block">
-
-         
-          <div class="d-flex mt-4">
-            <v-btn
-              text
-              large
-              @click="scrollTo(100)"
-              :class="{ activeButton: scrollPosition == 1150 }"
-              class="text-capitalize"
-            >
-              About Me
-            </v-btn>
-            <v-btn
-              text
-              large
-              @click="scrollTo(1050)"
-              :class="{ activeButton: scrollPosition == 1950 }"
-              class="text-capitalize"
-            >
-              Projects
-            </v-btn>
-            <v-btn
-              text
-              large
-              @click="scrollTo(1850)"
-              :class="{ activeButton: scrollPosition == 3550 }"
-              class="text-capitalize"
-            >
-              Skills
-            </v-btn>
-            <v-btn
-              text
-              large
-              @click="scrollTo(2650)"
-              :class="{ activeButton: scrollPosition == 4350 }"
-              class="text-capitalize"
-            >
-              Work Experience
-            </v-btn>
-            <v-btn
-              text
-              large
-              @click="scrollTo(3450)"
-              :class="{ activeButton: scrollPosition == 5150 }"
-              class="text-capitalize"
-            >
-              Education
-            </v-btn>
-            <v-btn
-              text
-              large
-              @click="scrollTo(4250)"
-              :class="{ activeButton: scrollPosition == 5150 }"
-              class="text-capitalize"
-            >
-              Contact
-            </v-btn>
+          <div class="d-flex my-4">
+            <v-btn text large @click="scrollTo(100)" :class="{ activeButton: scrollPosition == 1150 }" class="text-capitalize btnText--text"> About Me </v-btn>
+            <v-btn text large @click="scrollTo(1050)" :class="{ activeButton: scrollPosition == 1950 }" class="text-capitalize btnText--text"> Projects </v-btn>
+            <v-btn text large @click="scrollTo(1850)" :class="{ activeButton: scrollPosition == 3550 }" class="text-capitalize btnText--text"> Skills </v-btn>
+            <v-btn text large @click="scrollTo(2650)" :class="{ activeButton: scrollPosition == 4350 }" class="text-capitalize btnText--text"> Work Experience </v-btn>
+            <v-btn text large @click="scrollTo(3450)" :class="{ activeButton: scrollPosition == 5150 }" class="text-capitalize btnText--text"> Education </v-btn>
+            <v-btn text large @click="scrollTo(4250)" :class="{ activeButton: scrollPosition == 5150 }" class="text-capitalize btnText--text"> Contact </v-btn>
           </div>
-         
+        </v-col>
+        <v-col cols="12" lg="2" md="12" sm="12" class="">
+          <v-menu  offset-y left="true" rounded="lg">
+            <template v-slot:activator="{  on }">
+              <v-btn  v-on="on" class="mt-6 menu elevation-0" >
+              <v-icon color="icon" class="" v-on="on" > {{ selectedItem }}  </v-icon>
+              <v-icon color="icon" class="ml-4" > mdi-chevron-down  </v-icon>
+            </v-btn>
+            </template>
+
+            <v-list dense>
+              <v-list-item class="" v-for="item in items" :key="item"  @click="selectItem(item)">
+                <v-list-item-icon class="">
+                  <v-icon color="icon" class="" v-on="on"> {{ item.icon }}  </v-icon>
+                </v-list-item-icon>
+                <v-list-item-title>{{ item.name }}</v-list-item-title>
+              </v-list-item>
+            </v-list>
+          </v-menu>
         </v-col>
       </v-row>
     </v-app-bar>
-    <v-navigation-drawer
-      class="back1"
-      width="100%"
-      v-model="drawer"
-      absolute
-      temporary
-    >
+    <v-navigation-drawer class="back1" width="100%" v-model="drawer" absolute temporary>
       <div class="text-right pr-4 mt-8">
         <v-btn icon class="drawer" @click="drawer = false">
           <v-icon class="ml-auto">mdi-close</v-icon>
@@ -107,13 +60,22 @@ export default {
       // consumer: false,
       scrollPosition: "",
       visible: false,
-      name: "DE",
+      items: [{icon:'mdi-white-balance-sunny', name: "Light" }, {icon:'mdi-weather-night', name: "Dark" }],
+      selectedItem: 'mdi-white-balance-sunny',
     };
   },
   methods: {
     ...mapActions(["moveToNext"]),
+    selectItem(item) {
+      this.selectedItem = item.icon;
+      this.$emit('item-selected', this.selectedItem)
+    },
     openModal() {
-      this.$emit("openDialog", true);
+      if (this.$vuetify.theme.dark == false) {
+        this.$vuetify.theme.dark = true;
+      } else {
+        this.$vuetify.theme.dark = false;
+      }
     },
     toggle(event) {
       this.visible = event;
@@ -209,7 +171,6 @@ ul {
 }
 .topBarOpacity {
   opacity: 0.8;
-  
 }
 .activeButton {
   background-color: #ffec00;

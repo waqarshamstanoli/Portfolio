@@ -23,18 +23,19 @@
               and efficient code. My journey in the world of web development has
               been exciting, and I'm always eager to take on new challenges.
             </p>
+            <div class="d-flex mt-16" style="border: 1px solid #56D3DB; border-radius: 8px; background-color: #C8D5E8; padding: 12px 12px 8px 8px; width:420px">
+            <v-text-field outlined dense label="Type Your Email Address" >   </v-text-field>
+            <v-btn color=""  class="py-5 ml-12 white--text text-capitalize subscribe-button " >Subscribe <v-icon size="small" class="ml-2">mdi-arrow-right</v-icon></v-btn>
+          </div>
           </v-card-text>
           <!-- <v-card-actions class="red"> -->
             <!--  -->
-            <div class="d-flex" style="border: 2px solid #56D3DB; border-radius: 10px; background-color: #C8D5E8; padding: 12px 12px 4px 12px; width:420px">
-            <v-text-field outlined dense label="Type Your Email Address" >   </v-text-field>
-            <v-btn color="primary"  class="py-4 ml-12 text-capitalize">Subscribe</v-btn>
-          </div>
+           
           <!-- </v-card-actions> -->
         </v-card>
       </v-col>
       <v-col cols="12" lg="5" md="12" sm="12">
-        <div class="d-flex">
+        <div class="d-flex justify-space-between">
           <div :key="animationKey" class="animated-div">
         <img src="../assets/pattern-1.svg" alt="" width="20">
       </div>
@@ -88,46 +89,29 @@ export default {
       scrollPosition: 0,
       increment: 0,
       test: false,
-      texts: [" Waqar Shams", " DEVELOPER", " Designer"],
+      texts: ["Waqar", " Developer", " Designer"],
     currentTextIndex: 0,
     typedText: '',
     index: 0,
     animationKey: 0, 
-    // dotTop: 300,
-    //         dotLeft: 100,
-    //         positions: [
-    //             { top: 350, left: 500 },
-    //             { top: 600, left: 300 },
-    //             { top: 700, left: 100 },
-    //         ],
-    //         currentPositionIndex: 0,
-    //         animationDuration: 2000,
+   
     };
   },
   methods: {
     restartAnimation() {
       this.animationKey += 1;
     },
-    // moveDotTo(positionIndex) {
-    //             this.dotTop = this.positions[positionIndex].top;
-    //             this.dotLeft = this.positions[positionIndex].left;
-    //         },
-    //         animateDot() {
-    //             setInterval(() => {
-    //                 this.moveDotTo(this.currentPositionIndex);
-    //                 this.currentPositionIndex = (this.currentPositionIndex + 1) % this.positions.length;
-    //             }, this.animationDuration);
-    //         },
+    
     typeText() {
       if (this.index <= this.texts[this.currentTextIndex].length) {
         this.typedText = this.texts[this.currentTextIndex].slice(0, this.index);
         this.index++;
-        setTimeout(this.typeText, 150); // Typing speed (adjust as needed)
+        setTimeout(this.typeText, 200); // Typing speed (adjust as needed)
       } else {
         // Wait for a second before clearing the text
         setTimeout(() => {
           this.clearText();
-        }, 1000);
+        }, 1500);
       }
     },
     clearText() {
@@ -162,7 +146,7 @@ export default {
     },
 
     scrollToContent() {
-      console.log("fdfasf");
+      
       if (this.scrollPosition == 0) {
         this.increment = 1150;
         this.scrollTo = this.scrollPosition + this.increment;
@@ -296,7 +280,6 @@ export default {
 } */
 
 .animated-div {
-
   position: relative;
   animation-name: cross1;
   animation-duration: 25s;
@@ -322,27 +305,28 @@ animation-duration: 25s;
   100% {  left: 0px; top: 0px; }
 }
 .bouncing-element {
-  animation: bounce 5s infinite;
+  animation: bounce 6s infinite;
   margin-top: 200px;
-  width: 20px;
-  height: 20px;
+  position: relative;
+  width: 25px;
+  height: 25px;
   border-radius: 50%;
   background-color: #0CB9DF;
 }
 @keyframes bounce {
   0%{
-    transform: translateY(0px);
+    transform: translateY(250px);
   } 
   50% {
-    transform: translateY(100px);
+    transform: translateY(320px);
   }
   100% {
-    transform: translateY(0px);
+    transform: translateY(250px);
   }
 }
 .bouncing-element2 {
   animation: scale 3s infinite;
-  margin-top: 200px;
+  margin-top: 400px;
   width: 20px;
   height: 20px;
   border-radius: 50%;
@@ -360,7 +344,13 @@ animation-duration: 25s;
   }
 }
 
-
+.subscribe-button {
+      /* background: linear-gradient(to right, #ff7e5f, #feb47b);  */
+      background: linear-gradient(to right, #0ea5ea,  #0ea5ea, #0bd1d1);
+      font-size: 16px;
+      font-weight: 700 !important;
+    
+}
 
 
 </style>

@@ -1,307 +1,24 @@
 <template>
-  <v-container class="md-px-16"  style=" padding-top: 200px">
+  <v-container class="md-px-16" style="padding-top: 200px">
     <v-row class="justify-center" :class="{ square: test }" ref="sectionElement">
       <v-col cols="12" lg="12" md="12" sm="12">
         <v-card width="80%" color="transparent" class="elevation-0 mx-auto">
           <v-card-text>
-           <h1 class="gray-text text--h2 text-center">
-            SKILLS
-          </h1>
+            <h1 class="gray-text text--h2 text-center">SKILLS</h1>
           </v-card-text>
-          </v-card>
-          </v-col>
-      <!-- <v-col cols="12" lg="4" md="12" sm="12">
-        <v-card width="80%" color="transparent" class="elevation-0 mx-auto">
-          <v-card-text>
-           <h1 class="gray-text text--h2 text-center">
-            PROJECTS
-          </h1>
-            <h2 class="white--text mt-4">
-              Vue.js:
-            </h2>
-            <p class="text--body-1 white--text ffHalyard mt-4 paragraphLeft">
-              I specialize in building modern and responsive web
-              applications using Vue.js, harnessing the power of its components
-              and reactivity.
-            </p>
-            <h2 class="white--text mt-4">
-              HTML5 & CSS3:
-            </h2>
-            <p class="text--body-1 white--text ffHalyard mt-4 paragraphLeft">
-               Proficient in crafting well-structured and visually
-              appealing user interfaces, ensuring a seamless user experience.
-            </p>
-            <h2 class="white--text mt-4">
-              JavaScript:
-            </h2>
-            <p class="text--body-1 white--text ffHalyard mt-4 paragraphLeft">
-               Leveraging the full potential of JavaScript to create
-              dynamic and interactive features that enhance user engagement.
-            </p>
-            <h2 class="white--text mt-4">
-              Git:
-            </h2>
-            <p class="text--body-1 white--text ffHalyard mt-4 paragraphLeft">
-              Experienced in version control to collaborate efficiently and
-              maintain code integrity throughout the development process.
-            </p>
-          </v-card-text>
-          <v-card-actions>
-          
-          </v-card-actions>
         </v-card>
-      </v-col> -->
-      
-      <v-col cols="12" lg="2" md="4" sm="6" class=" paragraphLeft">
-      <v-card outlined width="230" class="mx-auto borderRadius py-16">
-  <div class="text-center ">
-  <img src="../assets/skills/vue.png" width="50" class="" alt="">
-  <h2 class="black--text text--h3 mt-4">Vue JS</h2>
-  <h2 class="text--h3 mt-4">90%</h2>
-</div>
-</v-card>
-</v-col>
-<v-col cols="12" lg="2" md="4" sm="6" class=" paragraphLeft">
-<v-card outlined width="230" class="mx-auto borderRadius py-16">
-  <div class="text-center ">
-  <img src="../assets/skills/vuetify.png" width="50" class="" alt="">
-  <h2 class="black--text text--h3 mt-4">Vuetify</h2>
-  <h2 class="text--h3 mt-4">90%</h2>
-</div>
-</v-card>
-</v-col>
-<v-col cols="12" lg="2" md="12" sm="12" class=" paragraphLeft">
-<v-card outlined width="230" class="mx-auto borderRadius py-16">
-  <div class="text-center ">
-  <img src="../assets/skills/nuxt.png" width="50" class="" alt="">
-  <h2 class="text--h3 mt-4">Nuxt</h2>
-  <h2 class="text--h3 mt-4">90%</h2>
-</div>
-</v-card>
-</v-col>
-<v-col cols="12" lg="2" md="12" sm="12" class=" paragraphLeft">
-<v-card outlined width="230" class="mx-auto borderRadius py-16">
-  <div class="text-center ">
-  <img src="../assets/skills/react.png" width="50" class="" alt="">
-  <h2 class="text--h3 mt-4">React</h2>
-  <h2 class="text--h3 mt-4">90%</h2>
-</div>
-</v-card>
-</v-col>
-<v-col cols="12" lg="2" md="12" sm="12" class=" paragraphLeft">
-<v-card outlined width="230" class="mx-auto borderRadius py-16">
-  <div class="text-center ">
-  <img src="../assets/skills/angular.png" width="50" class="" alt="">
-  <h2 class="text--h3 mt-4">Angular</h2>
-  <h2 class="text--h3 mt-4">90%</h2>
-</div>
-</v-card>
-</v-col>
-<v-col cols="12" lg="2" md="12" sm="12" class=" paragraphLeft">
-<v-card outlined width="230" class=" mx-auto borderRadius py-16">
-  <div class="text-center ">
-  <img src="../assets/skills/photoshope.png" width="50" class="" alt="">
-  <h2 class="text--h3 mt-4">Adobe Photoshope</h2>
-  <h2 class="text--h3 mt-4">90%</h2>
-</div>
-</v-card>
-</v-col>
-<v-col cols="12" lg="2" md="12" sm="12" class=" paragraphLeft">
-<v-card outlined width="230" class="mx-auto borderRadius py-16">
-  <div class="text-center ">
-  <img src="../assets/skills/xd.png" width="50" class="" alt="">
-  <h2 class="text--h3 mt-4">Adobe Xd</h2>
-  <h2 class="text--h3 mt-4">90%</h2>
-</div>
-</v-card>
-</v-col>
-<v-col cols="12" lg="2" md="12" sm="12" class=" paragraphLeft">
-<v-card outlined width="230" class="mx-auto borderRadius py-16">
-  <div class="text-center ">
-  <img src="../assets/skills/material.png" width="50" class="" alt="">
-  <h2 class="text--h3 mt-4">Material UI</h2>
-  <h2 class="text--h3 mt-4">90%</h2>
-</div>
-</v-card>
-</v-col>
-<v-col cols="12" lg="2" md="12" sm="12" class=" paragraphLeft">
-<v-card outlined width="230" class="mx-auto borderRadius py-16">
-  <div class="text-center ">
-  <img src="../assets/skills/tailwind.png" width="50" class="" alt="">
-  <h2 class="text--h3 mt-4">Tailwind</h2>
-  <h2 class="text--h3 mt-4">90%</h2>
-</div>
-</v-card>
-</v-col>
-<v-col cols="12" lg="2" md="12" sm="12" class=" paragraphLeft">
-<v-card outlined width="230" class="mx-auto borderRadius py-16">
-  <div class="text-center ">
-  <img src="../assets/skills/figma.png" width="50" class="" alt="">
-  <h2 class="text--h3 mt-4">Figma</h2>
-  <h2 class="text--h3 mt-4">90%</h2>
-</div>
-</v-card>
-</v-col>
-
-<v-col cols="12" lg="2" md="12" sm="12" class=" paragraphLeft">
-<v-card outlined width="230" class="mx-auto borderRadius py-16">
-  <div class="text-center ">
-  <img src="../assets/skills/antdesign.png" width="50" class="" alt="">
-  <h2 class="text--h3 mt-4">Ant Design</h2>
-  <h2 class="text--h3 mt-4">90%</h2>
-</div>
-</v-card>
-</v-col>
-<v-col cols="12" lg="2" md="12" sm="12" class=" paragraphLeft">
-<v-card outlined width="230" class="mx-auto borderRadius py-16">
-  <div class="text-center ">
-  <img src="../assets/skills/github.png" width="50" class="" alt="">
-  <h2 class="text--h3 mt-4">Github</h2>
-  <h2 class="text--h3 mt-4">90%</h2>
-</div>
-</v-card>
-</v-col>
-<v-col cols="12" lg="2" md="12" sm="12" class=" paragraphLeft">
-<v-card outlined width="230" class="mx-auto borderRadius py-16">
-  <div class="text-center ">
-  <img src="../assets/skills/bootstrap.png" width="50" class="" alt="">
-  <h2 class="text--h3 mt-4">Bootstrap</h2>
-  <h2 class="text--h3 mt-4">90%</h2>
-</div>
-</v-card>
-</v-col>
-<v-col cols="12" lg="2" md="12" sm="12" class=" paragraphLeft">
-<v-card outlined width="230" class="mx-auto borderRadius py-16">
-  <div class="text-center ">
-  <img src="../assets/skills/quasar.png" width="50" class="" alt="">
-  <h2 class="text--h3 mt-4">Quasar</h2>
-  <h2 class="text--h3 mt-4">90%</h2>
-</div>
-</v-card>
-</v-col>
-<v-col cols="12" lg="2" md="12" sm="12" class=" paragraphLeft">
-<v-card outlined width="230" class="mx-auto borderRadius py-16">
-  <div class="text-center ">
-  <img src="../assets/skills/css.png" width="50" class="" alt="">
-  <h2 class="text--h3 mt-4">CSS</h2>
-  <h2 class="text--h3 mt-4">90%</h2>
-</div>
-</v-card>
-</v-col>
-<v-col cols="12" lg="2" md="12" sm="12" class=" paragraphLeft">
-<v-card outlined width="230" class="mx-auto borderRadius py-16">
-  <div class="text-center ">
-  <img src="../assets/skills/html.png" width="50" class="" alt="">
-  <h2 class="text--h3 mt-4">HTML</h2>
-  <h2 class="text--h3 mt-4">90%</h2>
-</div>
-</v-card>
-</v-col>
-
-      <!-- <v-col cols="12" lg="4" md="12" sm="12" class="px-16 paragraphLeft">
-        <div class="d-flex">
-          <v-hover v-slot="{ hover }">
-            <div class="text-center">
-              <img src="../assets/skills/vue.png" width="70%" alt="" class="image" :class="{ scaled: hover }" />
-              <h2 class="white--text text--h3 mt-4">Vue.js:</h2>
-            </div>
-          </v-hover>
-          <v-hover v-slot="{ hover }">
-            <div class="text-center">
-              <img src="../assets/skills/vuetify.png" width="70%" alt="" class="image" :class="{ scaled: hover }" />
-              <h2 class="white--text text--h3 mt-4">Vuetify:</h2>
-            </div>
-          </v-hover>
-          <v-hover v-slot="{ hover }">
-            <div class="text-center">
-              <img src="../assets/skills/nuxt.png" width="70%" alt="" class="image" :class="{ scaled: hover }" />
-              <h2 class="white--text text--h3 mt-4">Nuxt:</h2>
-            </div>
-          </v-hover>
-          <v-hover v-slot="{ hover }">
-            <div class="text-center">
-              <img src="../assets/skills/react.png" width="70%" alt="" class="image" :class="{ scaled: hover }" />
-              <h2 class="white--text text--h3 mt-4">React:</h2>
-            </div>
-          </v-hover>
-        </div>
-
-        <div class="d-flex mt-8">
-          <v-hover v-slot="{ hover }">
-            <div class="text-center">
-              <img src="../assets/skills/photoshope.png" width="70%" alt="" class="image" :class="{ scaled: hover }"/>
-              <h2 class="white--text text--h3 mt-4">Photoshope:</h2>
-            </div>
-          </v-hover>
-          <v-hover v-slot="{ hover }">
-            <div class="text-center">
-              <img src="../assets/skills/xd.png" width="70%" alt="" class="image" :class="{ scaled: hover }" />
-              <h2 class="white--text text--h3 mt-4">Xd:</h2>
-            </div>
-          </v-hover>
-          <v-hover v-slot="{ hover }">
-            <div class="text-center">
-              <img src="../assets/skills/tailwind.png" width="70%" alt="" class="image" :class="{ scaled: hover }"/>
-              <h2 class="white--text text--h3 mt-4">Tailwind:</h2>
-            </div>
-          </v-hover>
-          <v-hover v-slot="{ hover }">
-            <div class="text-center">
-              <img src="../assets/skills/figma.png" width="70%" alt="" class="image" :class="{ scaled: hover }" />
-              <h2 class="white--text text--h3 mt-4">Vue.js:</h2>
-            </div>
-          </v-hover>
-        </div>
-
-       
-
-        <v-row> </v-row>
       </v-col>
-      <v-col cols="12" lg="4" md="12" sm="12" class="px-16 paragraphLeft">
-        <div class="d-flex">
-          <div class="text-center">
-            <img src="../assets/skills/angular.png" width="70%" alt="" class="" />
-            <h2 class="white--text text--h3 mt-4">Angular:</h2>
-          </div>
-          <div class="text-center">
-            <img src="../assets/skills/bootstrap.png" width="70%" alt="" class="" />
-            <h2 class="white--text text--h3 mt-4">Bootstrap:</h2>
-          </div>
-          <div class="text-center">
-            <img src="../assets/skills/css.png" width="70%" alt="" class="" />
-            <h2 class="white--text text--h3 mt-4">CSS:</h2>
-          </div>
-          <div class="text-center">
-            <img src="../assets/skills/html.png" width="70%" alt="" class="" />
-            <h2 class="white--text text--h3 mt-4">HTML:</h2>
-          </div>
-        </div>
+      
 
-        <div class="d-flex mt-8">
-          <v-hover v-slot="{ hover }">
-            <div class="text-center">
-              <img src="../assets/skills/quasar.png" width="70%" alt="" class="image" :class="{ scaled: hover }" />
-              <h2 class="white--text text--h3 mt-4">Quasar:</h2>
-            </div>
-          </v-hover>
-          <v-hover v-slot="{ hover }">
-            <div class="text-center">
-              <img src="../assets/skills/github.png" width="70%" alt="" class="image" :class="{ scaled: hover }" />
-              <h2 class="white--text text--h3 mt-4">Github:</h2>
-            </div>
-          </v-hover>
+      <v-col cols="12" lg="2" md="4" sm="6" class="paragraphLeft" v-for="skill in skills" :key="skill">
+        <v-card outlined width="200" class="mx-auto borderRadius py-16">
           <div class="text-center">
-            <img src="../assets/skills/antdesign.png" width="70%" alt="" class="" />
-            <h2 class="white--text text--h3 mt-4">Ant Design:</h2>
+            <img :src="skill.img" width="50" class="" alt="" />
+            <h3 class="text--h3 mt-4">{{ skill.skillName }}</h3>
+            <h2 class="text--h3 mt-4">{{ skill.skillLevel }}</h2>
           </div>
-          <div class="text-center">
-            <img src="../assets/skills/material.png" width="70%" alt="" class="" />
-            <h2 class="white--text text--h3 mt-4">Material UI:</h2>
-          </div>
-        </div>
-
-        <v-row> </v-row>
-      </v-col> -->
+        </v-card>
+      </v-col>
     </v-row>
   </v-container>
 </template>
@@ -310,37 +27,53 @@
 export default {
   data() {
     return {
-      text: "Hello, World!",
-      isTextVisible: false,
-      isHovered: false,
+     
       test: false,
       lightPurple: false,
+      skills: [
+        { skillName: "Vue js", skillLevel: "", img:require('../assets/skills/vue.png')},
+        { skillName: "React", skillLevel: "", img:require('../assets/skills/react.png') },
+        { skillName: "Angular", skillLevel: "", img:require('../assets/skills/angular.png') },
+        { skillName: "Vuetify", skillLevel: "", img:require('../assets/skills/vuetify.png') },
+        { skillName: "Quasar", skillLevel: "", img:require('../assets/skills/quasar.png') },
+        { skillName: "Nuxt", skillLevel: "", img:require('../assets/skills/nuxt.png') },
+        { skillName: "Github", skillLevel: "", img:require('../assets/skills/github.png') },
+        { skillName: "Material UI", skillLevel: "", img:require('../assets/skills/material.png') },
+        { skillName: "Tailwind CSS", skillLevel: "", img:require('../assets/skills/tailwind.png') },
+        { skillName: "Bootstrap", skillLevel: "", img:require('../assets/skills/bootstrap.png') },
+        { skillName: "CSS", skillLevel: "", img:require('../assets/skills/css.png') },
+        { skillName: "HTML", skillLevel: "", img:require('../assets/skills/html.png') },
+        
+        { skillName: "Photoshope", skillLevel: "", img:require('../assets/skills/photoshope.png') },
+        { skillName: "Xd", skillLevel: "", img:require('../assets/skills/xd.png') },
+        { skillName: "Figma", skillLevel: "", img:require('../assets/skills/figma.png') },
+        { skillName: "Ant Design", skillLevel: "", img:require('../assets/skills/antdesign.png') },
+        
+      ],
     };
   },
   methods: {
-    setHovered(value) {
-      this.isHovered = value;
-    },
-    handleIntersection(entries) {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          this.onSectionVisible();
-        }
-      });
-    },
-    onSectionVisible() {
-      this.test = true;
-    },
+   
+    // handleIntersection(entries) {
+    //   entries.forEach((entry) => {
+    //     if (entry.isIntersecting) {
+    //       this.onSectionVisible();
+    //     }
+    //   });
+    // },
+    // onSectionVisible() {
+    //   this.test = true;
+    // },
   },
   mounted() {
-    const options = {
-      root: null,
-      rootMargin: "0px",
-      threshold: 0.5,
-    };
+    // const options = {
+    //   root: null,
+    //   rootMargin: "0px",
+    //   threshold: 0.5,
+    // };
 
-    const observer = new IntersectionObserver(this.handleIntersection, options);
-    observer.observe(this.$refs.sectionElement);
+    // const observer = new IntersectionObserver(this.handleIntersection, options);
+    // observer.observe(this.$refs.sectionElement);
   },
 };
 </script>
@@ -377,7 +110,7 @@ export default {
 .scaled {
   transform: scale(3);
 }
-.borderRadius{
+.borderRadius {
   border-radius: 40px;
 }
 </style>

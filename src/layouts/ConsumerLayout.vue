@@ -1,8 +1,8 @@
 <template>
   <div class="dashboard-layout">
     <div>
-      <Top-bar></Top-bar>
-      <dashboard-content ref="content" class="bodyy" ></dashboard-content>
+      <Top-bar @item-selected="changeTheme"></Top-bar>
+      <dashboard-content ref="content"  :class="(darkTheme ? 'dark-theme' : 'body')" ></dashboard-content>
 
       <v-footer color="transparent" class="pa-0">
         <v-card tile color="#2D2F2E" width="100%">
@@ -73,16 +73,23 @@ export default {
     return {
       // count: 1000000,
       // digits: [],
+      darkTheme:false
     };
   },
   methods: {
-    // move() {
-    //   this.$refs.content.move;
-    // },
-    // increment() {
-    //   this.count++;
-    //   this.digits = "" + this.count;
-    // },
+    changeTheme(theme) {
+      
+      if (theme == 'mdi-weather-night') {
+        this.$vuetify.theme.dark = true;
+        this.darkTheme = true
+        
+      } else {
+        this.$vuetify.theme.dark = false;
+        this.darkTheme = false
+        
+      }
+
+    },
   },
   // created() {
   //   this.digits = "" + this.count;
@@ -110,6 +117,24 @@ export default {
   font-weight: 100 !important;
   line-height: 35px !important;
 }
+.v-application .text--h3 {
+  font-size: 16px !important;
+  font-family: "NotoSans-Medium" !important;
+  font-weight: 400 !important;
+  line-height: 24px !important;
+  // color: #7E9CC7;
+}
+.v-application .text--h5 {
+  font-size: 22px !important;
+  font-family: "NotoSans-Medium";
+  font-weight: 500 !important;
+  line-height: 35px !important;
+}
+.v-card__title {
+  font-size: 30px !important;
+  font-weight: 600;
+  font-family: 'NotoSans-Medium' !important;
+}
 .v-text-field.v-text-field--enclosed .v-text-field__details {
     padding-top: 0px;
     margin-bottom: 8px;
@@ -124,14 +149,46 @@ export default {
 }
 .v-btn.v-size--large {
   transition: all 0.15s ease-in-out;
-  color: #2E548C !important;
+  // color: #2E548C !important;
+  // 94a9c9
   font-family: 'NotoSans-Medium' !important;
   font-size: 16px !important;
   cursor: pointer;
   border-radius: 30px !important;
 }
+.menu.v-btn.v-btn--is-elevated.v-btn--has-bg.theme--light.v-size--default {
+  background-color: transparent !important;
+}
+.menu.v-btn.v-btn--is-elevated.v-btn--has-bg.theme--dark.v-size--default {
+  background-color: transparent !important;
+}
+.menu.v-btn.v-btn--is-elevated.v-btn--has-bg.theme--light.v-size--default:hover {
+  background-color: transparent !important;
+}
 
-
+// .v-btn:hover{
+//   background:#3a2d3b !important
+// }
+.v-text-field--outlined.v-input--dense .v-label {
+    color: #7F92B0 !important;
+    font-size: 14px !important;
+    font-family: 'NotoSans-Medium' !important;
+}
+.v-text-field--outlined fieldset {
+    color: transparent !important;
+}
+.body {
+  background: linear-gradient(to bottom left, #dceef3, #F9FBFF, #dae8ec, #F9FBFF);
+}
+.dark-theme{
+  background-color:#0F172A
+}
+.theme--light.v-btn {
+    color: rgba(0, 0, 0, 0);
+}
+.theme--dark.v-btn {
+    color: rgba(0, 0, 0, 0);
+}
 
 
 
@@ -164,13 +221,7 @@ export default {
   font-family: Noto_Sans !important;
   font-size: 16px !important;
 }
-.bodyy {
-  // background-image: url("../assets/5073414.jpg");
-  background: linear-gradient(45deg, #DDF4FB, #F9FBFF);
-  //  background-size: 100 100;
-  // background-repeat: repeat-y;
-  // background-position: center;
-}
+
 .v-application .text--h1 {
   line-height: 52px !important;
   font-size: 60px !important;
@@ -179,21 +230,9 @@ export default {
   font-family: "Noto_Sans-Black";
 }
 
-.v-application .text--h3 {
-  font-size: 16px !important;
-  font-family: "Noto_Sans";
-  font-weight: 400 !important;
-  line-height: 24px !important;
-  color: #7E9CC7;
-}
 
-.v-application .text--h5 {
-  font-size: 26px !important;
-  font-family: "Noto_Sans";
-  font-weight: 100 !important;
-  line-height: 35px !important;
-  color: black;
-}
+
+
 
 .v-btn--rounded {
   font-family: "Noto_Sans" !important;
@@ -244,11 +283,7 @@ export default {
 
   font-family: Halyard !important;
 }
-.v-card__title {
-  font-size: 30px !important;
-  font-weight: 500;
-  font-family: Halyard !important;
-}
+
 
 .height {
   height: fit-content;
