@@ -1,7 +1,7 @@
 <template>
-  <v-container  class="px-lg-16">
-    <v-row class="justify-center" style="height: 100vh">
-      <v-col cols="12" lg="5" md="12" sm="12" class="">
+  <v-container  class="px-lg-16 px-xl-8">
+    <v-row class="justify-center" style="height: 80vh">
+      <v-col cols="12"   lg="5" md="12" sm="12" >
         <v-card
           width="80%"
           color="transparent"

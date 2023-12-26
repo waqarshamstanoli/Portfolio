@@ -63,7 +63,7 @@ export default {
       {projectName:'INTELLI COMMERCE', projectImg:require('../assets/intel.png'),projectDescription:''},
       {projectName:'NASEEM EDUCATION', projectImg:require('../assets/nas.png'),projectDescription:''},
       {projectName:'FINANCIALS UNLIMITED', projectImg:require('../assets/proteins.png'),projectDescription:''},
-      {projectName:'KYC', projectImg:'',projectDescription:''},
+      {projectName:'WHEELS N DEALS', projectImg:require('../assets/wnd.png'),projectDescription:''},
       // {projectName:'TASC', projectImg:'',projectDescription:''},
       // {projectName:'SCRAM', projectImg:'',projectDescription:''},
       // {projectName:'STABLE FUND', projectImg:'',projectDescription:''},
