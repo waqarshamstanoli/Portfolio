@@ -1,10 +1,10 @@
 <template>
-  <v-container fluid>
+  <div>
     <v-row>
       <v-col cols="12" lg="6" md="12" sm="12"> </v-col>
       <v-col cols="12" lg="6" md="12" sm="12"> </v-col>
     </v-row>
-  </v-container>
+  </div>
 </template>
 
 <script>

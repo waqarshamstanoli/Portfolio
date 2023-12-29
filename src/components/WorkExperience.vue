@@ -1,5 +1,5 @@
 <template>
-  <div class="py-16">
+  <v-container class="py-16">
     <v-row class="justify-space-around">
      
       <v-col cols="12" lg="12" md="12" sm="12">
@@ -22,29 +22,16 @@
           </div>
         </v-card>
       </v-col>
-      <!-- <v-col cols="12" lg="6" md="12" sm="12">
-        <v-card outlined width="80%" class="mx-auto mt-8 px-4 py-4 pb-8 px-md-16 borderRadius py-md-8 paragraphLeft">
-          <div class="text-center">
-            <v-card-title class="gray--text justify-center pb-1">Financials Unlimited</v-card-title>
-            <h5 class="gray--text text--h5">Vue js Developer</h5>
-            <h4 class="gray--text text--h4">Nov 2019 - Sep 2021</h4>
-
-            <p class="text-body-1 gray--text font-weight-regular mt-4"> During my two-year tenure at Financials Unlimited, I served as a Vue.js developer, 
-              exclusively focusing on the framework. I actively contributed to the development of various projects, leveraging Vue.js to create dynamic and 
-              efficient user interfaces. This experience at Financials Unlimited significantly enhanced my proficiency
-               in Vue.js and allowed me to play a crucial role in advancing the company's web development initiatives.</p>
-          </div>
-        </v-card>
-      </v-col> -->
+     
     </v-row>
-  </div>
+  </v-container>
 </template>s
 
 <script>
 export default {
   data() {
     return {
-    experiences:[{company:'Infini8AI', jobTitle:'Senior Front End Developer', duration:'Oct 2021 - Present', description:'As a Senior Front End Developer at Infin8AI, I specialized in Vue.js while also working on Angular and React.  Leading a team, I conducted code reviews and managed Git merges,  ensuring code quality. This experience enhanced my technical skills and leadership abilities in a dynamic development environment.'},{company:'Financials Unlimited', jobTitle:'Vue js Developer', duration:'Nov 2019 - Sep 2021', description:'During my two-year tenure at Financials Unlimited, I served as a Vue.js developer,exclusively focusing on the framework. I actively contributed to the development of various projects, leveraging Vue.js to create dynamic and  efficient user interfaces. This experience at Financials Unlimited significantly enhanced my proficiency in Vue.js and allowed me to play a crucial role in advancing the company s web development initiatives'}]
+    experiences:[{company:'Infini8AI', jobTitle:'Senior Front End Developer', duration:'Oct 2021 - Present', description:' In my capacity as a Senior Front End Developer at Infin8AI, I specialized in Vue.js, concurrently working with Angular and React. Leading a skilled team, I conducted code reviews and managed Git merges, ensuring the highest standards of code quality. This role not only enhanced my technical proficiency but also refined my leadership skills in a dynamic development environment.'},{company:'Financials Unlimited', jobTitle:'Vue js Developer', duration:'Nov 2019 - Sep 2021', description:'During my two-year tenure at Financials Unlimited, I served as a Vue.js developer,exclusively focusing on the framework. I actively contributed to the development of various projects, leveraging Vue.js to create dynamic and  efficient user interfaces. This experience at Financials Unlimited significantly enhanced my proficiency in Vue.js and allowed me to play a crucial role in advancing the company s web development initiatives'}]
     };
   },
   methods: {

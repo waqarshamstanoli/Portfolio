@@ -1,5 +1,5 @@
 <template>
-  <v-container fluid class="height">
+  <div class="height">
     <v-row class="justify-space-around">
       <v-col cols="12" lg="12" md="12" sm="12">
         <v-card
@@ -46,7 +46,7 @@
         </v-card-actions> -->
       </v-col>
     </v-row>
-  </v-container>
+  </div>
 </template>
   
   <script>

@@ -1,48 +1,32 @@
 <template>
-  <v-card height="80vh" color="transparent" class="elevation-0">
-    <v-row class="justify-space-around">
-      <v-col cols="12" lg="6" md="12" sm="12">
-        <v-card
-          width="500"
-          color="transparent"
-          class="elevation-0 ml-16 marginTop"
-        >
+  <div class="pb-16">
+    <v-row >
+      <v-col cols="12" lg="12" md="12" sm="12">
+        <v-card color="transparent" class="elevation-0 ml-16  mx-auto">
           <v-card-text>
-            <h1 class="primary--text text--h2 headingLeft">EDUCATION</h1>
-            <h2 class="primary--text mt-4">
-              Degree: BS (Computer Science) - IQRA University 
-            </h2>
-            <p class="primary--text text--body-1 ffHalyard paragraphLeft">
-             
-            </p>
-            <p class="primary--text text--body-1 ffHalyard paragraphLeft">
-              Relevant Courses: List any courses or certifications that enhance
-              your skills as a Vue.js developer.
-            </p>
+            <h1 class="gray-text text--h2 text-center ">EDUCATION</h1>
+            <h5 class="secondary--text text--h5 text-center mt-4">
+              Degree: BS (Computer Science) - IQRA University
+            </h5>
           </v-card-text>
         </v-card>
       </v-col>
-      <v-col cols="12" lg="6" md="12" sm="12">
-        <!-- <img src="../assets/worldmap.png" alt="" class="marginTop" />
-          <img src="../assets/numbers.svg" alt=""> -->
-      </v-col>
+
     </v-row>
-  </v-card>
+  </div>
 </template>
   
-  <script>
+<script>
 export default {
   data() {
     return {
-      text: "Hello, World!",
-      isTextVisible: false,
+
     };
   },
- 
-  
+
+
 };
 </script>
   
-  <style>
-</style>
+<style></style>
   

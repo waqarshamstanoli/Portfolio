@@ -73,7 +73,7 @@ export default {
     return {
       // count: 1000000,
       // digits: [],
-      darkTheme:false
+      darkTheme:true
     };
   },
   methods: {
@@ -189,7 +189,10 @@ export default {
 .theme--dark.v-btn {
     color: rgba(0, 0, 0, 0);
 }
-
+.custom.theme--dark.v-card {
+    background-color: rgb(12,69,119,0.1) !important;
+    color: #FFFFFF;
+}
 
 
 

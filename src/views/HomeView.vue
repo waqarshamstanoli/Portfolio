@@ -1,81 +1,32 @@
 <template>
-  <v-container  class="px-lg-16 px-xl-8">
-    <v-row class="justify-center" style="height: 80vh">
-      <v-col cols="12"   lg="5" md="12" sm="12" >
-        <v-card
-          width="80%"
-          color="transparent"
-          class="elevation-0 mx-auto marginTop"
-        >
-          <v-card-text>
-            
-            <h4 class="text-subtitle-2 font-weight-bold gray--text headingLeft">
-              Hello Everyone!
-            </h4>
-            <h2 class="text--h2 secondary--text  headingLeft mt-4">
-              I'm <span class="header-text"> {{ typedText }} </span>
-            </h2>
-            <!-- <h4 class="text--h4 primary--text mt-4 headingLeft text-center"> FRONT END DEVELOPER</h4> -->
-            <p class="text-body-1 gray--text font-weight-regular mt-8">
-              Hello, I'm Waqar Shams, a passionate and dedicated Vue.js
-              developer with a love for creating interactive and dynamic web
-              applications. I thrive on turning ideas into reality through clean
-              and efficient code. My journey in the world of web development has
-              been exciting, and I'm always eager to take on new challenges.
-            </p>
-            <div class="d-flex mt-16" style="border: 1px solid #56D3DB; border-radius: 8px; background-color: #C8D5E8; padding: 12px 12px 8px 8px; width:420px">
-            <v-text-field outlined dense label="Type Your Email Address" >   </v-text-field>
-            <v-btn color=""  class="py-5 ml-12 white--text text-capitalize subscribe-button " >Subscribe <v-icon size="small" class="ml-2">mdi-arrow-right</v-icon></v-btn>
-          </div>
-          </v-card-text>
-          <!-- <v-card-actions class="red"> -->
-            <!--  -->
-           
-          <!-- </v-card-actions> -->
-        </v-card>
-      </v-col>
-      <v-col cols="12" lg="5" md="12" sm="12">
-        <div class="d-flex justify-space-between">
-          <div :key="animationKey" class="animated-div">
-        <img src="../assets/pattern-1.svg" alt="" width="20">
-      </div>
-        <div class="bouncing-element">
-      </div>
-        <div class="text-center">
-        <img src="../assets/banner.png" alt="" class="mt-16">
-      </div>
-        
-        <div :key="animationKey" class="cross-2">
-        <img src="../assets/pattern-2.svg" alt="" width="20"></div>
-        
-      <div class="bouncing-element2">
-      </div> 
-      </div>
-      </v-col>
-     
-    </v-row>
-
+  <div  class="">
+    
+<AboutUs></AboutUs>
+<!-- <AboutUs></AboutUs> -->
     <flavors-component></flavors-component>
     <projects-comp></projects-comp>
     <SkillsComp ref="section" class="section"></SkillsComp>
     <WorkExperience></WorkExperience>
-    <education-comp ref="myEl"></education-comp>
+    <!-- <education-comp ref="myEl"></education-comp> -->
     <v-footer fixed color="transparent">
       <v-btn large icon class="mx-auto" @click="scrollToContent"
         ><v-icon>mdi-chevron-down</v-icon></v-btn
       >
     </v-footer>
-  </v-container>
+  </div>
 </template>
 
 <script>
 import { mapGetters } from "vuex";
-
+// import AboutUs from "@/components/AboutUs.vue"
+import AboutUs from "@/components/AboutUs.vue"
 import FlavorsComponent from "@/components/FlavorsComponent.vue";
 import ProjectsComp from "@/components/ProjectsComp.vue";
 import SkillsComp from "@/components/SkillsComp.vue";
 import WorkExperience from "@/components/WorkExperience.vue";
 import EducationComp from "@/components/EducationComp.vue";
+
+
 export default {
   components: {
     FlavorsComponent,
@@ -83,6 +34,9 @@ export default {
     SkillsComp,
     WorkExperience,
     EducationComp,
+    // AboutUs,
+    AboutUs
+    
   },
   data() {
     return {
@@ -98,6 +52,10 @@ export default {
     };
   },
   methods: {
+    playClickSound() {
+      const audio = new Audio(require('../assets/sounds/click.wav'));
+      audio.play();
+  },
     restartAnimation() {
       this.animationKey += 1;
     },

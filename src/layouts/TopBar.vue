@@ -5,8 +5,8 @@
         <v-col cols="12" lg="2" md="12" sm="12" class="">
           <v-app-bar-nav-icon @click="drawer = true" class="hidden-md-and-up"></v-app-bar-nav-icon>
           <v-toolbar-title link @click="openModal()">
-            <img src="../assets/logo dark.png" alt="" width="115%" class="mt-6 ml-8 ml-md-4 cursor-pointer" to="/" v-if="selectedItem != 'mdi-white-balance-sunny'"/>
-            <img src="../assets/logo light.png" alt="" width="115%" class="mt-6 ml-8 ml-md-4 cursor-pointer" to="/" v-if="selectedItem == 'mdi-white-balance-sunny'"/>
+            <img src="../assets/logo dark.png" alt="" width="115%" class="mt-6 ml-8 ml-md-4 cursor-pointer" to="/" v-if="selectedItem == 'mdi-weather-night'"/>
+            <img src="../assets/logo light.png" alt="" width="115%" class="mt-6 ml-8 ml-md-4 cursor-pointer" to="/" v-if="selectedItem != 'mdi-weather-night'"/>
           </v-toolbar-title>
         </v-col>
 
@@ -62,11 +62,15 @@ export default {
       scrollPosition: "",
       visible: false,
       items: [{icon:'mdi-white-balance-sunny', name: "Light" }, {icon:'mdi-weather-night', name: "Dark" }],
-      selectedItem: 'mdi-white-balance-sunny',
+      selectedItem: 'mdi-weather-night',
     };
   },
   methods: {
     ...mapActions(["moveToNext"]),
+    playClickSound() {
+      const audio = new Audio(require('../assets/sounds/click.wav'));
+      audio.play();
+  },
     selectItem(item) {
       this.selectedItem = item.icon;
       this.$emit('item-selected', this.selectedItem)
@@ -82,16 +86,13 @@ export default {
       this.visible = event;
     },
     select(option) {
-      alert("");
       this.name = option.name;
       this.image = option.img;
       this.visible = false;
     },
 
     handleSwitchToggle() {
-      // this.consumer = !this.consumer;
-      // const theme = localStorage.getItem('theme');
-      // localStorage.getItem("theme");
+     
 
       if (this.$vuetify.theme.dark == false) {
         this.$vuetify.theme.dark = true;
@@ -104,7 +105,7 @@ export default {
       // this.$vuetify.theme.dark = !this.$vuetify.theme.dark;
     },
     scrollTo(position) {
-      console.log("test", position);
+      this.playClickSound()
       this.scrollPosition = position;
       this.$store.commit("SET_SCROLL_POSITION", position);
     },
