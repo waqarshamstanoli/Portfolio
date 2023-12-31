@@ -4,7 +4,7 @@
       <v-row class="justify-center">
         <v-col cols="12" lg="2" md="12" sm="12" class="">
           <v-app-bar-nav-icon @click="drawer = true" class="hidden-md-and-up"></v-app-bar-nav-icon>
-          <v-toolbar-title link @click="openModal()">
+          <v-toolbar-title>
             <img src="../assets/logo dark.png" alt="" width="115%" class="mt-6 ml-8 ml-md-4 cursor-pointer" to="/" v-if="selectedItem == 'mdi-weather-night'"/>
             <img src="../assets/logo light.png" alt="" width="115%" class="mt-6 ml-8 ml-md-4 cursor-pointer" to="/" v-if="selectedItem != 'mdi-weather-night'"/>
           </v-toolbar-title>
@@ -12,10 +12,10 @@
 
         <v-col cols="12" lg="6" md="12" sm="12" class="d-none d-md-block">
           <div class="d-flex my-4">
-            <v-btn text large @click="scrollTo(100)" :class="{ activeButton: scrollPosition == 1150 }" class="text-capitalize btnText--text"> About Me </v-btn>
-            <v-btn text large @click="scrollTo(1050)" :class="{ activeButton: scrollPosition == 1950 }" class="text-capitalize btnText--text"> Projects </v-btn>
+            <v-btn text large @click="scrollTo(0)" :class="{ activeButton: scrollPosition == 1150 }" class="text-capitalize btnText--text"> About Me </v-btn>
+            <v-btn text large @click="scrollTo(750)" :class="{ activeButton: scrollPosition == 1950 }" class="text-capitalize btnText--text"> Projects </v-btn>
             <v-btn text large @click="scrollTo(1850)" :class="{ activeButton: scrollPosition == 3550 }" class="text-capitalize btnText--text"> Skills </v-btn>
-            <v-btn text large @click="scrollTo(2650)" :class="{ activeButton: scrollPosition == 4350 }" class="text-capitalize btnText--text"> Work Experience </v-btn>
+            <v-btn text large @click="scrollTo(2850)" :class="{ activeButton: scrollPosition == 4350 }" class="text-capitalize btnText--text"> Work Experience </v-btn>
             <v-btn text large @click="scrollTo(3450)" :class="{ activeButton: scrollPosition == 5150 }" class="text-capitalize btnText--text"> Education </v-btn>
             <v-btn text large @click="scrollTo(4250)" :class="{ activeButton: scrollPosition == 5150 }" class="text-capitalize btnText--text"> Contact </v-btn>
           </div>

@@ -1,7 +1,7 @@
 <template>
   <v-app>
     <v-main>
-      <!-- <img src="./assets/swinger.png" alt="" class="setimage" :class="{ transformImage: left }"/> -->
+      <img src="./assets/pattern-1.svg" alt="" class="setimage" :class="{ transformImage: left }"/>
       <div class="dot" :style="{ top: `${dotPosition.y+45}px`, left: `${dotPosition.x+10}px` }">
         </div>
         <div class="dottext" v-if="showtext" :style="{ top: `${dotPosition.y +110}px`, left: `${dotPosition.x + 20}px` }"><p class="primary--text ml-2">Click to stop ripples</p></div>
@@ -56,13 +56,13 @@ export default {
     },
 
     rotate() {
-      if (window.pageYOffset > 10 && window.pageYOffset < 1150) {
+      if (window.pageYOffset > 10 && window.pageYOffset < 650) {
         this.left = true;
         this.right = false;
-      } else if (window.pageYOffset > 1161 && window.pageYOffset < 1950) {
+      } else if (window.pageYOffset > 651 && window.pageYOffset < 1110) {
         this.right = true;
         this.left = false;
-      } else if (window.pageYOffset > 1960 && window.pageYOffset < 2750) {
+      } else if (window.pageYOffset > 1101 && window.pageYOffset < 2750) {
         this.left = true;
         this.right = false;
       } else if (window.pageYOffset > 2760 && window.pageYOffset < 3550) {
@@ -124,14 +124,14 @@ export default {
 <style>
 .setimage {
   position: fixed;
-  width: 1300px;
+  width: 1000px;
   bottom: 200px;
   /* left:900px; top:0px; transform:rotate(0deg); */
   animation-name: moveRight;
   animation-duration: 3s;
   animation-fill-mode: forwards;
   /* Add this line */
-  opacity: 0.7;
+  opacity: 0.5;
 }
 
 @keyframes moveRight {
@@ -153,7 +153,7 @@ export default {
   animation-duration: 3s;
   animation-fill-mode: forwards;
   /* Add this line */
-  opacity: 0.7;
+  opacity: 0.5;
 }
 
 @keyframes moveLeft {

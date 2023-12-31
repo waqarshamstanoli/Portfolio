@@ -106,27 +106,31 @@ export default {
     scrollToContent() {
       
       if (this.scrollPosition == 0) {
-        this.increment = 1150;
+        this.increment = 750;
         this.scrollTo = this.scrollPosition + this.increment;
-      } else if (this.scrollPosition == 1150) {
-        this.increment = 800;
+      } else if (this.scrollPosition == 750) {
+        this.increment = 1100;
         this.scrollTo = this.scrollPosition + this.increment;
-      } else if (this.scrollPosition == 1950) {
-        this.increment = 800;
+      } else if (this.scrollPosition == 1850) {
+        this.increment = 1000;
         this.scrollTo = this.scrollPosition + this.increment;
-      } else if (this.scrollPosition == 2750) {
-        this.increment = 800;
-        this.scrollTo = this.scrollPosition + this.increment;
-      } else if (this.scrollPosition == 3550) {
-        this.increment = 800;
-        this.scrollTo = this.scrollPosition + this.increment;
-      } else if (this.scrollPosition == 4350) {
-        this.increment = 950;
-        this.scrollTo = this.scrollPosition + this.increment;
-      } else if (this.scrollPosition == 5150) {
-        alert("5150");
-        
       }
+      else {
+        console.log('chal nikal')
+      }
+      //  else if (this.scrollPosition == 2750) {
+      //   this.increment = 800;
+      //   this.scrollTo = this.scrollPosition + this.increment;
+      // } else if (this.scrollPosition == 3550) {
+      //   this.increment = 800;
+      //   this.scrollTo = this.scrollPosition + this.increment;
+      // } else if (this.scrollPosition == 4350) {
+      //   this.increment = 950;
+      //   this.scrollTo = this.scrollPosition + this.increment;
+      // } else if (this.scrollPosition == 5150) {
+      //   alert("5150");
+        
+      // }
       
       this.pageScroll(this.scrollTo);
       
