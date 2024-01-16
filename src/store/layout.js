@@ -7,7 +7,9 @@ const getters = {
     },
 };
 const mutations = {
+   
     SET_SCROLL_POSITION: (state, payload) => {
+        console.log('check')
         state.scroll = payload;
     },
 };

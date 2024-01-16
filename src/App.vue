@@ -21,8 +21,8 @@ export default {
 
   data: () => ({
     //
-    left: false,
-    right: true,
+    left: true,
+    right: false,
     dotPosition: { x: 0, y: 0 },
     showtext:true,
     ripples: [],
@@ -133,18 +133,23 @@ export default {
   /* Add this line */
   opacity: 0.5;
 }
+@media only screen and (max-width: 600px) {
+  .setimage {
+    display: none;
+  }
+}
 
 @keyframes moveRight {
   0% {
     left: 50px;
-    top: 0px;
+    top: 10px;
     transform: rotate(-160deg);
   }
 
   100% {
-    left: 900px;
-    top: 0px;
-    transform: rotate(0deg);
+    left: 70%;
+    top: 10px;
+    transform: rotate(62deg);
   }
 }
 

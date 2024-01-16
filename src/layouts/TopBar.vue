@@ -1,16 +1,48 @@
 <template>
   <div>
     <v-app-bar class="elevation-0" color="blue" fixed app>
-      <v-row class="justify-center">
-        <v-col cols="12" lg="2" md="12" sm="12" class="">
-          <v-app-bar-nav-icon @click="drawer = true" class="hidden-md-and-up"></v-app-bar-nav-icon>
+      <v-toolbar-items >
+            <img src="../assets/logo dark.png" alt=""  class="mt-4  ml-md-4 cursor-pointer" to="/" v-if="selectedItem == 'mdi-weather-night'"/>
+            <img src="../assets/logo light.png" alt=""  class="mt-4  ml-md-4 cursor-pointer" to="/" v-if="selectedItem != 'mdi-weather-night'"/>
+      </v-toolbar-items>
+          
+      <v-toolbar-items class="hidden-sm-and-down">
+        <v-btn text large @click="scrollTo(0)" :class="{ activeButton: scrollPosition == 1150 }" class="text-capitalize btnText--text"> About Me </v-btn>
+            <v-btn text large @click="scrollTo(750)" :class="{ activeButton: scrollPosition == 1950 }" class="text-capitalize btnText--text"> Projects </v-btn>
+            <v-btn text large @click="scrollTo(1850)" :class="{ activeButton: scrollPosition == 3550 }" class="text-capitalize btnText--text"> Skills </v-btn>
+            <v-btn text large @click="scrollTo(2850)" :class="{ activeButton: scrollPosition == 4350 }" class="text-capitalize btnText--text"> Work Experience </v-btn>
+            <v-btn text large @click="scrollTo(3450)" :class="{ activeButton: scrollPosition == 5150 }" class="text-capitalize btnText--text"> Education </v-btn>
+            <v-btn text large @click="scrollTo(4250)" :class="{ activeButton: scrollPosition == 5150 }" class="text-capitalize btnText--text"> Contact </v-btn>
+            
+        </v-toolbar-items>
+        
+        <v-menu  offset-y left="true" rounded="lg">
+            <template v-slot:activator="{  on }">
+              <v-btn  v-on="on" class=" menu elevation-0" >
+              <v-icon color="icon" class="" v-on="on" > {{ selectedItem }}  </v-icon>
+              <v-icon color="icon" class="ml-4" > mdi-chevron-down  </v-icon>
+            </v-btn>
+            </template>
+
+            <v-list dense>
+              <v-list-item class="" v-for="item in items" :key="item"  @click="selectItem(item)">
+                <v-list-item-icon class="">
+                  <v-icon color="icon" class="" v-on="on"> {{ item.icon }}  </v-icon>
+                </v-list-item-icon>
+                <v-list-item-title>{{ item.name }}</v-list-item-title>
+              </v-list-item>
+            </v-list>
+          </v-menu>
+      <!-- <v-row class="justify-center">
+        <v-col cols="12" lg="2" md="12" sm="12">
+          <v-app-bar-nav-icon @click="drawer = true" ></v-app-bar-nav-icon>
           <v-toolbar-title>
-            <img src="../assets/logo dark.png" alt="" width="115%" class="mt-6 ml-8 ml-md-4 cursor-pointer" to="/" v-if="selectedItem == 'mdi-weather-night'"/>
-            <img src="../assets/logo light.png" alt="" width="115%" class="mt-6 ml-8 ml-md-4 cursor-pointer" to="/" v-if="selectedItem != 'mdi-weather-night'"/>
+            <img src="../assets/logo dark.png" alt="" width="100%" class="mt-6 ml-8 ml-md-4 cursor-pointer" to="/" v-if="selectedItem == 'mdi-weather-night'"/>
+            <img src="../assets/logo light.png" alt="" width="100%" class=" ml-8 ml-md-4 cursor-pointer" to="/" v-if="selectedItem != 'mdi-weather-night'"/>
           </v-toolbar-title>
         </v-col>
 
-        <v-col cols="12" lg="6" md="12" sm="12" class="d-none d-md-block">
+        <v-col cols="12" lg="5" md="12" sm="12" class=" d-none d-md-block">
           <div class="d-flex my-4">
             <v-btn text large @click="scrollTo(0)" :class="{ activeButton: scrollPosition == 1150 }" class="text-capitalize btnText--text"> About Me </v-btn>
             <v-btn text large @click="scrollTo(750)" :class="{ activeButton: scrollPosition == 1950 }" class="text-capitalize btnText--text"> Projects </v-btn>
@@ -39,7 +71,7 @@
             </v-list>
           </v-menu>
         </v-col>
-      </v-row>
+      </v-row> -->
     </v-app-bar>
     <v-navigation-drawer class="back1" width="100%" v-model="drawer" absolute temporary>
       <div class="text-right pr-4 mt-8">

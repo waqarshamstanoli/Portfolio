@@ -12,7 +12,7 @@
         </v-card>
       </v-col>
       <v-col cols="12" lg="6" md="12" sm="12" v-for="experience in experiences" :key="experience">
-        <v-card outlined width="80%" class="mx-auto mt-8 px-4 py-4 pb-8 px-md-16 borderRadius py-md-8 paragraphLeft">
+        <v-card outlined width="80%" class="custom mx-auto mt-8 px-4 py-4 pb-8 px-md-16 borderRadius py-md-8 paragraphLeft">
           <div class="text-center">
             <v-card-title class="secondary--text justify-center pb-1">{{experience.company}}</v-card-title>
             <h5 class="secondary--text text--h5">{{ experience.jobTitle }}</h5>

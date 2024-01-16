@@ -133,9 +133,11 @@ export default {
       // }
       
       this.pageScroll(this.scrollTo);
+      this.getScrollValue = this.scrollTo
       
     },
     movetoScrollPosition(value) {
+      
       this.scrollPosition = value;
       window.scroll({
         top: value,

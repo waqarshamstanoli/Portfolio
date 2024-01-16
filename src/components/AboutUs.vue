@@ -1,12 +1,12 @@
 <template>
     <div>
-      <v-row class="justify-center" style="height: 80vh">
-        <v-col cols="12"   lg="5" md="12" sm="12" >
+      <v-row class="justify-center fill-height" >
+        <v-col cols="12"   lg="5" md="8" sm="12" >
           <v-card
             width="80%"
             color="transparent"
             class="elevation-0 mx-auto marginTop"
-            @click="playClickSound"
+           
           >
             <v-card-text>
               
@@ -15,7 +15,7 @@
               </h4>
               <h2 class="text--h2 secondary--text  headingLeft mt-4">
                 I'm <span class="header-text"> {{ typedText }} </span>
-              </h2>
+              </h2>  
               <!-- <h4 class="text--h4 primary--text mt-4 headingLeft text-center"> FRONT END DEVELOPER</h4> -->
               <p class="text-body-1 gray--text font-weight-regular mt-8">
                 Hello, I'm Waqar Shams, a passionate and dedicated Vue.js
@@ -24,9 +24,9 @@
                 and efficient code. My journey in the world of web development has
                 been exciting, and I'm always eager to take on new challenges.
               </p>
-              <div class="d-flex mt-16" style="border: 1px solid #56D3DB; border-radius: 8px; background-color: #C8D5E8; padding: 12px 12px 8px 8px; width:420px">
+              <div class="d-flex mt-16" style="border: 1px solid #56D3DB; border-radius: 8px; background-color: #222F43; padding: 12px 12px 8px 8px; width:100%">
               <v-text-field outlined dense label="Type Your Email Address" >   </v-text-field>
-              <v-btn color=""  class="py-5 ml-12 white--text text-capitalize subscribe-button " >Subscribe <v-icon size="small" class="ml-2">mdi-arrow-right</v-icon></v-btn>
+              <v-btn  class="py-5 ml-12 white--text text-capitalize subscribe-button " >Subscribe <v-icon size="small" class="ml-2">mdi-arrow-right</v-icon></v-btn>
             </div>
             </v-card-text>
             <!-- <v-card-actions class="red"> -->
@@ -101,9 +101,8 @@
         if (this.index <= this.texts[this.currentTextIndex].length) {
           this.typedText = this.texts[this.currentTextIndex].slice(0, this.index);
           this.index++;
-          setTimeout(this.typeText, 200); // Typing speed (adjust as needed)
+          setTimeout(this.typeText, 200); 
         } else {
-          // Wait for a second before clearing the text
           setTimeout(() => {
             this.clearText();
           }, 1500);
@@ -113,14 +112,13 @@
         if (this.index >= 0) {
           this.typedText = this.texts[this.currentTextIndex].slice(0, this.index);
           this.index--;
-          setTimeout(this.clearText, 100); // Deleting speed (adjust as needed)
+          setTimeout(this.clearText, 100); 
         } else {
-          // Reset for the next text
           setTimeout(() => {
             this.index = 0;
             this.currentTextIndex = (this.currentTextIndex + 1) % this.texts.length;
             this.typeText();
-          }, 500); // Wait for 0.5 seconds before typing the next text
+          }, 500); 
         }
       },
       
@@ -194,16 +192,12 @@
       handleIntersection(entries) {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            // Call your function when the section becomes visible
             this.onSectionVisible();
           }
         });
       },
       onSectionVisible() {
-        alert("fdsfdsfdsf");
         this.test = true;
-        console.log(this.test);
-        // Your logic wthishen the section becomes visible
       },
     },
   
@@ -244,7 +238,7 @@
   }
   
   
-  .animated-div {
+  /* .animated-div {
     position: relative;
     animation-name: cross1;
     animation-duration: 25s;
@@ -253,9 +247,9 @@
   position: relative;
   animation-name: cross2;
   animation-duration: 25s;
-  }
+  } */
   
-  @keyframes cross1 {
+  /* @keyframes cross1 {
     0%   {  left: 10px; top: 200px; }
     25%  {  left: 150px; top: 190px; }
     50%  {  left: 250px; top: 250px; }
@@ -268,7 +262,7 @@
     50%  {  left: 250px; top: 250px; }
     75%  {  left: 0px; top: 200px; }
     100% {  left: 0px; top: 0px; }
-  }
+  } */
   .bouncing-element {
     animation: bounce 6s infinite;
     margin-top: 200px;
