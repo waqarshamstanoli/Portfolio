@@ -43,7 +43,7 @@ export default {
       scrollPosition: 0,
       increment: 0,
       test: false,
-      texts: ["Waqar", " Developer", " Designer"],
+      texts: ["Muhammad Shaban", " Developer"],
     currentTextIndex: 0,
     typedText: '',
     index: 0,
@@ -88,9 +88,9 @@ export default {
     },
     
     pageScroll() {
-      console.log(
-        window.innerHeight + window.scrollY >= document.body.offsetHeight
-      );
+      // console.log(
+      //   window.innerHeight + window.scrollY >= document.body.offsetHeight
+      // );
       let intervalId = window.setInterval(() => {
         if (window.scrollY >= this.scrollTo) {
           clearInterval(intervalId);
@@ -116,7 +116,7 @@ export default {
         this.scrollTo = this.scrollPosition + this.increment;
       }
       else {
-        console.log('chal nikal')
+        // console.log('chal nikal')
       }
       //  else if (this.scrollPosition == 2750) {
       //   this.increment = 800;
@@ -171,7 +171,7 @@ export default {
     onSectionVisible() {
       alert("fdsfdsfdsf");
       this.test = true;
-      console.log(this.test);
+      // console.log(this.test);
       // Your logic wthishen the section becomes visible
     },
   },

@@ -11,10 +11,12 @@ export default new Vuetify({
           light: {
             primary: '#0EA7E9',
             secondary: '#344161',
+            success:'#000000',
             gray:'#7E9CC7',
             icon:'#344161',
-            blue:'#F9FBFF',
-            btnText:'#2E548C'
+            blue:'#F1F1F1',
+            btnText:'#000000',
+            svg_color:"#ffffff"
 
             
            
@@ -23,10 +25,13 @@ export default new Vuetify({
           dark: {
             primary: '#0EA7E9',
             secondary:'#B9E0F2',
+            success:'#ffffff',
             gray:'#7E9CC7',
             icon:'#0EA7E9',
-            blue:'#0F172A',
-            btnText:'94a9c9'
+            blue:'#0E6288',
+            btnText:'#ffffff',
+            svg_color:"#000000"
+
           },
           
         },

@@ -14,7 +14,7 @@
                 Hey My Name is
               </h4>
               <h2 class="text--h2 secondary--text  headingLeft mt-4">
-                I'm <span class="header-text"> WAQAR SHAMS</span>
+                I'm <span class="header-text"> Muhammad Shaban</span>
               </h2>
               
               
@@ -57,7 +57,7 @@
     },
     data() {
       return {
-        texts: ["Waqar", " Developer", " Designer"],
+        texts: ["Muhammad Shaban", " Developer"],
       };
     },
    

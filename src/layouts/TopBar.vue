@@ -1,108 +1,151 @@
 <template>
   <div>
-    <v-app-bar class="elevation-0" color="blue" fixed app>
-      <v-toolbar-items >
-            <img src="../assets/logo dark.png" alt=""  class="mt-4  ml-md-4 cursor-pointer" to="/" v-if="selectedItem == 'mdi-weather-night'"/>
-            <img src="../assets/logo light.png" alt=""  class="mt-4  ml-md-4 cursor-pointer" to="/" v-if="selectedItem != 'mdi-weather-night'"/>
+    <!-- <v-container fluid>
+
+    </v-container> -->
+    <v-app-bar class="elevation-0 hidden-sm-and-down" color="blue" fixed dense height="auto">
+      <v-toolbar-items>
+
+        <img @click="scrollTo(0)" src="../assets/logo dark.png" height="60px" alt="" class="mt-4  ml-md-4 cursor-pointer" to="/"
+          v-if="selectedItem == 'mdi-weather-night'" />
+        <img @click="scrollTo(0)" src="../assets/logo light.png" height="60px" alt="" class="mt-4  ml-md-4 cursor-pointer" to="/"
+          v-if="selectedItem != 'mdi-weather-night'" />
       </v-toolbar-items>
-          
-      <v-toolbar-items class="hidden-sm-and-down">
-        <v-btn text large @click="scrollTo(0)" :class="{ activeButton: scrollPosition == 1150 }" class="text-capitalize btnText--text"> About Me </v-btn>
-            <v-btn text large @click="scrollTo(750)" :class="{ activeButton: scrollPosition == 1950 }" class="text-capitalize btnText--text"> Projects </v-btn>
-            <v-btn text large @click="scrollTo(1850)" :class="{ activeButton: scrollPosition == 3550 }" class="text-capitalize btnText--text"> Skills </v-btn>
-            <v-btn text large @click="scrollTo(2850)" :class="{ activeButton: scrollPosition == 4350 }" class="text-capitalize btnText--text"> Work Experience </v-btn>
-            <v-btn text large @click="scrollTo(3450)" :class="{ activeButton: scrollPosition == 5150 }" class="text-capitalize btnText--text"> Education </v-btn>
-            <v-btn text large @click="scrollTo(4250)" :class="{ activeButton: scrollPosition == 5150 }" class="text-capitalize btnText--text"> Contact </v-btn>
-            
-        </v-toolbar-items>
-        
-        <v-menu  offset-y left="true" rounded="lg">
-            <template v-slot:activator="{  on }">
-              <v-btn  v-on="on" class=" menu elevation-0" >
-              <v-icon color="icon" class="" v-on="on" > {{ selectedItem }}  </v-icon>
-              <v-icon color="icon" class="ml-4" > mdi-chevron-down  </v-icon>
-            </v-btn>
-            </template>
 
-            <v-list dense>
-              <v-list-item class="" v-for="item in items" :key="item"  @click="selectItem(item)">
-                <v-list-item-icon class="">
-                  <v-icon color="icon" class="" v-on="on"> {{ item.icon }}  </v-icon>
-                </v-list-item-icon>
-                <v-list-item-title>{{ item.name }}</v-list-item-title>
-              </v-list-item>
-            </v-list>
-          </v-menu>
-      <!-- <v-row class="justify-center">
-        <v-col cols="12" lg="2" md="12" sm="12">
-          <v-app-bar-nav-icon @click="drawer = true" ></v-app-bar-nav-icon>
-          <v-toolbar-title>
-            <img src="../assets/logo dark.png" alt="" width="100%" class="mt-6 ml-8 ml-md-4 cursor-pointer" to="/" v-if="selectedItem == 'mdi-weather-night'"/>
-            <img src="../assets/logo light.png" alt="" width="100%" class=" ml-8 ml-md-4 cursor-pointer" to="/" v-if="selectedItem != 'mdi-weather-night'"/>
-          </v-toolbar-title>
-        </v-col>
+      <v-toolbar-items class="hidden-sm-and-down mx-auto">
+        <v-btn text large @click="scrollTo(0)" :class="{ activeButton: scrollPosition == 1150 }"
+          class="text-capitalize btnText--text py-2"> About Me </v-btn>
+        <v-btn text large @click="scrollTo(700)" :class="{ activeButton: scrollPosition == 1950 }"
+          class="text-capitalize btnText--text py-2"> Projects </v-btn>
+        <v-btn text large @click="scrollTo(1350)" :class="{ activeButton: scrollPosition == 3350 }"
+          class="text-capitalize btnText--text py-2"> Skills </v-btn>
+        <v-btn text large @click="scrollTo(2450)" :class="{ activeButton: scrollPosition == 4350 }"
+          class="text-capitalize btnText--text py-2"> Work Experience </v-btn>
+        <!-- <v-btn text large @click="scrollTo(3450)" :class="{ activeButton: scrollPosition == 5150 }"
+          class="text-capitalize btnText--text py-2"> Education </v-btn> -->
+        <v-btn text large @click="scrollTo(4250)" :class="{ activeButton: scrollPosition == 5150 }"
+          class="text-capitalize btnText--text py-2"> Contact </v-btn>
+      </v-toolbar-items>
+      <v-menu offset-y left="true" rounded="lg">
+        <template v-slot:activator="{ on }">
+          <v-btn v-on="on" class=" menu elevation-0">
+            <v-icon color="icon" class="" v-on="on"> {{ selectedItem }} </v-icon>
+            <v-icon color="icon" class="ml-4"> mdi-chevron-down </v-icon>
+          </v-btn>
+        </template>
 
-        <v-col cols="12" lg="5" md="12" sm="12" class=" d-none d-md-block">
-          <div class="d-flex my-4">
-            <v-btn text large @click="scrollTo(0)" :class="{ activeButton: scrollPosition == 1150 }" class="text-capitalize btnText--text"> About Me </v-btn>
-            <v-btn text large @click="scrollTo(750)" :class="{ activeButton: scrollPosition == 1950 }" class="text-capitalize btnText--text"> Projects </v-btn>
-            <v-btn text large @click="scrollTo(1850)" :class="{ activeButton: scrollPosition == 3550 }" class="text-capitalize btnText--text"> Skills </v-btn>
-            <v-btn text large @click="scrollTo(2850)" :class="{ activeButton: scrollPosition == 4350 }" class="text-capitalize btnText--text"> Work Experience </v-btn>
-            <v-btn text large @click="scrollTo(3450)" :class="{ activeButton: scrollPosition == 5150 }" class="text-capitalize btnText--text"> Education </v-btn>
-            <v-btn text large @click="scrollTo(4250)" :class="{ activeButton: scrollPosition == 5150 }" class="text-capitalize btnText--text"> Contact </v-btn>
-          </div>
-        </v-col>
-        <v-col cols="12" lg="2" md="12" sm="12" class="">
-          <v-menu  offset-y left="true" rounded="lg">
-            <template v-slot:activator="{  on }">
-              <v-btn  v-on="on" class="mt-6 menu elevation-0" >
-              <v-icon color="icon" class="" v-on="on" > {{ selectedItem }}  </v-icon>
-              <v-icon color="icon" class="ml-4" > mdi-chevron-down  </v-icon>
-            </v-btn>
-            </template>
+        <v-list dense>
+          <v-list-item class="" v-for="item in items" :key="item" @click="selectItem(item)">
+            <v-list-item-icon class="">
+              <v-icon color="icon" class="" v-on="on"> {{ item.icon }} </v-icon>
+            </v-list-item-icon>
+            <v-list-item-title>{{ item.name }}</v-list-item-title>
+          </v-list-item>
+        </v-list>
+      </v-menu>
 
-            <v-list dense>
-              <v-list-item class="" v-for="item in items" :key="item"  @click="selectItem(item)">
-                <v-list-item-icon class="">
-                  <v-icon color="icon" class="" v-on="on"> {{ item.icon }}  </v-icon>
-                </v-list-item-icon>
-                <v-list-item-title>{{ item.name }}</v-list-item-title>
-              </v-list-item>
-            </v-list>
-          </v-menu>
-        </v-col>
-      </v-row> -->
     </v-app-bar>
-    <v-navigation-drawer class="back1" width="100%" v-model="drawer" absolute temporary>
-      <div class="text-right pr-4 mt-8">
-        <v-btn icon class="drawer" @click="drawer = false">
-          <v-icon class="ml-auto">mdi-close</v-icon>
-        </v-btn>
+    <!-- MOBILE NAVBAR -->
+
+    <v-app-bar height="auto" class="hidden-md-and-up" color="blue" dense>
+      <v-toolbar-title class="mobile-title">
+        <v-toolbar-items>
+          <router-link to="/">
+          <img src="../assets/logo dark.png" height="60px" alt="" class="mt-4  ml-md-4 cursor-pointer" to="/"
+            v-if="selectedItem == 'mdi-weather-night'" />
+          <img src="../assets/logo dark.png" height="60px" alt="" class="mt-4  ml-md-4 cursor-pointer" to="/"
+            v-if="selectedItem != 'mdi-weather-night'" />
+          </router-link>
+        </v-toolbar-items>
+      </v-toolbar-title>
+
+      <v-spacer></v-spacer>
+      <!-- <v-spacer></v-spacer> -->
+      <v-menu offset-y left="true" rounded="lg">
+        <template v-slot:activator="{ on }">
+          <v-btn v-on="on" class=" menu elevation-0">
+            <v-icon color="icon" class="" v-on="on"> {{ selectedItem }} </v-icon>
+            <v-icon color="icon"> mdi-chevron-down </v-icon>
+          </v-btn>
+        </template>
+
+        <v-list dense>
+          <v-list-item class="" v-for="item in items" :key="item" @click="selectItem(item)">
+            <v-list-item-icon class="">
+              <v-icon color="icon" class="" v-on="on"> {{ item.icon }} </v-icon>
+            </v-list-item-icon>
+            <v-list-item-title>{{ item.name }}</v-list-item-title>
+          </v-list-item>
+        </v-list>
+      </v-menu>
+      <div class="text-right">
+        <v-app-bar-nav-icon class="mbl-nav-icon" @click="toggleMenu"></v-app-bar-nav-icon>
       </div>
+    </v-app-bar>
+    <!-- MOBILE NAVBAR -->
+
+    <!-- MOBILE NAVIGATION DRAWER -->
+    <v-navigation-drawer width="100%" v-if="showMenu" class="mbl-navbar" v-model="showMenu">
+      <v-list>
+        <v-list-item link>
+          <v-btn text large @click="scrollTo(0)" :class="{ activeButton: scrollPosition == 1150 }"
+            class="text-capitalize btnText--text py-2"> About Me </v-btn>
+        </v-list-item>
+        <v-list-item link>
+          <v-btn text large @click="scrollTo(750)" :class="{ activeButton: scrollPosition == 1950 }"
+            class="text-capitalize btnText--text py-2"> Projects </v-btn>
+        </v-list-item>
+        <v-list-item link>
+          <v-btn text large @click="scrollTo(1850)" :class="{ activeButton: scrollPosition == 3550 }"
+            class="text-capitalize btnText--text py-2"> Skills </v-btn>
+        </v-list-item>
+        <v-list-item link>
+          <v-btn text large @click="scrollTo(2850)" :class="{ activeButton: scrollPosition == 4350 }"
+            class="text-capitalize btnText--text py-2"> Work Experience </v-btn>
+        </v-list-item>
+        <!-- <v-list-item link>
+          <v-btn text large @click="scrollTo(3450)" :class="{ activeButton: scrollPosition == 5150 }"
+            class="text-capitalize btnText--text py-2"> Education </v-btn>
+        </v-list-item> -->
+        <v-list-item link>
+          <v-btn text large @click="scrollTo(4250)" :class="{ activeButton: scrollPosition == 5150 }"
+            class="text-capitalize btnText--text py-2"> Contact </v-btn>
+        </v-list-item>
+
+
+      </v-list>
     </v-navigation-drawer>
   </div>
 </template>
 <script>
 // import InputSwitch from "@/components/InputSwitch.vue";
 import { mapActions } from "vuex";
+import { mapGetters } from "vuex"; // Import mapGetters to access the current route
+
 export default {
   // components: { InputSwitch },
   data() {
     return {
+      showMenu: false,
       isHovered: true,
       // consumer: false,
       scrollPosition: "",
       visible: false,
-      items: [{icon:'mdi-white-balance-sunny', name: "Light" }, {icon:'mdi-weather-night', name: "Dark" }],
+      items: [{ icon: 'mdi-white-balance-sunny', name: "Light" }, { icon: 'mdi-weather-night', name: "Dark" }],
       selectedItem: 'mdi-weather-night',
     };
   },
+
+
   methods: {
+    toggleMenu() {
+      this.showMenu = !this.showMenu; // Toggle the menu state
+    },
     ...mapActions(["moveToNext"]),
     playClickSound() {
       const audio = new Audio(require('../assets/sounds/click.wav'));
       audio.play();
-  },
+    },
     selectItem(item) {
       this.selectedItem = item.icon;
       this.$emit('item-selected', this.selectedItem)
@@ -124,7 +167,7 @@ export default {
     },
 
     handleSwitchToggle() {
-     
+
 
       if (this.$vuetify.theme.dark == false) {
         this.$vuetify.theme.dark = true;
@@ -142,7 +185,25 @@ export default {
       this.$store.commit("SET_SCROLL_POSITION", position);
     },
   },
-  computed: {},
+  mounted() {
+    // Check the current route and set the selectedItem accordingly
+    switch (this.$route.path) {
+      case "/": // Assuming "/" corresponds to the About Me route
+        this.selectedItem = "mdi-weather-night";
+        break;
+      case "/projects":
+        this.selectedItem = "YourIconForProjects";
+        break;
+      // Add cases for other routes if needed
+      default:
+        this.selectedItem = "mdi-weather-night"; // Set default if route not matched
+    }
+  },
+
+  computed: {
+    // map the $route object to a local computed property
+    ...mapGetters(["$route"])
+  },
 };
 </script>
 
@@ -164,9 +225,11 @@ export default {
   transition-duration: 0.3s;
   transition-timing-function: cubic-bezier(0.59, 1.39, 0.37, 1.01);
 }
+
 .expanded {
   transform: rotateZ(180deg) translateY(2px);
 }
+
 .label {
   display: block;
   padding: 2px 12px;
@@ -174,6 +237,7 @@ export default {
   color: white;
   font-family: Tungsten !important;
 }
+
 /* .current {
 			background: #eaeaea;
 		}
@@ -189,6 +253,7 @@ export default {
   position: relative;
   z-index: 1;
 }
+
 ul {
   /* width: 100%; */
   list-style-type: none;
@@ -203,10 +268,71 @@ ul {
   border-radius: 5px;
   padding: 10px 25px 10px 10px;
 }
+
 .topBarOpacity {
   opacity: 0.8;
 }
+
 .activeButton {
   background-color: #ffec00;
+}
+
+.mbl-navbar {
+  display: none;
+}
+
+/*.hover-effect {
+  transition: transform 0.3s ease-in-out;
+}
+
+ Define the transformation on hover 
+.hover-effect:hover {
+  transform: scale(1.1);
+   Scale up the image by 10% 
+}*/
+
+.content-container {
+  position: fixed;
+  top: 17%;
+  left: 0;
+  width: 100%;
+  height: fit-content;
+  z-index: 1000;
+
+}
+
+.dialog-wrapper {
+  background-color: #ffffff;
+  /* Background color of the dialog */
+  padding: 20px;
+
+}
+
+.dialog-content {
+  max-width: 100%;
+}
+
+
+@media only screen and (max-width: 767px) {
+  .mbl-navbar {
+    display: block;
+  }
+
+  .mbl-nav-icon {
+    display: block !important;
+  }
+
+  .desktop-nav {
+    display: none !important;
+  }
+
+  .mobile-title {
+    display: flex;
+    align-items: center;
+  }
+
+  .mobile-title {
+    justify-content: space-between;
+  }
 }
 </style>

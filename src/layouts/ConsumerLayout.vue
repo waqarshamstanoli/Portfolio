@@ -3,58 +3,8 @@
     <div>
       <Top-bar @item-selected="changeTheme"></Top-bar>
       <dashboard-content ref="content"  :class="(darkTheme ? 'dark-theme' : 'body')" ></dashboard-content>
-
-      <v-footer color="transparent" class="pa-0">
-        <v-card tile color="#2D2F2E" width="100%">
-          <v-row class="justify-space-around">
-            <v-col cols="12" lg="4" md="12" sm="12" class="">
-              <div class="mt-6">
-                <img src="../assets/instagram.png" alt="" width="50" />
-               
-                
-              </div>
-            </v-col>
-            <v-col cols="12" lg="2" md="12" sm="12">
-              
-            </v-col>
-            <v-col cols="12" lg="3" md="12" sm="12" class="">
-              <div class="d-flex">
-                <div>
-                  <img src="../assets/glassWhite.png" alt="" />
-                </div>
-                <v-card
-                  color="#ffffff"
-                  height="50"
-                  width="30"
-                  v-for="item in digits"
-                  :key="item"
-                  class="mt-8 ml-2 pl-1"
-                >
-                  <h1 class="white--text">
-                    {{ item }}
-                  </h1>
-                </v-card>
-
-                <div class="ml-4">
-                 
-                </div>
-              </div>
-            </v-col>
-          </v-row>
-        </v-card>
-        <v-card tile color="black" width="100%" class="py-2">
-          <v-row>
-            <v-col cols="12" lg="3" md="3" sm="3" offset-lg="5">
-             
-            </v-col>
-            <v-col cols="12" lg="3" md="3" sm="3">
-              <v-btn text small class="mt-2">COOKIE-PREFERENCES</v-btn>
-              <v-btn text small class="mt-2">LEGAL NOTICE</v-btn>
-              <v-btn text small class="mt-2">PRIVACY POLICY</v-btn>
-            </v-col>
-          </v-row>
-        </v-card>
-      </v-footer>
+      <Footer></Footer>
+     
     </div>
   </div>
 </template>
@@ -62,11 +12,13 @@
 <script>
 import DashboardContent from "../components/ContentView.vue";
 import TopBar from "./TopBar.vue";
+import Footer from "../components/Footer.vue";
 
 export default {
   components: {
     DashboardContent,
     TopBar,
+    Footer
   },
 
   data() {
@@ -123,6 +75,10 @@ export default {
   font-weight: 400 !important;
   line-height: 24px !important;
   // color: #7E9CC7;
+}
+.v-application .text--h6 {
+  font-size: 40px !important;
+  line-height: normal !important
 }
 .v-application .text--h5 {
   font-size: 22px !important;
@@ -313,5 +269,9 @@ export default {
 }
 ///business layout ki classes
 
-
+@media only screen and (max-width: 767px) {
+  .v-application .text--h2 {
+    font-size: 36px !important;
+  }
+}
 </style>

@@ -1,49 +1,37 @@
 <template>
-    <div>
-      <v-row class="justify-center fill-height" >
-        <v-col cols="12"   lg="5" md="8" sm="12" >
+      <v-container>
+      <v-row class="" >
+        <v-col cols="12"   lg="6" md="6" sm="12" >
           <v-card
-            width="80%"
             color="transparent"
-            class="elevation-0 mx-auto marginTop"
-           
+            class="elevation-0  marginTop"           
           >
             <v-card-text>
-              
               <h4 class="text-subtitle-2 font-weight-bold gray--text headingLeft">
                 Hello Everyone!
               </h4>
-              <h2 class="text--h2 secondary--text  headingLeft mt-4">
+              <h2 class="intro_text secondary--text  headingLeft mt-4">
                 I'm <span class="header-text"> {{ typedText }} </span>
               </h2>  
-              <!-- <h4 class="text--h4 primary--text mt-4 headingLeft text-center"> FRONT END DEVELOPER</h4> -->
               <p class="text-body-1 gray--text font-weight-regular mt-8">
-                Hello, I'm Waqar Shams, a passionate and dedicated Vue.js
-                developer with a love for creating interactive and dynamic web
-                applications. I thrive on turning ideas into reality through clean
-                and efficient code. My journey in the world of web development has
-                been exciting, and I'm always eager to take on new challenges.
+                Hello there! I'm Shaban, a passionate Frontend Developer with a knack for turning ideas into immersive digital experiences. With a rich toolbox boasting Vue.js, Nuxt.js, React.js, Next.js, along with HTML, CSS, Bootstrap, and WordPress, I orchestrate web magic that captivates and engages.
               </p>
               <div class="d-flex mt-16" style="border: 1px solid #56D3DB; border-radius: 8px; background-color: #222F43; padding: 12px 12px 8px 8px; width:100%">
               <v-text-field outlined dense label="Type Your Email Address" >   </v-text-field>
-              <v-btn  class="py-5 ml-12 white--text text-capitalize subscribe-button " >Subscribe <v-icon size="small" class="ml-2">mdi-arrow-right</v-icon></v-btn>
+              <v-btn  class="py-5 ml-md-12 ml-8 white--text text-capitalize subscribe-button">Subscribe<v-icon size="small" class="ml-2">mdi-arrow-right</v-icon></v-btn>
             </div>
             </v-card-text>
-            <!-- <v-card-actions class="red"> -->
-              <!--  -->
-             
-            <!-- </v-card-actions> -->
           </v-card>
         </v-col>
-        <v-col cols="12" lg="5" md="12" sm="12">
-          <div class="d-flex justify-space-between">
+        <v-col cols="12" lg="6" md="6" sm="12">
+          <div class="d-flex justify-space-between about_2">
             <div :key="animationKey" class="animated-div">
           <img src="../assets/pattern-1.svg" alt="" width="20">
         </div>
           <div class="bouncing-element">
         </div>
           <div class="text-center">
-          <img src="../assets/banner.png" alt="" class="mt-16">
+          <img src="../assets/banner.png" alt="" class="mt-md-16" width="100%">
         </div>
           
           <div :key="animationKey" class="cross-2">
@@ -55,14 +43,13 @@
         </v-col>
        
       </v-row>
-  
      
       <v-footer fixed color="transparent">
         <v-btn large icon class="mx-auto" @click="scrollToContent"
           ><v-icon>mdi-chevron-down</v-icon></v-btn
         >
       </v-footer>
-    </div>
+  </v-container>
   </template>
   
   <script>
@@ -80,7 +67,7 @@
         scrollPosition: 0,
         increment: 0,
         test: false,
-        texts: ["Waqar", " Developer", " Designer"],
+        texts: ["Madinatech", "Innovations"],
       currentTextIndex: 0,
       typedText: '',
       index: 0,
@@ -123,9 +110,9 @@
       },
       
       pageScroll() {
-        console.log(
-          window.innerHeight + window.scrollY >= document.body.offsetHeight
-        );
+        // console.log(
+        //   window.innerHeight + window.scrollY >= document.body.offsetHeight
+        // );
         let intervalId = window.setInterval(() => {
           if (window.scrollY >= this.scrollTo) {
             clearInterval(intervalId);
@@ -236,7 +223,9 @@
   .marginTop {
     margin-top: 200px;
   }
-  
+  .about_2{
+    margin-top: 200px;
+  }
   
   /* .animated-div {
     position: relative;
@@ -310,7 +299,24 @@
         font-weight: 700 !important;
       
   }
-  
+  .intro_text{
+    font-size: 40px !important;
+  }
+  /* .text-24{
+    font-size: 24px !important;
+  } */
+  @media only screen and (max-width: 767px) {
+    .intro_text{
+    font-size: 28px !important;
+  }
+  .marginTop{
+    margin-top: 50px !important;
+  }
+  .about_2{
+    margin-top: 0px;
+  }  
+  }
+
   
   </style>
   

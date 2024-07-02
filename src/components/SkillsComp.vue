@@ -1,5 +1,5 @@
 <template>
-  <v-container class="md-px-16" style="padding-top: 200px">
+  <v-container class="md-px-16 md-pt-16">
     <v-row class="justify-center" :class="{ square: test }" ref="sectionElement">
       <v-col cols="12" lg="12" md="12" sm="12">
         <v-card width="80%" color="transparent" class="elevation-0 mx-auto">
@@ -32,21 +32,21 @@ export default {
       lightPurple: false,
       skills: [
         { skillName: "Vue js", skillLevel: "99%", img:require('../assets/skills/vue.png')},
-        { skillName: "React", skillLevel: "80%", img:require('../assets/skills/react.png') },
-        { skillName: "Angular", skillLevel: "80%", img:require('../assets/skills/angular.png') },
+        { skillName: "React", skillLevel: "95%", img:require('../assets/skills/react.png') },
+        // { skillName: "Angular", skillLevel: "75%", img:require('../assets/skills/angular.png') },
         { skillName: "Vuetify", skillLevel: "99%", img:require('../assets/skills/vuetify.png') },
         { skillName: "Quasar", skillLevel: "99%", img:require('../assets/skills/quasar.png') },
         { skillName: "Nuxt", skillLevel: "99%", img:require('../assets/skills/nuxt.png') },
         { skillName: "Github", skillLevel: "99%", img:require('../assets/skills/github.png') },
         { skillName: "Material UI", skillLevel: "99%", img:require('../assets/skills/material.png') },
-        { skillName: "Tailwind CSS", skillLevel: "99%", img:require('../assets/skills/tailwind.png') },
+        { skillName: "Tailwind CSS", skillLevel: "80%", img:require('../assets/skills/tailwind.png') },
         { skillName: "Bootstrap", skillLevel: "99%", img:require('../assets/skills/bootstrap.png') },
         { skillName: "CSS", skillLevel: "99%", img:require('../assets/skills/css.png') },
         { skillName: "HTML", skillLevel: "99%", img:require('../assets/skills/html.png') },
-        { skillName: "Ant Design", skillLevel: "99%", img:require('../assets/skills/antdesign.png') },
+        { skillName: "Ant Design", skillLevel: "85%", img:require('../assets/skills/antdesign.png') },
         { skillName: "Photoshope", skillLevel: "85%", img:require('../assets/skills/photoshope.png') },
         { skillName: "Xd", skillLevel: "90%", img:require('../assets/skills/xd.png') },
-        { skillName: "Figma", skillLevel: "90%", img:require('../assets/skills/figma.png') },
+        { skillName: "Figma", skillLevel: "99%", img:require('../assets/skills/figma.png') },
         
         
       ],

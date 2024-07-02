@@ -8,7 +8,6 @@
       <div class="ripples-container">
         <div v-for="(ripple, index) in ripples" :key="index" class="ripple" :style="{ top: `${dotPosition.y+20}px`, left: `${dotPosition.x-15}px` }">
          </div>
-        
       </div>
       <router-view />
     </v-main>
@@ -157,7 +156,6 @@ export default {
   animation-name: moveLeft;
   animation-duration: 3s;
   animation-fill-mode: forwards;
-  /* Add this line */
   opacity: 0.5;
 }
 
