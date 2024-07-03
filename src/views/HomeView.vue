@@ -43,7 +43,7 @@ export default {
       scrollPosition: 0,
       increment: 0,
       test: false,
-      texts: ["Muhammad Shaban", " Developer"],
+      texts: ["Muhammad waqar", " Developer"],
     currentTextIndex: 0,
     typedText: '',
     index: 0,

@@ -14,7 +14,7 @@
                 I'm <span class="header-text"> {{ typedText }} </span>
               </h2>  
               <p class="text-body-1 gray--text font-weight-regular mt-8">
-                Hello there! I'm Shaban, a passionate Frontend Developer with a knack for turning ideas into immersive digital experiences. With a rich toolbox boasting Vue.js, Nuxt.js, React.js, Next.js, along with HTML, CSS, Bootstrap, and WordPress, I orchestrate web magic that captivates and engages.
+                Hello there! I'm waqar, a passionate Frontend Developer with a knack for turning ideas into immersive digital experiences. With a rich toolbox boasting Vue.js, Nuxt.js, React.js, Next.js, along with HTML, CSS, Bootstrap, and WordPress, I orchestrate web magic that captivates and engages.
               </p>
               <div class="d-flex mt-16" style="border: 1px solid #56D3DB; border-radius: 8px; background-color: #222F43; padding: 12px 12px 8px 8px; width:100%">
               <v-text-field outlined dense label="Type Your Email Address" >   </v-text-field>

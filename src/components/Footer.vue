@@ -104,7 +104,7 @@
                         </svg>
 
                     </div>
-                    <p class="text-caption btnText--text white--text mt-4">© Muhammad Shaban 2022-2024</p>
+                    <p class="text-caption btnText--text white--text mt-4">© Muhammad waqar 2022-2024</p>
                 </v-col>
                 <v-col cols="12" lg="8" md="12" sm="12">
                     <v-row>
@@ -138,7 +138,7 @@
                                 <v-list-item two-line class="btnText--text  text-body-2 pl-0">
                                     <v-list-item-icon class=" mr-4 mt-3">
                                         <a href="https://wa.me/3158600864">
-                                        <img src="../assets/whatsapp.svg" alt="">
+                                        <!-- <img src="../assets/whatsapp.svg" alt=""> -->
                                     </a>
                                     </v-list-item-icon>
                                     <v-list-item-content class="pt-0">
@@ -157,9 +157,9 @@
                                 <v-list-item two-line class="btnText--text  text-body-2 pl-0">
                                     <v-list-item-content class="pt-0">
                                         <v-list-item-title>
-                                            <a href="mailto:reactwithshaban@gmail.com"
+                                            <a href="mailto:reactwithwaqar@gmail.com"
                                                 class="FF_montserrat-regular btnText--text">
-                                                reactwithshaban@gmail.com
+                                                reactwithwaqar@gmail.com
                                             </a>
                                         </v-list-item-title>
                                     </v-list-item-content>
@@ -182,7 +182,7 @@
                         <v-col cols="12" lg="9" md="12" sm="12" class="pt-0">
                             <v-card width="100%" color="transparent" elevation="0" class="pr-md-16">
                                 <p class="grey2--text text-caption btnText--text">
-                                    Hello there! I'm Shaban, a passionate
+                                    Hello there! I'm waqar, a passionate
                                     Frontend
                                     Developer with a knack for turning ideas into immersive digital experiences. With a
                                     rich toolbox boasting Vue.js, Nuxt.js, React.js, Next.js, along with HTML, CSS,

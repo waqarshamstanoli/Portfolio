@@ -1,4 +1,4 @@
-# Muhammad Shaban
+# Muhammad waqar
 
 ## Project setup
 ```
