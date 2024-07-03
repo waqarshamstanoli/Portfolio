@@ -15,7 +15,7 @@
                 <v-img :src="project.projectImg" alt="" class="mt-8"> </v-img>
               </v-card-text>
               <v-card-actions>
-                <v-btn class="py-5 px-6 white--text text-capitalize subscribe-button mx-auto mb-4" > <a :href="project.projectLink">Details</a></v-btn>
+                <v-btn class="py-5 px-6 white--text text-capitalize subscribe-button mx-auto mb-4" > <a :href="project.projectLink" style="text-decoration: none !important;">See Live</a></v-btn>
               </v-card-actions>
             </v-card>
         </vue-slick-carousel>
@@ -71,7 +71,7 @@ export default {
 },
       step4Highlight: false,
       projects: [
-      { projectName: "AEVENT", projectImg: require("../assets/aevent.webp"), projectDescription: "",projectLink:'' },
+      { projectName: "AEVENT", projectImg: require("../assets/aevent.webp"), projectDescription: "",projectLink:'https://app.aevent.com/#/' },
         { projectName: "KAARKA", projectImg: require("../assets/kaarka.png"), projectDescription: "", projectLink:'https://kaarka.netlify.app/#/' },
         { projectName: "FITRROBIX", projectImg: require("../assets/fit.png"), projectDescription: "",projectLink:'' },
         { projectName: "EXTSY", projectImg: require("../assets/ex.png"), projectDescription: "", projectLink:'https://extsy.top/' },
