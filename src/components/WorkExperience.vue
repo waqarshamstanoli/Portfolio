@@ -22,17 +22,7 @@
           </div>
         </v-card>
       </v-col>
-      <v-col cols="12" lg="6" md="12" sm="12" v-for="experience in experiences" :key="experience">
-        <v-card outlined width="100%" class="custom mx-auto mt-8 px-4 py-4 pb-8 px-md-16 borderRadius py-md-8 paragraphLeft">
-          <div class="text-center">
-            <v-card-title class="secondary--text text-24 justify-center pb-1">{{experience.company}}</v-card-title>
-            <h5 class="secondary--text text--h5">{{ experience.jobTitle }}</h5>
-            <h4 class="secondary--text text--h4">{{ experience.duration }}</h4>
-
-            <p class="text-body-1 gray--text font-weight-regular mt-4">{{ experience.description }}</p>
-          </div>
-        </v-card>
-      </v-col>
+     
      
     </v-row>
   </v-container>
