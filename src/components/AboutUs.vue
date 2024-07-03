@@ -31,7 +31,7 @@
           <div class="bouncing-element">
         </div>
           <div class="text-center">
-          <img src="../assets/banner.png" alt="" class="mt-md-16" width="100%">
+          <!-- <img src="../assets/banner.png" alt="" class="mt-md-16" width="100%"> -->
         </div>
           
           <div :key="animationKey" class="cross-2">
@@ -67,7 +67,7 @@
         scrollPosition: 0,
         increment: 0,
         test: false,
-        texts: ["Waqar Shams ", "Front end Developer"],
+        texts: ["Waqar Shams", "Front End Developer"],
       currentTextIndex: 0,
       typedText: '',
       index: 0,

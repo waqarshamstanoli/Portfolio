@@ -6,9 +6,9 @@
     <v-app-bar class="elevation-0 hidden-sm-and-down" color="blue" fixed dense height="auto">
       <v-toolbar-items>
 
-        <img @click="scrollTo(0)" src="../assets/logo dark.png" height="60px" alt="" class="mt-4  ml-md-4 cursor-pointer" to="/"
+        <img @click="scrollTo(0)" src="../assets/WAQAR SHAMS.png" width="400px" height="60px" alt="" class="mt-4  ml-md-4 cursor-pointer" to="/"
           v-if="selectedItem == 'mdi-weather-night'" />
-        <img @click="scrollTo(0)" src="../assets/logo light.png" height="60px" alt="" class="mt-4  ml-md-4 cursor-pointer" to="/"
+        <img @click="scrollTo(0)" src="../assets/WAQAR SHAMS.png" width="400px" height="60px" alt="" class="mt-4  ml-md-4 cursor-pointer" to="/"
           v-if="selectedItem != 'mdi-weather-night'" />
       </v-toolbar-items>
 

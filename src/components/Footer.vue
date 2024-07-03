@@ -138,7 +138,7 @@
                                 <v-list-item two-line class="btnText--text  text-body-2 pl-0">
                                     <v-list-item-icon class=" mr-4 mt-3">
                                         <a href="https://wa.me/3158600864">
-                                        <!-- <img src="../assets/whatsapp.svg" alt=""> -->
+                                        <img src="../assets/whatsapp.svg" alt="">
                                     </a>
                                     </v-list-item-icon>
                                     <v-list-item-content class="pt-0">
