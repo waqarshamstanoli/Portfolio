@@ -126,7 +126,7 @@
 
                                     <v-list-item-content>
                                         <v-list-item-title>
-                                            <a href="tel:+923315823600" class="FF_montserrat-regular btnText--text">+92
+                                            <a href="tel:+923458112216" class="FF_montserrat-regular btnText--text">+92
                                                 331 5823600
                                             </a>
                                         </v-list-item-title>
@@ -137,14 +137,14 @@
                                 </v-list-item>
                                 <v-list-item two-line class="btnText--text  text-body-2 pl-0">
                                     <v-list-item-icon class=" mr-4 mt-3">
-                                        <a href="https://wa.me/3158600864">
+                                        <a href="https://wa.me/3458112216">
                                         <img src="../assets/whatsapp.svg" alt="">
                                     </a>
                                     </v-list-item-icon>
                                     <v-list-item-content class="pt-0">
-                                        <a href="https://wa.me/3158600864">
+                                        <a href="https://wa.me/3458112216">
                                         <v-list-item-title>
-                                            <a href="https://wa.me/3158600864"
+                                            <a href="https://wa.me/3458112216"
                                                 class="FF_montserrat-regular btnText--text"> Whatsapp
                                             </a>
                                         </v-list-item-title>
@@ -157,9 +157,9 @@
                                 <v-list-item two-line class="btnText--text  text-body-2 pl-0">
                                     <v-list-item-content class="pt-0">
                                         <v-list-item-title>
-                                            <a href="mailto:reactwithwaqar@gmail.com"
+                                            <a href="mailto:waqar.shamstanoli@gmail.com"
                                                 class="FF_montserrat-regular btnText--text">
-                                                reactwithwaqar@gmail.com
+                                                waqar.shamstanoli@gmail.com
                                             </a>
                                         </v-list-item-title>
                                     </v-list-item-content>
@@ -286,7 +286,7 @@ export default {
         },
         async submitForm() {
             try {
-                const response = await fetch('https://formspree.io/f/xeqydqrl', {
+                const response = await fetch('https://formspree.io/f/mdoqneye', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json'

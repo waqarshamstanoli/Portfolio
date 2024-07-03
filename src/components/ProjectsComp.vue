@@ -72,14 +72,17 @@ export default {
       step4Highlight: false,
       projects: [
       { projectName: "AEVENT", projectImg: require("../assets/aevent.webp"), projectDescription: "",projectLink:'https://app.aevent.com/#/' },
+      { projectName: "BimmeTech", projectImg: require("../assets/bimmerTech.png"), projectDescription: "", projectLink:'https://www.bimmer-tech.net/' },
+
         { projectName: "KAARKA", projectImg: require("../assets/kaarka.png"), projectDescription: "", projectLink:'https://kaarka.netlify.app/#/' },
-        { projectName: "FITRROBIX", projectImg: require("../assets/fit.png"), projectDescription: "",projectLink:'' },
         { projectName: "EXTSY", projectImg: require("../assets/ex.png"), projectDescription: "", projectLink:'https://extsy.top/' },
         { projectName: "EYE SMARTY", projectImg: require("../assets/eye.svg"), projectDescription: "",projectLink:'https://www.eyesmarty.com/' },
-        { projectName: "INTELLI COMMERCE", projectImg: require("../assets/intel.png"), projectDescription: "",projectLink:'' },
       { projectName: "Distinction Wrapping", projectImg: require("../assets/DW.png"), projectDescription: "",projectLink:'https://www.distinctionwrapping.com/' },
       { projectName: "The Taxcom Accountants", projectImg: require("../assets/TheTax.png"), projectDescription: "",projectLink:'https://thetaxcom.co.uk/' },
       { projectName: "PureSun", projectImg: require("../assets/PureSun.png"), projectDescription: "",projectLink:'https://demo23.anazah.com/' },
+      { projectName: "FITRROBIX", projectImg: require("../assets/fit.png"), projectDescription: "",projectLink:'' },
+      { projectName: "INTELLI COMMERCE", projectImg: require("../assets/intel.png"), projectDescription: "",projectLink:'' },
+
       { projectName: "Chef Special", projectImg: require("../assets/ChefSpecial.png"), projectDescription: "",projectLink:'' },
       { projectName: "One Stop Claims", projectImg: require("../assets/OneStopClaims.png"), projectDescription: "",projectLink:'' },
       { projectName: "Beyond Blend", projectImg: require("../assets/BeyondBlend.png"), projectDescription: "",projectLink:'' },
