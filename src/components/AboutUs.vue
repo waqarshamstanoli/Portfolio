@@ -67,7 +67,7 @@
         scrollPosition: 0,
         increment: 0,
         test: false,
-        texts: ["Madinatech", "Innovations"],
+        texts: ["Waqar Shams ", "Front end Developer"],
       currentTextIndex: 0,
       typedText: '',
       index: 0,
