@@ -14,17 +14,18 @@
 
       <v-toolbar-items class="hidden-sm-and-down mx-auto">
         <v-btn text large @click="scrollTo(0)" :class="{ activeButton: scrollPosition == 1150 }"
-          class="text-capitalize btnText--text py-2"> About Me </v-btn>
+          class="text-capitalize btnText--text py-2"> Services </v-btn>
         <v-btn text large @click="scrollTo(700)" :class="{ activeButton: scrollPosition == 1950 }"
-          class="text-capitalize btnText--text py-2"> Projects </v-btn>
+          class="text-capitalize btnText--text py-2"> Industries
+        </v-btn>
         <v-btn text large @click="scrollTo(1350)" :class="{ activeButton: scrollPosition == 3350 }"
-          class="text-capitalize btnText--text py-2"> Skills </v-btn>
+          class="text-capitalize btnText--text py-2"> Insights </v-btn>
         <v-btn text large @click="scrollTo(2450)" :class="{ activeButton: scrollPosition == 4350 }"
-          class="text-capitalize btnText--text py-2"> Work Experience </v-btn>
+          class="text-capitalize btnText--text py-2"> About </v-btn>
         <!-- <v-btn text large @click="scrollTo(3450)" :class="{ activeButton: scrollPosition == 5150 }"
           class="text-capitalize btnText--text py-2"> Education </v-btn> -->
         <v-btn text large @click="scrollTo(4250)" :class="{ activeButton: scrollPosition == 5150 }"
-          class="text-capitalize btnText--text py-2"> Contact </v-btn>
+          class="text-capitalize btnText--text py-2"> Careers </v-btn>
       </v-toolbar-items>
       <v-menu offset-y left="true" rounded="lg">
         <template v-slot:activator="{ on }">
@@ -45,7 +46,6 @@
       </v-menu>
 
     </v-app-bar>
-    <!-- MOBILE NAVBAR -->
 
     <v-app-bar height="auto" class="hidden-md-and-up" color="blue" dense>
       <v-toolbar-title class="mobile-title">
@@ -60,7 +60,6 @@
       </v-toolbar-title>
 
       <v-spacer></v-spacer>
-      <!-- <v-spacer></v-spacer> -->
       <v-menu offset-y left="true" rounded="lg">
         <template v-slot:activator="{ on }">
           <v-btn v-on="on" class=" menu elevation-0">
@@ -103,10 +102,7 @@
           <v-btn text large @click="scrollTo(2850)" :class="{ activeButton: scrollPosition == 4350 }"
             class="text-capitalize btnText--text py-2"> Work Experience </v-btn>
         </v-list-item>
-        <!-- <v-list-item link>
-          <v-btn text large @click="scrollTo(3450)" :class="{ activeButton: scrollPosition == 5150 }"
-            class="text-capitalize btnText--text py-2"> Education </v-btn>
-        </v-list-item> -->
+       
         <v-list-item link>
           <v-btn text large @click="scrollTo(4250)" :class="{ activeButton: scrollPosition == 5150 }"
             class="text-capitalize btnText--text py-2"> Contact </v-btn>
@@ -118,17 +114,14 @@
   </div>
 </template>
 <script>
-// import InputSwitch from "@/components/InputSwitch.vue";
 import { mapActions } from "vuex";
-import { mapGetters } from "vuex"; // Import mapGetters to access the current route
+import { mapGetters } from "vuex"; 
 
 export default {
-  // components: { InputSwitch },
   data() {
     return {
       showMenu: false,
       isHovered: true,
-      // consumer: false,
       scrollPosition: "",
       visible: false,
       items: [{ icon: 'mdi-white-balance-sunny', name: "Light" }, { icon: 'mdi-weather-night', name: "Dark" }],
@@ -139,7 +132,7 @@ export default {
 
   methods: {
     toggleMenu() {
-      this.showMenu = !this.showMenu; // Toggle the menu state
+      this.showMenu = !this.showMenu; 
     },
     ...mapActions(["moveToNext"]),
     playClickSound() {
@@ -177,7 +170,6 @@ export default {
         this.$router.push({ path: "/" });
       }
 
-      // this.$vuetify.theme.dark = !this.$vuetify.theme.dark;
     },
     scrollTo(position) {
       this.playClickSound()
@@ -186,22 +178,19 @@ export default {
     },
   },
   mounted() {
-    // Check the current route and set the selectedItem accordingly
     switch (this.$route.path) {
-      case "/": // Assuming "/" corresponds to the About Me route
+      case "/": 
         this.selectedItem = "mdi-weather-night";
         break;
       case "/projects":
         this.selectedItem = "YourIconForProjects";
         break;
-      // Add cases for other routes if needed
       default:
-        this.selectedItem = "mdi-weather-night"; // Set default if route not matched
+        this.selectedItem = "mdi-weather-night"; 
     }
   },
 
   computed: {
-    // map the $route object to a local computed property
     ...mapGetters(["$route"])
   },
 };
@@ -238,26 +227,15 @@ export default {
   font-family: Tungsten !important;
 }
 
-/* .current {
-			background: #eaeaea;
-		}
-		.hidden {
-			visibility: hidden;
-		}
-		.visible {
-			visibility: visible;
-		} */
+
 .selector {
-  /* border: 1px solid gainsboro; */
   background: transparent;
   position: relative;
   z-index: 1;
 }
 
 ul {
-  /* width: 100%; */
   list-style-type: none;
-
   margin: 0;
   font-size: 16px;
   font-family: tungsten;
@@ -281,15 +259,6 @@ ul {
   display: none;
 }
 
-/*.hover-effect {
-  transition: transform 0.3s ease-in-out;
-}
-
- Define the transformation on hover 
-.hover-effect:hover {
-  transform: scale(1.1);
-   Scale up the image by 10% 
-}*/
 
 .content-container {
   position: fixed;
@@ -303,7 +272,6 @@ ul {
 
 .dialog-wrapper {
   background-color: #ffffff;
-  /* Background color of the dialog */
   padding: 20px;
 
 }

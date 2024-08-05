@@ -43,12 +43,7 @@ export default {
 
     },
   },
-  // created() {
-  //   this.digits = "" + this.count;
-  //   setInterval(() => {
-  //     this.increment();
-  //   }, 100000); 
-  // },
+ 
 };
 </script>
 
@@ -58,7 +53,6 @@ export default {
   font-size: 64px !important;
   font-weight: 800 !important;
   font-family: "Noto_Sans-Black" !important;
-  // font-family: "Halyard";
 }
 .v-application .body-1 {
   font-family: 'NotoSans-Medium' !important;
@@ -101,6 +95,7 @@ export default {
      -webkit-background-clip: text !important;
     -webkit-text-fill-color: transparent !important;
     background-clip: text !important;
+    line-height: 40px;
     text-fill-color: transparent;
 }
 .v-btn.v-size--large {
@@ -122,9 +117,7 @@ export default {
   background-color: transparent !important;
 }
 
-// .v-btn:hover{
-//   background:#3a2d3b !important
-// }
+
 .v-text-field--outlined.v-input--dense .v-label {
     color: #7F92B0 !important;
     font-size: 14px !important;
@@ -185,7 +178,6 @@ export default {
   line-height: 52px !important;
   font-size: 60px !important;
   font-weight: 900 !important;
-  // font-family: "Halyard";
   font-family: "Noto_Sans-Black";
 }
 
@@ -224,18 +216,7 @@ export default {
 .ffHalyard {
   font-family: Halyard !important;
 }
-// .v-application .body-1 {
-//   font-size: 28px !important;
-//   font-weight: 200;
 
-//   font-family: Halyard !important;
-// }
-// .v-application .body-2 {
-//   font-size: 58px !important;
-//   font-weight: 200;
-
-//   font-family: Halyard !important;
-// }
 .v-application .caption {
   font-size: 22px !important;
   font-weight: 200;

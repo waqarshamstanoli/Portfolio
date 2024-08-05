@@ -4,6 +4,7 @@
             <v-row>
                 <v-col cols="12" lg="4" md="12" sm="12" class="">
                     <!-- <img src="../assets/BimmerTech logo.svg" alt="" class="mt-8 mt-md-0"> -->
+                    <!-- <h4 class="white--text  btnText--text">Subscribe</h4> -->
                     <v-form method="POST" action="https://formspree.io/f/xeqydqrl" v-model="valid"
                         @submit.prevent="submitForm" class="pa-5" style="border: 1px solid white; border-radius: 20px;">
                         <v-container>
@@ -112,23 +113,23 @@
                     <v-row>
                         <v-col cols="12" lg="4" md="3" sm="6" class="pb-0"
                             :class="{ '': !$vuetify.breakpoint.smAndDown, 'custom': $vuetify.breakpoint.smAndDown }">
-                            <h4 class="white--text FF_montserrat btnText--text">Our Company</h4>
+                            <h4 class="white--text  btnText--text">Services</h4>
                             <v-list color="transparent" dense>
                                 <v-list-item link v-for="(item, index) in company" :key="index" :to="item.link"
-                                    class="white--text btnText--text  text-body-2 FF_montserrat-regular pl-0 pr-0">
+                                    class="white--text btnText--text  text-body-2  pl-0 pr-0">
                                     {{ item.title }}
                                 </v-list-item>
                             </v-list>
                         </v-col>
                         <v-col cols="12" lg="4" md="3" sm="6" class="pb-0" order-lg="2"
                             :class="{ '': !$vuetify.breakpoint.smAndDown, 'custom': $vuetify.breakpoint.smAndDown }">
-                            <h4 class="white--text FF_montserrat btnText--text">Have Questions</h4>
+                            <h4 class="white--text  btnText--text">Have Questions</h4>
                             <v-list color="transparent" dense>
                                 <v-list-item two-line class="grey--text text--lighten-5 text-body-2 pl-0 pr-0">
 
                                     <v-list-item-content>
                                         <v-list-item-title>
-                                            <a href="tel:+923458112216" class="FF_montserrat-regular btnText--text">+92
+                                            <a href="tel:+923458112216" class=" btnText--text">+92
                                                 923458112216
                                             </a>
                                         </v-list-item-title>
@@ -147,7 +148,7 @@
                                         <a href="https://wa.me/3458112216">
                                         <v-list-item-title>
                                             <a href="https://wa.me/3458112216"
-                                                class="FF_montserrat-regular btnText--text"> Whatsapp
+                                                class=" btnText--text"> Whatsapp
                                             </a>
                                         </v-list-item-title>
                                         <v-list-item-subtitle class="btnText--text">
@@ -160,7 +161,7 @@
                                     <v-list-item-content class="pt-0">
                                         <v-list-item-title>
                                             <a href="mailto:waqar.shamstanoli@gmail.com"
-                                                class="FF_montserrat-regular btnText--text">
+                                                class=" btnText--text">
                                                 waqar.shamstanoli@gmail.com
                                             </a>
                                         </v-list-item-title>
@@ -170,10 +171,10 @@
                         </v-col>
                         <v-col cols="12" lg="4" md="3" sm="6" class="pb-0" order-lg="1"
                             :class="{ '': !$vuetify.breakpoint.smAndDown, 'custom': $vuetify.breakpoint.smAndDown }">
-                            <h4 class="white--text FF_montserrat btnText--text">Policies</h4>
+                            <h4 class="white--text  btnText--text">Industries</h4>
                             <v-list color="transparent" dense>
                                 <v-list-item link v-for="(item, index) in policies" :key="index" :to="item.link"
-                                    class="btnText--text text-body-2 FF_montserrat-regular pl-0 pr-0">
+                                    class="btnText--text text-body-2  pl-0 pr-0">
                                     {{ item.title }}
                                 </v-list-item>
                             </v-list>
@@ -227,12 +228,16 @@ export default {
             darkTheme: this.$vuetify.theme.dark,
             company: [
                 {
-                    title: "About Us",
+                    title: "Digital",
                     // link: "/page-about-us"
 
                 },
                 {
-                    title: "Contact Us",
+                    title: "Data & AI",
+                    // link: "/page-contact"
+                },
+                {
+                    title: "Cloud",
                     // link: "/page-contact"
                 },
             ],
@@ -257,12 +262,30 @@ export default {
                 },
             ],
             policies: [
+
+            
+
+
+
+
                 {
-                    title: "Temrs & Conditions",
+                    title: "Telecommunications",
                     // link: "termsandconditions"
                 },
                 {
-                    title: "Privacy and cookies policy",
+                    title: "Banking & Finance",
+                    // link: "cookiespolicy"
+                },
+                {
+                    title: "Public Sector",
+                    // link: "cookiespolicy"
+                },
+                {
+                    title: "Healthcare & Pharmaceutical",
+                    // link: "cookiespolicy"
+                },
+                {
+                    title: "Retail & CPG",
                     // link: "cookiespolicy"
                 },
             ],
@@ -297,30 +320,25 @@ export default {
                 });
 
                 if (response.ok) {
-                    // Reset form after successful submission
                     this.valid = false;
                     this.formData = {};
-                    // Display success message to user
-                    // You can handle this as per your UI design
-                    //   alert('Form submitted successfully!');
+                    
+                      alert('Form submitted successfully!');
                     this.thanksDialog = true;
                     this.emailRules = false,
                         this.nameRules = false
                 } else {
-                    // Handle error response from Formspree
                     const errorData = await response.json();
                     console.error('Form submission error:', errorData);
                     alert('Form submission failed. Please try again later.');
                     this.errorDialog = true;
                 }
             } catch (error) {
-                // Handle network errors
                 console.error('Form submission error:', error);
                 alert('An unexpected error occurred. Please try again later.');
             }
         },
         mounted() {
-            // Use the Toasted plugin
             this.$toasted.register('success', message => message);
             this.$toasted.register('error', message => message);
         },
@@ -344,20 +362,7 @@ a {
     margin-top: 25px;
 }
 
-/* @font-face {
-src: url('../assets/fonts/Montserrat/static/Montserrat-Bold.ttf') format('truetype');
-}
-@font-face {
-font-family: 'Montserrat-regular'; 
-src: url('../assets/fonts/Montserrat/static/Montserrat-Regular.ttf') format('truetype'); 
-} */
-.FF_montserrat {
-    font-family: 'Montserrat' !important;
-}
 
-.FF_montserrat-regular {
-    font-family: 'Montserrat-regular' !important;
-}
 
 .custom.col-12 {
     flex: 0 0 100%;

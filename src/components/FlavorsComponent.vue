@@ -8,7 +8,6 @@
 </template>
 
 <script>
-// import { Carousel3d, Slide } from 'vue-carousel-3d';
 
 export default {
   data() {
@@ -17,54 +16,7 @@ export default {
   components: {},
   methods: {
     pageScroll() {
-      // If at page bottom, scroll by to top
-      // if((window.innerHeight + window.scrollY) >= document.body.offsetHeight)
-      //   window.scrollTo(0, 0)
-      // else
-      //   // Scroll 1px down
-      //   window.scrollBy(0, 1)
-    },
-    reveal() {
-      var reveals = document.querySelectorAll(".headingRight");
-      for (var i = 0; i < reveals.length; i++) {
-        var windowHeight = window.innerHeight;
-        var elementTop = reveals[i].getBoundingClientRect().top;
-        var elementVisible = 150;
-
-        if (elementTop < windowHeight - elementVisible) {
-          reveals[i].classList.add("active");
-        } else {
-          reveals[i].classList.remove("active");
-        }
-      }
-    },
-    animateHeadingLeft() {
-      var reveals = document.querySelectorAll(".headingLeft");
-      for (var i = 0; i < reveals.length; i++) {
-        var windowHeight = window.innerHeight;
-        var elementTop = reveals[i].getBoundingClientRect().top;
-        var elementVisible = 150;
-
-        if (elementTop < windowHeight - elementVisible) {
-          reveals[i].classList.add("active");
-        } else {
-          reveals[i].classList.remove("active");
-        }
-      }
-    },
-    animateParagraphRight() {
-      var reveals = document.querySelectorAll(".paragraphRight");
-      for (var i = 0; i < reveals.length; i++) {
-        var windowHeight = window.innerHeight;
-        var elementTop = reveals[i].getBoundingClientRect().top;
-        var elementVisible = 150;
-
-        if (elementTop < windowHeight - elementVisible) {
-          reveals[i].classList.add("active");
-        } else {
-          reveals[i].classList.remove("active");
-        }
-      }
+     
     },
     animateParagraphLeft() {
       var reveals = document.querySelectorAll(".paragraphLeft");
@@ -94,34 +46,77 @@ export default {
         }
       }
     },
-    animateHeadingLeftBottom() {
-      var reveals = document.querySelectorAll(".headingLeftBottom");
-      for (var i = 0; i < reveals.length; i++) {
-        var windowHeight = window.innerHeight;
-        var elementTop = reveals[i].getBoundingClientRect().top;
-        var elementVisible = 150;
+    // reveal() {
+    //   var reveals = document.querySelectorAll(".headingRight");
+    //   for (var i = 0; i < reveals.length; i++) {
+    //     var windowHeight = window.innerHeight;
+    //     var elementTop = reveals[i].getBoundingClientRect().top;
+    //     var elementVisible = 150;
 
-        if (elementTop < windowHeight - elementVisible) {
-          reveals[i].classList.add("active");
-        } else {
-          reveals[i].classList.remove("active");
-        }
-      }
-    },
-    animateCenterCards() {
-      var reveals = document.querySelectorAll(".centerCards");
-      for (var i = 0; i < reveals.length; i++) {
-        var windowHeight = window.innerHeight;
-        var elementTop = reveals[i].getBoundingClientRect().top;
-        var elementVisible = 150;
+    //     if (elementTop < windowHeight - elementVisible) {
+    //       reveals[i].classList.add("active");
+    //     } else {
+    //       reveals[i].classList.remove("active");
+    //     }
+    //   }
+    // },
+    // animateHeadingLeft() {
+    //   var reveals = document.querySelectorAll(".headingLeft");
+    //   for (var i = 0; i < reveals.length; i++) {
+    //     var windowHeight = window.innerHeight;
+    //     var elementTop = reveals[i].getBoundingClientRect().top;
+    //     var elementVisible = 150;
 
-        if (elementTop < windowHeight - elementVisible) {
-          reveals[i].classList.add("active");
-        } else {
-          reveals[i].classList.remove("active");
-        }
-      }
-    },
+    //     if (elementTop < windowHeight - elementVisible) {
+    //       reveals[i].classList.add("active");
+    //     } else {
+    //       reveals[i].classList.remove("active");
+    //     }
+    //   }
+    // },
+    // animateParagraphRight() {
+    //   var reveals = document.querySelectorAll(".paragraphRight");
+    //   for (var i = 0; i < reveals.length; i++) {
+    //     var windowHeight = window.innerHeight;
+    //     var elementTop = reveals[i].getBoundingClientRect().top;
+    //     var elementVisible = 150;
+
+    //     if (elementTop < windowHeight - elementVisible) {
+    //       reveals[i].classList.add("active");
+    //     } else {
+    //       reveals[i].classList.remove("active");
+    //     }
+    //   }
+    // },
+    
+    // animateHeadingLeftBottom() {
+    //   var reveals = document.querySelectorAll(".headingLeftBottom");
+    //   for (var i = 0; i < reveals.length; i++) {
+    //     var windowHeight = window.innerHeight;
+    //     var elementTop = reveals[i].getBoundingClientRect().top;
+    //     var elementVisible = 150;
+
+    //     if (elementTop < windowHeight - elementVisible) {
+    //       reveals[i].classList.add("active");
+    //     } else {
+    //       reveals[i].classList.remove("active");
+    //     }
+    //   }
+    // },
+    // animateCenterCards() {
+    //   var reveals = document.querySelectorAll(".centerCards");
+    //   for (var i = 0; i < reveals.length; i++) {
+    //     var windowHeight = window.innerHeight;
+    //     var elementTop = reveals[i].getBoundingClientRect().top;
+    //     var elementVisible = 150;
+
+    //     if (elementTop < windowHeight - elementVisible) {
+    //       reveals[i].classList.add("active");
+    //     } else {
+    //       reveals[i].classList.remove("active");
+    //     }
+    //   }
+    // },
   },
   created() {
     window.addEventListener("scroll", this.pageScroll);
@@ -139,9 +134,9 @@ export default {
 <style>
 .containerHeight {
   display: flex;
-  align-items: center; /* Vertically center the items */
-  justify-content: center; /* Horizontally center the items */
-  height: 100vh; /* Set the height of the container */
+  align-items: center; 
+  justify-content: center; 
+  height: 100vh; 
 }
 
 .headingRight {
@@ -149,7 +144,6 @@ export default {
   opacity: 0;
   visibility: hidden;
   transform: translate(150px, -50px);
-  /* transform: translateY(-100px); */
   opacity: 0;
   transition: 2s all ease;
 }
@@ -164,7 +158,6 @@ export default {
   opacity: 0;
   visibility: hidden;
   transform: translate(150px, 50px);
-  /* transform: translateY(-100px); */
   opacity: 0;
   transition: 2s all ease;
 }

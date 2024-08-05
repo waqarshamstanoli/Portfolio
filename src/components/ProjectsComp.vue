@@ -9,7 +9,7 @@
       </v-col>
       <v-col cols="12">
         <vue-slick-carousel v-bind="slickOptions" >
-            <v-card v-for="(project, index) in projects" :key="index" rounded="lg" color="rgba(0,0,0,.1)" width="290px" class="mx-auto mt-8 elevation-0">
+            <v-card v-for="(project, index) in projects" :key="index" rounded="lg" color="rgba(0,0,0,.1)" width="200px" class="mx-auto mt-8 elevation-0">
               <v-card-text>
                 <h4 class="secondary--text text--h4 text-center mt-2">{{ project.projectName }}.</h4>
                 <v-img :src="project.projectImg" alt="" class="mt-8"> </v-img>
@@ -36,16 +36,16 @@ export default {
   data() {
     return {
       slickOptions: {
-  slidesToShow: 3, // Number of slides to show at once
-  slidesToScroll: 1, // Number of slides to scroll at once
-  autoplaySpeed: 2000, // Auto-play speed in milliseconds
-  arrows: true, // Show navigation arrows
-  dots: true, // Show navigation dots
-  infinite: true, // Loop the slider infinitely
-  speed: 500, // Transition speed in milliseconds
-  responsive: [ // Responsive breakpoints
+  slidesToShow: 4, 
+  slidesToScroll: 1, 
+  autoplaySpeed: 2000, 
+  arrows: true, 
+  dots: true, 
+  infinite: true, 
+  speed: 500, 
+  responsive: [ 
     {
-      breakpoint: 1024, // Breakpoint at which settings will change
+      breakpoint: 1024, 
       settings: {
         slidesToShow: 3,
         slidesToScroll: 1,
@@ -63,7 +63,7 @@ export default {
       settings: {
         slidesToShow: 1,
         slidesToScroll: 1,
-  arrows: false, // Show navigation arrows
+  arrows: false, 
 
       }
     }
@@ -103,52 +103,7 @@ export default {
   },
   methods: {
    
-    // step1Visible() {
-    //   setTimeout(() => {
-    //     this.whiteProtien = true;
-    //   }, 1000);
-    // },
-    // step1Hide() {
-    //   setTimeout(() => {
-    //     this.whiteProtien = false;
-    //   }, 10000);
-    // },
-    // step2Visible() {
-    //   setTimeout(() => {
-    //     this.step2Highlight = true;
-    //   }, 5000);
-    // },
-    // step3Visible() {
-    //   setTimeout(() => {
-    //     this.step3Highlight = true;
-    //   }, 7000);
-    // },
-    // step4Visible() {
-    //   setTimeout(() => {
-    //     this.step4Highlight = true;
-    //   }, 8000);
-    // },
-
-    // makeAllInactive() {
-    //   setTimeout(() => {
-    //     this.step4Highlight = false;
-    //     this.step3Highlight = false;
-    //     this.step2Highlight = false;
-    //   }, 12000);
-    // },
-
-    // handleIntersection(entries) {
-    //   entries.forEach((entry) => {
-    //     if (entry.isIntersecting) {
-    //       this.step1Visible();
-    //       this.step2Visible();
-    //       this.step3Visible();
-    //       this.step4Visible();
-    //       this.makeAllInactive();
-    //       this.step1Hide();
-    //     }
-    //   });
-    // },
+   
   },
   created() {
     window.addEventListener("scroll", this.reveal);
@@ -160,24 +115,12 @@ export default {
       threshold: 0.5,
     });
     observer.observe(this.$refs.mySection);
-    // this.step1Visible()
   },
 };
 </script>
 
 <style>
-.Hide {
-  transition: transform 1s ease;
-  transform: scale(0);
-}
-.scaled {
-  transform: scale(0.2);
-  transition: transform 1s ease; /* Add a smooth transition effect */
-}
-.scaled2 {
-  transform: scale(1);
-  transition: transform 1s ease; /* Add a smooth transition effect */
-}
+
 a{
   color: white !important;
 }

@@ -25,14 +25,10 @@
         <v-col cols="12" lg="4" md="12" sm="12" class=" green">
           <div class="containers">
   <div class="centered-div radius">
-    <!-- <div class="text-center radius "> -->
           <img src="../assets/banner.png" alt="" class="mt-16">
-          <!-- </div> -->
   </div>
 </div>
-          <!-- <div class="text-center radius centered-div">
-          <img src="../assets/banner.png" alt="" class="mt-16">
-          </div> -->
+          
         </v-col>
         <v-col cols="12" lg="4" md="12" sm="12" class="red">
          

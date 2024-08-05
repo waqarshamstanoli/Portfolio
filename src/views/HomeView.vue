@@ -7,7 +7,6 @@
     <projects-comp></projects-comp>
     <SkillsComp ref="section" class="section"></SkillsComp>
     <WorkExperience></WorkExperience>
-    <!-- <education-comp ref="myEl"></education-comp> -->
     <v-footer fixed color="transparent">
       <v-btn large icon class="mx-auto" @click="scrollToContent"
         ><v-icon>mdi-chevron-down</v-icon></v-btn
@@ -18,7 +17,6 @@
 
 <script>
 import { mapGetters } from "vuex";
-// import AboutUs from "@/components/AboutUs.vue"
 import AboutUs from "@/components/AboutUs.vue"
 import FlavorsComponent from "@/components/FlavorsComponent.vue";
 import ProjectsComp from "@/components/ProjectsComp.vue";
@@ -118,19 +116,7 @@ export default {
       else {
         // console.log('chal nikal')
       }
-      //  else if (this.scrollPosition == 2750) {
-      //   this.increment = 800;
-      //   this.scrollTo = this.scrollPosition + this.increment;
-      // } else if (this.scrollPosition == 3550) {
-      //   this.increment = 800;
-      //   this.scrollTo = this.scrollPosition + this.increment;
-      // } else if (this.scrollPosition == 4350) {
-      //   this.increment = 950;
-      //   this.scrollTo = this.scrollPosition + this.increment;
-      // } else if (this.scrollPosition == 5150) {
-      //   alert("5150");
-        
-      // }
+     
       
       this.pageScroll(this.scrollTo);
       this.getScrollValue = this.scrollTo
@@ -163,37 +149,30 @@ export default {
     handleIntersection(entries) {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
-          // Call your function when the section becomes visible
           this.onSectionVisible();
         }
       });
     },
     onSectionVisible() {
-      alert("fdsfdsfdsf");
       this.test = true;
-      // console.log(this.test);
-      // Your logic wthishen the section becomes visible
+     
     },
   },
 
   mounted() {
     this.typeText();
     this.animate();
-    // this.animateDot();
     setInterval(this.restartAnimation, 25000);
-    // this.restartAnimation();
     const options = {
       root: null,
       rootMargin: "0px",
-      threshold: 0.5, // Adjust this value based on your needs
+      threshold: 0.5,
     };
 
     const observer = new IntersectionObserver(this.handleIntersection, options);
     observer.observe(this.$refs.sectionElement);
   },
-  created() {
-    // window.addEventListener("scroll",  this.handleScroll)
-  },
+ 
   watch: {
     getScrollValue: {
       deep: true,
@@ -211,37 +190,7 @@ export default {
 .marginTop {
   margin-top: 200px;
 }
-/* .scroll-ease {
-  transition: transform 0.03s ease-out;
-} */
-/* .translate-element {
-  transition: transform 3s ease-out;
-  position: fixed;
-  top: 100px;
-} */
-/* .scroll-effect {
-  transition: opacity 5s ease-in-out;
-  opacity: 1;
-} */
 
-/* .slide-up-enter-active,
-.slide-up-leave-active {
-  transition: all 4s ease-out;
-} */
-/* .slide-up-enter-from {
-  transform: translateY(0px);
-} */
-/* .slide-up-leave-to {
-  transform: translateY(-300px);
-} */
-/* .cross {
-    width: 20px;
-    height: 20px;
-    background-color: red;
-    border-radius: 50%;
-    position: relative;
-    transition: top 10.5s ease, left 10.5s ease; 
-} */
 
 .animated-div {
   position: relative;
@@ -309,7 +258,6 @@ animation-duration: 25s;
 }
 
 .subscribe-button {
-      /* background: linear-gradient(to right, #ff7e5f, #feb47b);  */
       background: linear-gradient(to right, #0ea5ea,  #0ea5ea, #0bd1d1);
       font-size: 16px;
       font-weight: 700 !important;

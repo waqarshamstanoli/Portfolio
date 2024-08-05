@@ -47,23 +47,9 @@ export default {
 
 <style scoped>
 
-.scaled {
-  transform: scale(1.5); /* Increase the scale value as desired */
-  transition: transform 1.9s ease; /* Add a smooth transition effect */
-}
-/* .dark{
-  transform: scale(5.5);
-} */
-.glass {
-  width: 200px;
-  height: 400px;
-}
-@media only screen and(max-width: 400) {
-  .glass {
-    width: 100px;
-    height: 200px;
-  }
-}
+
+
+
 .borderRadius {
   border-radius: 40px;
 }
