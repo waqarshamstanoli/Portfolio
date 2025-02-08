@@ -3,11 +3,8 @@ import App from './App.vue'
 import router from './router'
 import store from './store'
 import vuetify from './plugins/vuetify'
-import Carousel3d from 'vue-carousel-3d';
-import Toasted from 'vue-toasted';
+import i18n from './i18n';
 
-
-Vue.use(Toasted);
 
 
 Vue.config.productionTip = false
@@ -16,5 +13,6 @@ new Vue({
   router,
   store,
   vuetify,
+  i18n,
   render: h => h(App)
 }).$mount('#app')

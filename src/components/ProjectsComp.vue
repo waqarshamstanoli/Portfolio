@@ -6,7 +6,7 @@
           class="headingCenter project_card elevation-0 mx-auto mt-16"
           color="transparent"
         >
-          <h1 class="text-center">PORTFOLIO</h1>
+          <h1 class="text-center text-uppercase"> {{$t("portfolio")}}</h1>
           <p
             class="text-body-1 gray--text font-weight-regular mt-8 text-center"
           >
@@ -43,7 +43,7 @@
                 color="#00A9D6"
                 class="white--text text-capitalize elevation-0 mx-auto px-4"
               >
-                details
+              {{$t("details")}}
                 <!-- <a :href="project.projectLink" style="text-decoration: none !important; color: white !important;">See Live</a> -->
               </v-btn>
               <v-btn
@@ -53,7 +53,7 @@
                 class="white--text text-capitalize elevation-0 mx-auto px-4"
                 @click="goToExternalPage(project.projectLink)"
               >
-                live
+                {{$t("live")}}
                 <!-- <a :href="project.projectLink" style="text-decoration: none !important; color: white !important;">See Live</a> -->
               </v-btn>
             </v-card-actions>

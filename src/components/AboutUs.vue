@@ -5,13 +5,13 @@
       <v-card color="transparent" class="elevation-0 marginTop">
         <v-card-text>
           <h1 class="hero_text black--text">
-            Transforming Ideas into
+            {{ $t("welcome") }}
           </h1>
+          
+  
           <h1 class="header-text hero_text mt-4">{{ typedText }}</h1>
           <p class="text-body-1 gray--text font-weight-regular mt-8">
-            Madinatech Innovations is your partner in delivering cutting-edge software solutions that drive success.
-             From web and mobile development to digital strategy, we bring your 
-             vision to life with precision and innovation.
+           {{$t("heroText")}}
           </p>
         </v-card-text>
       </v-card>
@@ -41,6 +41,9 @@ export default {
     };
   },
   methods: {
+    // changeLanguage(lang) {
+    //   this.$i18n.locale = lang; 
+    // },
     playClickSound() {
       const audio = new Audio(require("../assets/sounds/click.wav"));
       audio.play();

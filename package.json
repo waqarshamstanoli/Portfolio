@@ -9,14 +9,11 @@
   },
   "dependencies": {
     "core-js": "^3.8.3",
-    "hooper": "^0.3.4",
-    "howler": "^2.2.4",
     "slick-carousel": "^1.8.1",
     "vue": "^2.6.14",
-    "vue-carousel-3d": "^1.0.1",
+    "vue-i18n": "^8.28.2",
     "vue-router": "^3.5.1",
     "vue-slick-carousel": "^1.0.6",
-    "vue-toasted": "^1.1.28",
     "vue2-smooth-scroll": "^1.6.0",
     "vuetify": "^2.6.0",
     "vuex": "^3.6.2"

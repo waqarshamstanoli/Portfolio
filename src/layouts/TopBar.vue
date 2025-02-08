@@ -12,6 +12,7 @@
       <v-toolbar-items>
         <!-- <img @click="scrollTo(0)" src="../assets/logo.png" width="200px" height="60px" alt="" class="mt-4  ml-md-4 cursor-pointer" to="/"
           /> -->
+         
       </v-toolbar-items>
 
       <v-toolbar-items
@@ -24,7 +25,7 @@
           :class="{ activeButton: scrollPosition == 1150 }"
           class="text-capitalize btnText--text py-2 mx-4"
         >
-          Home
+          {{$t("home")}}
         </v-btn>
         <v-btn
           text
@@ -33,7 +34,7 @@
           :class="{ activeButton: scrollPosition == 1950 }"
           class="text-capitalize btnText--text py-2 mx-4"
         >
-          Services
+          {{$t("services")}}
         </v-btn>
         <v-btn
           text
@@ -42,7 +43,7 @@
           :class="{ activeButton: scrollPosition == 3350 }"
           class="text-capitalize btnText--text py-2 mx-4"
         >
-          Clients
+          {{$t("clients")}}
         </v-btn>
         <v-btn
           text
@@ -51,7 +52,7 @@
           :class="{ activeButton: scrollPosition == 4350 }"
           class="text-capitalize btnText--text py-2 mx-4"
         >
-          Portfolio
+          {{$t("portfolio")}}
         </v-btn>
 
         <v-btn
@@ -61,15 +62,20 @@
           :class="{ activeButton: scrollPosition == 5150 }"
           class="text-capitalize btnText--text py-2 mx-4"
         >
-          Careers
+         {{$t("careers")}}
         </v-btn>
         <v-btn
           small
           color="red"
           class="text-capitalize ml-md-0 ml-8 white--text"
-          >Get in touch</v-btn
+          >{{$t("get_in_touch")}}</v-btn
         >
       </v-toolbar-items>
+      <select v-model="$i18n.locale" class="px-6" style="padding: 15px; outline-color: gray !important; outline-style: solid 1px !important;">
+      <option value="en">English</option>
+      <option value="ja">日本語</option>
+      <option value="ur">اردو</option>
+    </select>
     </v-app-bar>
 
     <v-app-bar height="auto" class="hidden-md-and-up" color="blue" dense>

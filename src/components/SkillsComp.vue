@@ -4,7 +4,7 @@
       <v-col cols="12" lg="12" md="12" sm="12" class="pa-0">
         <!-- <v-card width="80%" color="transparent" class="elevation-0 mx-auto">
           <v-card-text> -->
-            <h1 class="text-center black--text ff_averta pa-0">SERVICES</h1>
+            <h1 class="text-center black--text ff_averta pa-0 text-capitalize"> {{$t("services")}}</h1>
           <!-- </v-card-text>
         </v-card> -->
       </v-col>
@@ -16,13 +16,13 @@
           :key="skill"
           @click="selectItem(skill)"
         >
-          {{ skill.skillName }}
+        {{ $t(skill.skillName) }}
         </h2>
       </v-col>
       <v-col cols="12" lg="6" md="12" sm="12">
         <v-card flat tile height="100%">
           <img :src="selectedItem.img" alt="" width="100%" height="300" />
-          <p class="ff_averta">{{ selectedItem?.description }}</p>
+          <p class="ff_averta"> {{ $t(selectedItem?.description) }}</p>
           <v-card-actions class="pl-0">
             <v-btn
               tile
@@ -30,7 +30,7 @@
               color="red"
               class="white--text text-capitalize elevation-0 px-4"
             >
-              connect with us
+            {{$t("connect_with_us")}}
             </v-btn>
             <v-btn
               tile
@@ -39,7 +39,7 @@
               color="red"
               class="white--text text-capitalize elevation-0 px-4"
             >
-              learn more
+            {{$t("learn_more")}}
             </v-btn>
           </v-card-actions>
         </v-card>
@@ -68,54 +68,47 @@ export default {
       test: false,
       lightPurple: false,
       selectedItem: {
-        skillName: "UI/UX Design",
-        skillLevel: "99%",
-        img: require("../assets/UI.jpg"),
-        description:
-          "Craft intuitive, visually appealing designs that enhance user experience and align with your brand’s vision",
+        skillName: "uiux_design",
+          skillLevel: "99%",
+          img: require("../assets/UI.jpg"),
+          description: "uiux_description",
       },
       skills: [
         {
-          skillName: "UI/UX Design",
+          skillName: "uiux_design",
           skillLevel: "99%",
           img: require("../assets/UI.jpg"),
-          description:
-            "Craft intuitive, visually appealing designs that enhance user experience and align with your brand’s vision.",
+          description: "uiux_description",
         },
         {
-          skillName: "Custom Software Development",
+          skillName: "custom_software",
           skillLevel: "99%",
           img: require("../assets/custom.jpg"),
-          description:
-            "Develop custom, scalable software solutions tailored to meet your business needs efficiently and securely.",
+          description: "custom_software_description",
         },
         {
-          skillName: "Web Development",
+          skillName: "web_development",
           skillLevel: "95%",
           img: require("../assets/website.jpg"),
-          description:
-            "Create fast, responsive websites optimized for all devices, ensuring a flawless user experience.",
+          description: "web_development_description",
         },
         {
-          skillName: "Mobile Development",
+          skillName: "mobile_development",
           skillLevel: "99%",
           img: require("../assets/mobile.png"),
-          description:
-            "Develop high-performance mobile apps for iOS and Android, built to engage and meet your goals.",
+          description: "mobile_development_description",
         },
         {
-          skillName: "DevOps",
+          skillName: "devops",
           skillLevel: "99%",
           img: require("../assets/devops.jpeg"),
-          description:
-            "Streamline development with automation, continuous delivery, and optimized cloud infrastructure.",
+          description: "devops_description",
         },
         {
-          skillName: "Support & Maintenance",
+          skillName: "support_maintenance",
           skillLevel: "99%",
           img: require("../assets/support.jpg"),
-          description:
-            "Ensure your software stays updated and secure with ongoing support and maintenance services.",
+          description: "support_maintenance_description",
         },
       ],
     };
