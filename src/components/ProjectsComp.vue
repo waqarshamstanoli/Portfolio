@@ -10,9 +10,9 @@
           <p
             class="text-body-1 gray--text font-weight-regular mt-8 text-center"
           >
-            Stay in control - und create the shake that meets your needs. Just
+            <!-- Stay in control - und create the shake that meets your needs. Just
             as you like it. Just as you need it. Keep an eye out for our
-            machines. The rest's a cinch:
+            machines. The rest's a cinch: -->
           </p>
         </v-card>
       </v-col>
