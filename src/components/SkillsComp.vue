@@ -4,14 +4,14 @@
       <v-col cols="12" lg="12" md="12" sm="12" class="pa-0">
         <!-- <v-card width="80%" color="transparent" class="elevation-0 mx-auto">
           <v-card-text> -->
-            <h1 class="text-center black--text ff_averta pa-0 text-capitalize"> {{$t("services")}}</h1>
+            <h1 class="text-center primary--text oswald-text pa-0 text-uppercase"> {{$t("services")}}</h1>
           <!-- </v-card-text>
         </v-card> -->
       </v-col>
       <v-col cols="12" lg="6" md="12" sm="12">
         <h2
           style=""
-          class="mb-4 text"
+          class="mb-4 primary--text oswald-text"
           v-for="skill in skills"
           :key="skill"
           @click="selectItem(skill)"

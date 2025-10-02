@@ -5,7 +5,7 @@
       <v-col cols="12" lg="12" md="12" sm="12">
         <v-card width="100%" color="transparent" class="elevation-0 mx-auto mt-md-16">
           <v-card-text>
-            <h2 class="secondary--text text-center text--h2 ">OUR CLIENTS</h2>
+            <h1 class=" text-center primary--text oswald-text ">OUR CLIENTS</h1>
            
           </v-card-text>
           

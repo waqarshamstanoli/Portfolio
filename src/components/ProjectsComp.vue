@@ -6,7 +6,7 @@
           class="headingCenter project_card elevation-0 mx-auto mt-16"
           color="transparent"
         >
-          <h1 class="text-center text-uppercase"> {{$t("portfolio")}}</h1>
+          <h1 class="text-center oswald-text text-uppercase primary--text"> {{$t("portfolio")}}</h1>
           <p
             class="text-body-1 gray--text font-weight-regular mt-8 text-center"
           >
@@ -40,7 +40,7 @@
               <v-btn
                 tile
                 small
-                color="#00A9D6"
+                color="#692073"
                 class="white--text text-capitalize elevation-0 mx-auto px-4"
               >
               {{$t("details")}}
@@ -49,7 +49,7 @@
               <v-btn
                 tile
                 small
-                color="#00A9D6"
+                color="#692073"
                 class="white--text text-capitalize elevation-0 mx-auto px-4"
                 @click="goToExternalPage(project.projectLink)"
               >

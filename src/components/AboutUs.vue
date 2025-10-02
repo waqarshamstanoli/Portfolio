@@ -4,12 +4,12 @@
     <v-col cols="12" lg="8" md="12" sm="12">
       <v-card color="transparent" class="elevation-0 marginTop">
         <v-card-text>
-          <h1 class="hero_text black--text">
+          <h1 class="hero_text primary--text">
             {{ $t("welcome") }}
           </h1>
           
   
-          <h1 class="header-text hero_text mt-4">{{ typedText }}</h1>
+          <h1 class="header-text hero_text mt-8">{{ typedText }}</h1>
           <p class="text-body-1 gray--text font-weight-regular mt-8">
            {{$t("heroText")}}
           </p>

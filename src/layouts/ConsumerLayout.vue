@@ -54,7 +54,7 @@ export default {
      -webkit-background-clip: text !important;
     -webkit-text-fill-color: transparent !important;
     background-clip: text !important;
-    line-height: 55px;
+    line-height: 90px;
    
     text-fill-color: transparent;
 }
@@ -63,12 +63,24 @@ export default {
 }
 .ff_averta {font-family: "AvertaRegular";}
 
+.oswald-text {
+  font-family: 'Oswald', sans-serif;
+}
 
 
+h1 {
+  font-family: 'Oswald', sans-serif;
+  font-size: 72px !important; 
+}
 
+// .theme--light.v-btn.v-btn--disabled.v-btn--has-bg {
+//     background-color: white !important;
+// }
 
-
-
+.theme--light.v-btn.v-btn--disabled {
+    color: white !important;
+    background-color: rgba(0,0,0, 0.1) !important;
+}
 
 
 
@@ -108,6 +120,17 @@ export default {
   cursor: pointer;
 }
 
+.white-input input {
+  color: white !important;       /* text color */
+}
+
+.white-input label {
+  color: white !important;       /* label color */
+}
+
+.white-input .v-field__outline {
+  border-color: white !important; /* border color */
+}
 
 
 
