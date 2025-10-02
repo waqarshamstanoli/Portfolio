@@ -62,14 +62,14 @@
                 </v-list-item>
                 <v-list-item two-line class="btnText--text text-body-2 pl-0">
                   <v-list-item-icon class="mr-2 mt-3">
-                    <a href="mailto:waqar.shamstanoli@gmail.com">
+                    <a href="mailto:madinatechinnovations@gmail.com">
                       <v-icon color="black">mdi-email-outline</v-icon>
                     </a>
                   </v-list-item-icon>
                   <v-list-item-content class="pt-0">
                     <v-list-item-title>{{$t("email_us")}}</v-list-item-title>
                     <v-list-item-title>
-                      <a href="mailto:waqar.shamstanoli@gmail.com" class="btnText--text"> waqar.shamstanoli@gmail.com </a>
+                      <a href="mailto:madinatechinnovations@gmail.com" class="btnText--text"> madinatechinnovations@gmail.com </a>
                     </v-list-item-title>
                   </v-list-item-content>
                 </v-list-item>
@@ -140,11 +140,11 @@
               <path d="M30.8008 17.6445C31.2227 19.1211 31.2227 22.2852 31.2227 22.2852C31.2227 22.2852 31.2227 25.4141 30.8008 26.9258C30.5898 27.7695 29.9219 28.4023 29.1133 28.6133C27.6016 29 21.625 29 21.625 29C21.625 29 15.6133 29 14.1016 28.6133C13.293 28.4023 12.625 27.7695 12.4141 26.9258C11.9922 25.4141 11.9922 22.2852 11.9922 22.2852C11.9922 22.2852 11.9922 19.1211 12.4141 17.6445C12.625 16.8008 13.293 16.1328 14.1016 15.9219C15.6133 15.5 21.625 15.5 21.625 15.5C21.625 15.5 27.6016 15.5 29.1133 15.9219C29.9219 16.1328 30.5898 16.8008 30.8008 17.6445ZM19.6562 25.1328L24.6484 22.2852L19.6562 19.4375V25.1328Z" fill="black" />
             </svg>
           </div>
-          <p class="text-caption btnText--text white--text mt-4">© Muhammad waqar 2022-2024</p>
+          <p class="text-caption btnText--text white--text mt-4">© Madinatech Innovations 2022-2026</p>
         </v-col>
         <v-col cols="12" lg="8" md="12" sm="12">
           <v-card width="100%" color="transparent" elevation="0" class="pr-md-16 mt-4">
-            <p class="grey2--text text-caption btnText--text">Hello there! I'm waqar, a passionate Frontend Developer with a knack for turning ideas into immersive digital experiences. With a rich toolbox boasting Vue.js, Nuxt.js, React.js, Next.js, along with HTML, CSS, Bootstrap, and WordPress, I orchestrate web magic that captivates and engages. 🚀 Whether it's crafting pixel-perfect user interfaces, architecting seamless user experiences, or breathing life into creative concepts, I thrive on the cutting edge of web development. From sleek and responsive single-page applications to dynamic, data-driven websites, I wield the power of modern frameworks and technologies to bring visions to life.</p>
+            <p class="grey2--text text-caption btnText--text">Madinatech Innovations is a forward-thinking technology company dedicated to building immersive and impactful digital experiences. With expertise in modern frameworks and technologies such as Vue.js, Nuxt.js, React.js, Next.js, .NET, Python, Node.js, HTML, CSS, Bootstrap, and WordPress, we craft innovative solutions tailored to client needs. 🚀 From sleek, responsive single-page applications to powerful enterprise systems and dynamic, data-driven platforms, Madinatech Innovations blends creativity with cutting-edge technology to deliver seamless user experiences. Our mission is to transform ideas into powerful digital products that engage, inspire, and drive success</p>
           </v-card>
         </v-col>
       </v-row>

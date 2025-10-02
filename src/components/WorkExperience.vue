@@ -16,7 +16,14 @@
           <div class="text-center">
             <v-card-title class="secondary--text text-24 justify-center pb-1">{{experience.company}}</v-card-title>
             <h5 class="secondary--text text--h5">{{ experience.jobTitle }}</h5>
-            <h4 class="secondary--text text--h4">{{ experience.duration }}</h4>
+            <v-rating
+  hover
+  :length="5"
+  :size="25"
+  value="5"
+  readonly="true"
+  color="amber darken-1"
+ />
 
             <p class="text-body-1 gray--text font-weight-regular mt-4">{{ experience.description }}</p>
           </div>
@@ -32,9 +39,9 @@
 export default {
   data() {
     return {
-    experiences:[{company:'Infini8AI', jobTitle:'Front End Developer', duration:'October 2021 - Present', description:' At Infini8AI, we are not just in the business of providing IT services; we are architects of digital transformation, sculptors of cutting-edge solutions, and partners in your journey to success. With a commitment to innovation, excellence, and client satisfaction, we redefine possibilities and empower businesses to thrive in the digital age'},
-    {company:'Financials Unlimited', jobTitle:'Vue JS Developer', duration:'November-2019 - September 2021', description:' At Financials Unlimited, we are not just in the business of providing IT services; we are architects of digital transformation, sculptors of cutting-edge solutions, and partners in your journey to success. With a commitment to innovation, excellence, and client satisfaction, we redefine possibilities and empower businesses to thrive in the digital age'},
-    {company:'Mount Fuji Textile', jobTitle:'Front End Developer', duration:'November-2018 - October 2019', description:' At Mount Fuji Textile, we are not just in the business of providing IT services; we are architects of digital transformation, sculptors of cutting-edge solutions, and partners in your journey to success. With a commitment to innovation, excellence, and client satisfaction, we redefine possibilities and empower businesses to thrive in the digital age'}
+    experiences:[{company:'Bimmertech', description:' Madinatech Innovations transformed our vision into a seamless digital platform. Their technical expertise and commitment to quality made them an invaluable partner'},
+    {company:'Kaarka',  description:' We needed a reliable tech partner to scale our e-commerce operations, and Madinatech delivered beyond expectations. Highly recommended!'},
+    {company:'Techbar',   description:' Working with Madinatech Innovations has been great. Their team not only understood our requirements but also suggested innovative solutions we hadn’t thought of'}
 
     ]
     };
